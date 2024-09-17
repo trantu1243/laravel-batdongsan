@@ -27,6 +27,6 @@ class RegisterController extends Controller
         event(new Registered($user));
         Auth::login($user);
         toastr()->success('Đăng kí tài khoản thành công');
-        return redirect(route('dashboard'));
+        return redirect(route('home'));
     }
 }

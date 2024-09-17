@@ -8,7 +8,7 @@
 <h1 style="display: none;"> Nền tảng Quản Lí Bất Động Sản Việt Nam</h1>
 
 <form id="main" class="mt-4 container" method="get" action="search-duan">
-    <h2 class="mb-3 d-none d-sm-block">Chào mừng bạn đến với Batdongsan.vn!</h2>
+    <h2 class="mb-3 d-none d-sm-block">Chào mừng bạn đến với Website Batdongsan!</h2>
     <div class="desc d-none d-sm-flex" style="gap: 16px;">
         <span>Tìm nhà phố, dự án, cho thuê và nhiều hơn nữa</span>
         <a href="ban-nha-ha-noi" title="Nhà riêng Hà Nội">Nhà riêng Hà Nội</a>
