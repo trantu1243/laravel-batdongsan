@@ -1,0 +1,69 @@
+// resources/sass/app.scss
+// Import Bootstrap hoặc các thư viện SCSS khác nếu cần
+// @import "~bootstrap/scss/bootstrap";
+// Viết các quy tắc CSS tùy chỉnh của bạn ở đây
+@import "variable.scss";
+//  header
+#header {
+    position: sticky;
+    z-index: 99999;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: $background-color-header;
+    &>.navbar {
+        background-color: transparent;
+        & ul.navbar-nav {
+            & .item-menu.item-menu__login-profile {
+                background-color: rgb(239, 237, 235);
+                color: #f1f1f1;
+                &>#profile-submenu>li>a {
+                    background-color: $background-color-header;
+                    &:hover {
+                        background-color: #d8d8d8;
+                    }
+                }
+            }
+        }
+        .item-menu .item-nav-link {
+            &:hover {
+                text-decoration: none;
+                color: $color-hover-nav;
+            }
+        }
+    }
+    & .img-logo {
+        width: 100px;
+        height: 50px;
+        object-fit: cover;
+        background-color: transparent;
+    }
+    & .sub-menu {
+        background-color: $background-color-header;
+    }
+}
+
+// footer
+footer {
+    background-color: $background-color-footer;
+    & .footer {
+        & .footer-top {
+            align-items: center;
+            .list-social {
+                & a:hover {
+                    & img {
+                        scale: 1.1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// login
+.login-form {
+    &.logo img {
+        width: 100px;
+        height: 50px;
+        object-fit: cover;
+    }
+}

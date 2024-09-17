@@ -1,0 +1,51 @@
+#header {
+  position: sticky;
+  z-index: 99999;
+  top: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #e5f3ff;
+}
+#header > .navbar {
+  background-color: transparent;
+}
+#header > .navbar ul.navbar-nav .item-menu.item-menu__login-profile {
+  background-color: rgb(239, 237, 235);
+  color: #f1f1f1;
+}
+#header > .navbar ul.navbar-nav .item-menu.item-menu__login-profile > #profile-submenu > li > a {
+  background-color: #e5f3ff;
+}
+#header > .navbar ul.navbar-nav .item-menu.item-menu__login-profile > #profile-submenu > li > a:hover {
+  background-color: #d8d8d8;
+}
+#header > .navbar .item-menu .item-nav-link:hover {
+  text-decoration: none;
+  color: #e03c31;
+}
+#header .img-logo {
+  width: 100px;
+  height: 50px;
+  object-fit: cover;
+  background-color: transparent;
+}
+#header .sub-menu {
+  background-color: #e5f3ff;
+}
+
+footer {
+  background-color: #cbece2;
+}
+footer .footer .footer-top {
+  align-items: center;
+}
+footer .footer .footer-top .list-social a:hover img {
+  scale: 1.1;
+}
+
+.login-form.logo img {
+  width: 100px;
+  height: 50px;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=tan.css.map */

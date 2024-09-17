@@ -409,7 +409,7 @@
                                                                 </div>
 
                                                                 <div class="col-md-1" style="padding: 0; display: flex;">
-                                                                    <img src="/assets/img/m2.svg" alt="" style="width: 19px; height: 20px; margin: auto;" />
+                                                                    <img src="./assets/img/m2.svg" alt="" style="width: 19px; height: 20px; margin: auto;" />
                                                                 </div>
                                                             </div>
                                                             <div class="area_error text-danger"></div>
@@ -575,7 +575,7 @@
                                                         <div class="card">
                                                             <div class="drag-area select" role="button">
                                                                 <span class="visible">
-                                                                    <img src="/assets/img/gallery-add.png" alt="" class="mr-2" />
+                                                                    <img src="./assets/img/gallery-add.png" alt="" class="mr-2" />
                                                                     Bấm để chọn ảnh tải lên hoặc kéo thả ảnh vào
                                                                 </span>
                                                                 <span class="on-drop">Drop images here</span>
@@ -658,28 +658,28 @@
                                                     <label class="dangtintuc-image active">
                                                         <input type="radio" name="type" value="4" class="d-none" />
                                                         <span class="title-imgage">Tin thường</span>
-                                                        <img src="/assets/img/chuyenmuc-house.svg" alt="" style="width: 90px; height: 80px;" />
+                                                        <img src="./assets/img/chuyenmuc-house.svg" alt="" style="width: 90px; height: 80px;" />
                                                     </label>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <label class="dangtintuc-image">
                                                         <input type="radio" name="type" value="1" class="d-none" />
                                                         <span class="title-imgage">Tin VIP 1</span>
-                                                        <img src="/assets/img/Frame.png" alt="" style="width: 90px; height: 80px;" />
+                                                        <img src="./assets/img/Frame.png" alt="" style="width: 90px; height: 80px;" />
                                                     </label>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <label class="dangtintuc-image">
                                                         <input type="radio" name="type" value="2" class="d-none" />
                                                         <span class="title-imgage">Tin VIP 2</span>
-                                                        <img src="/assets/img/Frame-1.png" alt="" style="width: 90px; height: 80px;" />
+                                                        <img src="./assets/img/Frame-1.png" alt="" style="width: 90px; height: 80px;" />
                                                     </label>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <label class="dangtintuc-image">
                                                         <input type="radio" name="type" value="3" class="d-none" />
                                                         <span class="title-imgage mb-3">Tin VIP 3</span>
-                                                        <img class="pt-3" src="/assets/img/Group 103.png" alt="" style="width: 130px;" />
+                                                        <img class="pt-3" src="./assets/img/Group 103.png" alt="" style="width: 130px;" />
                                                     </label>
                                                 </div>
                                             </div>
@@ -756,7 +756,7 @@
                                 <div style="display: flex; align-items: center;" class="btn-container">
                                     <button style="color: #f0f0f0;" type="submit" class="btn-next btn btn-container-footer">
                                         Tiếp tục
-                                        <img src="/assets/img/btn-vector-footer.svg" alt="" style="width: 8px; height: 15px;" />
+                                        <img src="./assets/img/btn-vector-footer.svg" alt="" style="width: 8px; height: 15px;" />
                                     </button>
                                 </div>
                             </div>
