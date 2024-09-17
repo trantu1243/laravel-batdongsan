@@ -4,7 +4,8 @@
 
 @section('content')
 
-<h1 style="display: none;">Batdongsan.vn - Nền tảng Proptech số 1 Việt Nam</h1>
+
+<h1 style="display: none;"> Nền tảng Quản Lí Bất Động Sản Việt Nam</h1>
 
 <form id="main" class="mt-4 container" method="get" action="search-duan">
     <h2 class="mb-3 d-none d-sm-block">Chào mừng bạn đến với Batdongsan.vn!</h2>
@@ -150,7 +151,7 @@
         <div class="search-mobile-main d-flex d-sm-none">
             <input type="text" name="" placeholder="Tìm kiếm địa chỉ, dự án.." />
             <button type="submit">
-                <img src="/assets/img/search-normal.svg" alt="" />
+                <img src="assets/img/search-normal.svg" alt="" />
             </button>
         </div>
         <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1" style="flex: 1;">
@@ -960,10 +961,10 @@
                     Bất động sản mới nhất
                 </h3>
                 <button class="batdongsannoibat-swiper-prev prev">
-                    <img src="/assets/icon/arrow-left.svg" alt="" />
+                    <img src="assets/icon/arrow-left.svg" alt="" />
                 </button>
                 <button class="batdongsannoibat-swiper-next next">
-                    <img src="/assets/icon/arrow-right.svg" alt="" />
+                    <img src="assets/icon/arrow-right.svg" alt="" />
                 </button>
             </div>
             <div class="swiper-wrapper">
@@ -974,7 +975,7 @@
                                 <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117359_66c9f32bc3f48.jpg alt="Bán biệt thự 267.2m2 Trịnh Quang Nghị 4 tầng Phong Phú Bình Chánh giá chỉ 30,5
                                 tỷ" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                                 <div class="list-img">
-                                    <img src="/assets/img/camera.png" alt="" />
+                                    <img src="assets/img/camera.png" alt="" />
                                     <span class="qty">5</span>
                                 </div>
                             </div>
@@ -985,12 +986,12 @@
                                 </h3>
                                 <div class="price-area">
                                     <span class="price">
-                                        <img src="/assets/img/price.png" alt="" />
+                                        <img src="assets/img/price.png" alt="" />
                                         <span style="margin-left: 5px;"> 30 tỷ </span>
                                     </span>
 
                                     <span class="area">
-                                        <img src="/assets/img/area.png" alt="" />
+                                        <img src="assets/img/area.png" alt="" />
                                         <span>
                                             267 m²
                                         </span>
@@ -1011,7 +1012,7 @@
                                 <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117358_66c9eb0d18a73.jpg alt="BÁN NHÀ MẬU LƯƠNG Ô TÔ QUA CỬA - KINH DOANH DT 35M x 5T 6.4 tỷ"
                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                                 <div class="list-img">
-                                    <img src="/assets/img/camera.png" alt="" />
+                                    <img src="assets/img/camera.png" alt="" />
                                     <span class="qty">5</span>
                                 </div>
                             </div>
@@ -1022,12 +1023,12 @@
                                 </h3>
                                 <div class="price-area">
                                     <span class="price">
-                                        <img src="/assets/img/price.png" alt="" />
+                                        <img src="assets/img/price.png" alt="" />
                                         <span style="margin-left: 5px;"> 6 tỷ 400 triệu </span>
                                     </span>
 
                                     <span class="area">
-                                        <img src="/assets/img/area.png" alt="" />
+                                        <img src="assets/img/area.png" alt="" />
                                         <span>
                                             35 m²
                                         </span>
@@ -1048,7 +1049,7 @@
                                 <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117357_66c9e8e4a8aa8.jpg alt="Bán nhà, Nguyễn Văn Cừ Long Biên DT 45m2 * 6 tầng 9 tỷ 5 thang máy ô tô cafe
                                 tầng thượng" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                                 <div class="list-img">
-                                    <img src="/assets/img/camera.png" alt="" />
+                                    <img src="assets/img/camera.png" alt="" />
                                     <span class="qty">2</span>
                                 </div>
                             </div>
@@ -1059,12 +1060,12 @@
                                 </h3>
                                 <div class="price-area">
                                     <span class="price">
-                                        <img src="/assets/img/price.png" alt="" />
+                                        <img src="assets/img/price.png" alt="" />
                                         <span style="margin-left: 5px;"> 9 tỷ 500 triệu </span>
                                     </span>
 
                                     <span class="area">
-                                        <img src="/assets/img/area.png" alt="" />
+                                        <img src="assets/img/area.png" alt="" />
                                         <span>
                                             45 m²
                                         </span>
@@ -1085,7 +1086,7 @@
                                 <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117356_66c9e8ca22ab3.jpg alt="Bán nhà Nguyễn Văn Cừ Long Biên DT 47m2*6 tầng giá 10 tỷ ô tô thông thang máy
                                 vài phút sang Hồ Gươm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                                 <div class="list-img">
-                                    <img src="/assets/img/camera.png" alt="" />
+                                    <img src="assets/img/camera.png" alt="" />
                                     <span class="qty">1</span>
                                 </div>
                             </div>
@@ -1096,12 +1097,12 @@
                                 </h3>
                                 <div class="price-area">
                                     <span class="price">
-                                        <img src="/assets/img/price.png" alt="" />
+                                        <img src="assets/img/price.png" alt="" />
                                         <span style="margin-left: 5px;"> 10 tỷ </span>
                                     </span>
 
                                     <span class="area">
-                                        <img src="/assets/img/area.png" alt="" />
+                                        <img src="assets/img/area.png" alt="" />
                                         <span>
                                             47 m²
                                         </span>
@@ -1122,7 +1123,7 @@
                                 <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117355_66c9e6f6359c8.jpg alt="Bán đất Thụy Phương ngõ thông ô tô đỗ cửa , mặt tiền rộng 56m2 3tỷ"
                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                                 <div class="list-img">
-                                    <img src="/assets/img/camera.png" alt="" />
+                                    <img src="assets/img/camera.png" alt="" />
                                     <span class="qty">5</span>
                                 </div>
                             </div>
@@ -1133,12 +1134,12 @@
                                 </h3>
                                 <div class="price-area">
                                     <span class="price">
-                                        <img src="/assets/img/price.png" alt="" />
+                                        <img src="assets/img/price.png" alt="" />
                                         <span style="margin-left: 5px;"> 3 tỷ </span>
                                     </span>
 
                                     <span class="area">
-                                        <img src="/assets/img/area.png" alt="" />
+                                        <img src="assets/img/area.png" alt="" />
                                         <span>
                                             56 m²
                                         </span>
@@ -1159,7 +1160,7 @@
                                 <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117354_66c9e6927213d.jpg alt="Nhà Đẹp Thang Máy Trường Chinh, 41.4m², 6 Tầng, Giá 7.68 Tỷ, Kinh Doanh Đỉnh"
                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                                 <div class="list-img">
-                                    <img src="/assets/img/camera.png" alt="" />
+                                    <img src="assets/img/camera.png" alt="" />
                                     <span class="qty">1</span>
                                 </div>
                             </div>
@@ -1170,12 +1171,12 @@
                                 </h3>
                                 <div class="price-area">
                                     <span class="price">
-                                        <img src="/assets/img/price.png" alt="" />
+                                        <img src="assets/img/price.png" alt="" />
                                         <span style="margin-left: 5px;"> 7 tỷ 680 triệu </span>
                                     </span>
 
                                     <span class="area">
-                                        <img src="/assets/img/area.png" alt="" />
+                                        <img src="assets/img/area.png" alt="" />
                                         <span>
                                             42 m²
                                         </span>
@@ -1196,7 +1197,7 @@
                                 <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117353_66c9e5f60e13a.jpg alt="Tập Thể Bách Khoa,Tầng 1, 100m² , 6.6 Tỷ, Kinh Doanh đỉnh"
                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                                 <div class="list-img">
-                                    <img src="/assets/img/camera.png" alt="" />
+                                    <img src="assets/img/camera.png" alt="" />
                                     <span class="qty">1</span>
                                 </div>
                             </div>
@@ -1207,12 +1208,12 @@
                                 </h3>
                                 <div class="price-area">
                                     <span class="price">
-                                        <img src="/assets/img/price.png" alt="" />
+                                        <img src="assets/img/price.png" alt="" />
                                         <span style="margin-left: 5px;"> 6 tỷ 600 triệu </span>
                                     </span>
 
                                     <span class="area">
-                                        <img src="/assets/img/area.png" alt="" />
+                                        <img src="assets/img/area.png" alt="" />
                                         <span>
                                             100 m²
                                         </span>
@@ -1233,7 +1234,7 @@
                                 <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117352_66c9e4965d7dc.jpg alt="Còn duy nhất 1 lô đất đẹp (4.5x12), full thổ. tại HXH 8m Nguyễn Ảnh Thủ, Quận
                                 12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                                 <div class="list-img">
-                                    <img src="/assets/img/camera.png" alt="" />
+                                    <img src="assets/img/camera.png" alt="" />
                                     <span class="qty">3</span>
                                 </div>
                             </div>
@@ -1244,12 +1245,12 @@
                                 </h3>
                                 <div class="price-area">
                                     <span class="price">
-                                        <img src="/assets/img/price.png" alt="" />
+                                        <img src="assets/img/price.png" alt="" />
                                         <span style="margin-left: 5px;"> 3 tỷ 490 triệu </span>
                                     </span>
 
                                     <span class="area">
-                                        <img src="/assets/img/area.png" alt="" />
+                                        <img src="assets/img/area.png" alt="" />
                                         <span>
                                             54 m²
                                         </span>
@@ -1270,7 +1271,7 @@
                                 <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117088_66c69ae6c9986.jpg alt="Nên xin và lưu từ 5 – 10 số điện thoại của một vài bạn bè đồng nghiệp hoặc anh
                                 chị lớn tuổi để kết" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                                 <div class="list-img">
-                                    <img src="/assets/img/camera.png" alt="" />
+                                    <img src="assets/img/camera.png" alt="" />
                                     <span class="qty">5</span>
                                 </div>
                             </div>
@@ -1281,12 +1282,12 @@
                                 </h3>
                                 <div class="price-area">
                                     <span class="price">
-                                        <img src="/assets/img/price.png" alt="" />
+                                        <img src="assets/img/price.png" alt="" />
                                         <span style="margin-left: 5px;"> 5 tỷ 290 triệu/tháng </span>
                                     </span>
 
                                     <span class="area">
-                                        <img src="/assets/img/area.png" alt="" />
+                                        <img src="assets/img/area.png" alt="" />
                                         <span>
                                             65 m²
                                         </span>
@@ -1307,7 +1308,7 @@
                                 <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117162_66c7c4f81a971.jpg alt="Cần bán đất nhà phố thổ cư nguyên miếng 1 tỷ 1, 100m2"
                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                                 <div class="list-img">
-                                    <img src="/assets/img/camera.png" alt="" />
+                                    <img src="assets/img/camera.png" alt="" />
                                     <span class="qty">1</span>
                                 </div>
                             </div>
@@ -1318,12 +1319,12 @@
                                 </h3>
                                 <div class="price-area">
                                     <span class="price">
-                                        <img src="/assets/img/price.png" alt="" />
+                                        <img src="assets/img/price.png" alt="" />
                                         <span style="margin-left: 5px;"> 1 tỷ 100 triệu </span>
                                     </span>
 
                                     <span class="area">
-                                        <img src="/assets/img/area.png" alt="" />
+                                        <img src="assets/img/area.png" alt="" />
                                         <span>
                                             100 m²
                                         </span>
@@ -1344,7 +1345,7 @@
                                 <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117163_66c7caa332ae3.jpg alt="Cần bán đất ngộp thổ cư nguyên miếng 1 tỷ 1, 100m2"
                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                                 <div class="list-img">
-                                    <img src="/assets/img/camera.png" alt="" />
+                                    <img src="assets/img/camera.png" alt="" />
                                     <span class="qty">1</span>
                                 </div>
                             </div>
@@ -1355,12 +1356,12 @@
                                 </h3>
                                 <div class="price-area">
                                     <span class="price">
-                                        <img src="/assets/img/price.png" alt="" />
+                                        <img src="assets/img/price.png" alt="" />
                                         <span style="margin-left: 5px;"> 1 tỷ 100 triệu </span>
                                     </span>
 
                                     <span class="area">
-                                        <img src="/assets/img/area.png" alt="" />
+                                        <img src="assets/img/area.png" alt="" />
                                         <span>
                                             100 m²
                                         </span>
@@ -1381,7 +1382,7 @@
                                 <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117165_66c7cd8cc4b7a.jpg alt="Cần bán đất chính chủ 100% thổ cư 1 tỷ 1, 100m2"
                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                                 <div class="list-img">
-                                    <img src="/assets/img/camera.png" alt="" />
+                                    <img src="assets/img/camera.png" alt="" />
                                     <span class="qty">1</span>
                                 </div>
                             </div>
@@ -1392,12 +1393,12 @@
                                 </h3>
                                 <div class="price-area">
                                     <span class="price">
-                                        <img src="/assets/img/price.png" alt="" />
+                                        <img src="assets/img/price.png" alt="" />
                                         <span style="margin-left: 5px;"> 1 tỷ 100 triệu </span>
                                     </span>
 
                                     <span class="area">
-                                        <img src="/assets/img/area.png" alt="" />
+                                        <img src="assets/img/area.png" alt="" />
                                         <span>
                                             100 m²
                                         </span>
@@ -1421,14 +1422,14 @@
             <img
                 class="rounded"
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII="
-                lazy-src="/assets/img/Rectangle 7.png"
+                lazy-src="assets/img/Rectangle 7.png"
                 alt="" />
         </div>
         <div class="col">
             <img
                 class="rounded"
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII="
-                lazy-src="/assets/img/Rectangle 8.png"
+                lazy-src="assets/img/Rectangle 8.png"
                 alt="" />
         </div>
     </div>
@@ -1438,10 +1439,10 @@
     <div class="swiper-controls">
         <h3 class="title mb-0 mr-auto align-self-end">Dự án mới</h3>
         <button class="duanmoi-swiper-prev prev">
-            <img src="/assets/icon/arrow-left.svg" alt="Dự án mới" />
+            <img src="assets/icon/arrow-left.svg" alt="Dự án mới" />
         </button>
         <button class="duanmoi-swiper-next next">
-            <img src="/assets/icon/arrow-right.svg" alt="Dự án mới" />
+            <img src="assets/icon/arrow-right.svg" alt="Dự án mới" />
         </button>
     </div>
     <div class="swiper duanmoi-swiper">
@@ -1583,10 +1584,10 @@
         <div class="swiper-controls">
             <h3 class="title mb-0 mr-auto align-self-end">Đánh giá tốt</h3>
             <button class="danhgiatot-swiper-prev prev">
-                <img src="/assets/icon/arrow-left.svg" alt="" />
+                <img src="assets/icon/arrow-left.svg" alt="" />
             </button>
             <button class="danhgiatot-swiper-next next">
-                <img src="/assets/icon/arrow-right.svg" alt="" />
+                <img src="assets/icon/arrow-right.svg" alt="" />
             </button>
         </div>
         <div class="swiper-wrapper">
@@ -1597,7 +1598,7 @@
                             <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/171-244-188-193-e.jpg alt="NHÀ LÔ GÓC HẼM - ĐÔNG HƯNG THUẬN 6 - QUẬN 12 - 4X14M - CẤP 4 - HẼM XE HƠI - 3 TỶ 7 ."
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                             <div class="list-img">
-                                <img src="/assets/img/camera.png" alt="" />
+                                <img src="assets/img/camera.png" alt="" />
                                 <span class="qty">1</span>
                             </div>
                         </div>
@@ -1608,14 +1609,14 @@
                             </h3>
                             <div class="price-area">
                                 <span class="price">
-                                    <img src="/assets/img/price.png" alt="" />
+                                    <img src="assets/img/price.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         3 tỷ 700 triệu
                                     </span>
                                 </span>
 
                                 <span class="area">
-                                    <img src="/assets/img/area.png" alt="" />
+                                    <img src="assets/img/area.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         56 m²
                                     </span>
@@ -1634,7 +1635,7 @@
                             <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/118-69-191-160-279377173-539254467874773-736657574002157430-n.jpg alt="HÀNG HIẾM QUẬN TÂN PHÚ, 80M2, HXH, 6 TỶ
                             THƯƠNG LƯỢNG" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                             <div class="list-img">
-                                <img src="/assets/img/camera.png" alt="" />
+                                <img src="assets/img/camera.png" alt="" />
                                 <span class="qty">1</span>
                             </div>
                         </div>
@@ -1645,14 +1646,14 @@
                             </h3>
                             <div class="price-area">
                                 <span class="price">
-                                    <img src="/assets/img/price.png" alt="" />
+                                    <img src="assets/img/price.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         6 tỷ
                                     </span>
                                 </span>
 
                                 <span class="area">
-                                    <img src="/assets/img/area.png" alt="" />
+                                    <img src="assets/img/area.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         80 m²
                                     </span>
@@ -1671,7 +1672,7 @@
                             <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/171-247-45-125-z4579509690445-fdc55823ce41f719001d250e62942ce1.jpg alt="Deal Xịn Bán Gấp Trong Tuần-chung cư Sơn
                             An gần đại học Đồng Nai" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                             <div class="list-img">
-                                <img src="/assets/img/camera.png" alt="" />
+                                <img src="assets/img/camera.png" alt="" />
                                 <span class="qty">5</span>
                             </div>
                         </div>
@@ -1682,7 +1683,7 @@
                             </h3>
                             <div class="price-area">
                                 <span class="price">
-                                    <img src="/assets/img/price.png" alt="" />
+                                    <img src="assets/img/price.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         1 tỷ 250 triệu
                                     </span>
@@ -1701,7 +1702,7 @@
                             <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/115784_1721356609.jpg alt="Bán căn chung cư Vinhome smart city- MK11-tầng trung"
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                             <div class="list-img">
-                                <img src="/assets/img/camera.png" alt="" />
+                                <img src="assets/img/camera.png" alt="" />
                                 <span class="qty">5</span>
                             </div>
                         </div>
@@ -1712,14 +1713,14 @@
                             </h3>
                             <div class="price-area">
                                 <span class="price">
-                                    <img src="/assets/img/price.png" alt="" />
+                                    <img src="assets/img/price.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         5 tỷ 500 triệu
                                     </span>
                                 </span>
 
                                 <span class="area">
-                                    <img src="/assets/img/area.png" alt="" />
+                                    <img src="assets/img/area.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         62 m²
                                     </span>
@@ -1738,7 +1739,7 @@
                             <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/180-93-199-63-z4504275449657-a3cbaa742c501f88ccafdbee90c350cd.jpg alt="Bán đất 73m2 SHR thổ cư đường ô tô
                             (P.Trảng Dài) chỉ 1,950 tỉ" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                             <div class="list-img">
-                                <img src="/assets/img/camera.png" alt="" />
+                                <img src="assets/img/camera.png" alt="" />
                                 <span class="qty">4</span>
                             </div>
                         </div>
@@ -1749,14 +1750,14 @@
                             </h3>
                             <div class="price-area">
                                 <span class="price">
-                                    <img src="/assets/img/price.png" alt="" />
+                                    <img src="assets/img/price.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         1 tỷ 950 triệu
                                     </span>
                                 </span>
 
                                 <span class="area">
-                                    <img src="/assets/img/area.png" alt="" />
+                                    <img src="assets/img/area.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         73 m²
                                     </span>
@@ -1775,7 +1776,7 @@
                             <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/171-241-41-7-1.jpg alt="BÁN GẤP CĂN HỘ 2 PHÒNG NGỦ VINHOMES METROPOLIS 29 LIỄU GIAI."
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                             <div class="list-img">
-                                <img src="/assets/img/camera.png" alt="" />
+                                <img src="assets/img/camera.png" alt="" />
                                 <span class="qty">9</span>
                             </div>
                         </div>
@@ -1786,14 +1787,14 @@
                             </h3>
                             <div class="price-area">
                                 <span class="price">
-                                    <img src="/assets/img/price.png" alt="" />
+                                    <img src="assets/img/price.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         7 tỷ
                                     </span>
                                 </span>
 
                                 <span class="area">
-                                    <img src="/assets/img/area.png" alt="" />
+                                    <img src="assets/img/area.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         79 m²
                                     </span>
@@ -1812,7 +1813,7 @@
                             <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/171-252-195-68-bt-don-lap.jpg alt="Siêu phẩm mặt Vịnh - Biệt thự Grand Bay Villas Hạ Long. - Giá chỉ hơn 30 tỷ"
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                             <div class="list-img">
-                                <img src="/assets/img/camera.png" alt="" />
+                                <img src="assets/img/camera.png" alt="" />
                                 <span class="qty">6</span>
                             </div>
                         </div>
@@ -1823,14 +1824,14 @@
                             </h3>
                             <div class="price-area">
                                 <span class="price">
-                                    <img src="/assets/img/price.png" alt="" />
+                                    <img src="assets/img/price.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         36 tỷ
                                     </span>
                                 </span>
 
                                 <span class="area">
-                                    <img src="/assets/img/area.png" alt="" />
+                                    <img src="assets/img/area.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         210 m²
                                     </span>
@@ -1849,7 +1850,7 @@
                             <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/118-70-191-247-399022028-1502758290556643-8672408028690965-n.jpg alt="Ngọc Hà"
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                             <div class="list-img">
-                                <img src="/assets/img/camera.png" alt="" />
+                                <img src="assets/img/camera.png" alt="" />
                                 <span class="qty">9</span>
                             </div>
                         </div>
@@ -1860,14 +1861,14 @@
                             </h3>
                             <div class="price-area">
                                 <span class="price">
-                                    <img src="/assets/img/price.png" alt="" />
+                                    <img src="assets/img/price.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         3 tỷ 630 triệu
                                     </span>
                                 </span>
 
                                 <span class="area">
-                                    <img src="/assets/img/area.png" alt="" />
+                                    <img src="assets/img/area.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         66 m²
                                     </span>
@@ -1886,7 +1887,7 @@
                             <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/14-186-83-82-z4583117965506-cee2a411ae682c9e9efd45bf0ef0a95b.jpg alt="cho thuê kho xưởng 5000m2 đường phú thuận
                             quận 7" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                             <div class="list-img">
-                                <img src="/assets/img/camera.png" alt="" />
+                                <img src="assets/img/camera.png" alt="" />
                                 <span class="qty">4</span>
                             </div>
                         </div>
@@ -1897,14 +1898,14 @@
                             </h3>
                             <div class="price-area">
                                 <span class="price">
-                                    <img src="/assets/img/price.png" alt="" />
+                                    <img src="assets/img/price.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         400 triệu/tháng
                                     </span>
                                 </span>
 
                                 <span class="area">
-                                    <img src="/assets/img/area.png" alt="" />
+                                    <img src="assets/img/area.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         5000 m²
                                     </span>
@@ -1923,7 +1924,7 @@
                             <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/203-205-46-13-b11.jpg alt="Bán nhanh 139m2 thổ cư trung tâm Phường Hòa Vinh – Phú Yên giá 1tỷ 78 (bao thủ tục)"
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                             <div class="list-img">
-                                <img src="/assets/img/camera.png" alt="" />
+                                <img src="assets/img/camera.png" alt="" />
                                 <span class="qty">2</span>
                             </div>
                         </div>
@@ -1934,14 +1935,14 @@
                             </h3>
                             <div class="price-area">
                                 <span class="price">
-                                    <img src="/assets/img/price.png" alt="" />
+                                    <img src="assets/img/price.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         1 tỷ 780 triệu
                                     </span>
                                 </span>
 
                                 <span class="area">
-                                    <img src="/assets/img/area.png" alt="" />
+                                    <img src="assets/img/area.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         139 m²
                                     </span>
@@ -1960,7 +1961,7 @@
                             <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/14-186-81-246-314496936-3360869124241218-915828019660833885-n.jpg alt="CHO THUÊ NHÀ NGUYÊN CĂN TRỐNG SUỐT 4 LẦU
                             ĐƯỜNG NGUYỄN VĂN LINH QUẬN 7 LH: m09.4460.4465" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                             <div class="list-img">
-                                <img src="/assets/img/camera.png" alt="" />
+                                <img src="assets/img/camera.png" alt="" />
                                 <span class="qty">1</span>
                             </div>
                         </div>
@@ -1971,14 +1972,14 @@
                             </h3>
                             <div class="price-area">
                                 <span class="price">
-                                    <img src="/assets/img/price.png" alt="" />
+                                    <img src="assets/img/price.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         200/tháng
                                     </span>
                                 </span>
 
                                 <span class="area">
-                                    <img src="/assets/img/area.png" alt="" />
+                                    <img src="assets/img/area.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         1500 m²
                                     </span>
@@ -1997,7 +1998,7 @@
                             <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/116822_66c2bcde4b184.jpg alt="NHÀ MỚI FULL NỘI THẤT, 240M2, OTO NGỦ TRONG NHÀ CHỈ HƠN 7 TỶ, KHU NHÀ HIẾM BÁN"
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                             <div class="list-img">
-                                <img src="/assets/img/camera.png" alt="" />
+                                <img src="assets/img/camera.png" alt="" />
                                 <span class="qty">1</span>
                             </div>
                         </div>
@@ -2008,14 +2009,14 @@
                             </h3>
                             <div class="price-area">
                                 <span class="price">
-                                    <img src="/assets/img/price.png" alt="" />
+                                    <img src="assets/img/price.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         7 tỷ 500 triệu
                                     </span>
                                 </span>
 
                                 <span class="area">
-                                    <img src="/assets/img/area.png" alt="" />
+                                    <img src="assets/img/area.png" alt="" />
                                     <span style="margin-left: 5px;">
                                         240 m²
                                     </span>

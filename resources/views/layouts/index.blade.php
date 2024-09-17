@@ -19,7 +19,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Batdongsan.vn - Nền tảng Proptech số 1 Việt Nam" />
     <meta property="og:url" content="https://batdongsan.vn" />
-    <meta property="og:image" content="{{ asset('images/logo_default.png') }}" />
+    <meta property="og:image" content="/images/logo_default.png" />
     <meta property="og:description" content="Batdongsan.vn là nền tảng công nghệ bất động sản (Proptech) thuộc hệ sinh thái bất động sản số 1 Việt Nam. Batdongsan.vn cung cấp hàng ngàn tin đăng mua bán nhà đất mỗi tháng." />
 
     <meta name="twitter:card" content="summary" />
@@ -33,6 +33,7 @@
     <meta property="fb:app_id" content="478840744097490" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="requiresActiveX=true" />
+    <link rel="canonical" href="https://batdongsan.vn" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
@@ -47,6 +48,8 @@
     <link rel="stylesheet preload" href="/css/index.css" />
     <link rel="stylesheet preload" href="/css/custom.css" />
     <link rel="stylesheet preload" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/variable.css">
+    <link rel="stylesheet" href="/css/tan.css">
     <base href="{{ url('/') }}" />
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
@@ -85,17 +88,17 @@
         }
     </script>
 
-    <script rel="preload" src="{{ asset('js/swiper-bundle.min.js') }}"></script>
+    <script rel="preload" src="/js/swiper-bundle.min.js"></script>
     <script rel="preload" src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script rel="preload" src="{{ asset('js/index.js') }}"></script>
+    <script rel="preload" src="/js/index.js"></script>
 
-    <script rel="preload" src="{{ asset('js/chuyenmuc.js') }}"></script>
+    <script rel="preload" src="/js/chuyenmuc.js"></script>
 
-    <script rel="preload" src="{{ asset('js/script.js') }}"></script>
+    <script rel="preload" src="/js/script.js"></script>
 
-    <script rel="preload" src="{{ asset('js/filter.js') }}"></script>
+    <script rel="preload" src="/js/filter.js"></script>
 
     <script>
         $(document).ready(function() {

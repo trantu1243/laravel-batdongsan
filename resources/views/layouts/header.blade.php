@@ -1,10 +1,12 @@
 <!-- start header -->
+
+
 <div class="container-fluid" style="border-top: 2px solid #d1193f;"></div>
 <header class="top-header" id="header">
-    <nav class="navbar navbar-expand-lg menu navbar-light bg-light justify-content-lg-start justify-content-center" style="background: #ffffff !important; padding: 10px;">
+    <nav class="navbar navbar-expand-lg menu navbar-light justify-content-lg-start justify-content-center" style=" padding: 10px;">
         <!-- Links -->
         <!-- Brand/logo -->
-        <a style="margin-right: 42px;" class="navbar-brand ml-lg-0 ml-auto" href=""><img class="img-logo" src="{{ asset('images/batdongsan.png') }}" alt="Batdongsan.vn" width="180" /></a>
+        <a style="margin-right: 42px;" class="navbar-brand ml-lg-0 ml-auto" href=""><img class="img-logo" src="images/batdongsan.png" alt="Batdongsan.vn" width="180" /></a>
 
         <a href="/" class="d-lg-none d-block ml-lg-4 ml-auto"> </a>
 
@@ -13,24 +15,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="nav-mobile-header d-flex d-lg-none">
-                @auth
-                    <div>
-                        <img class="avatar" src="https://batdongsan.vn/images/default-user.svg" style="width: 50px; height: 50px; border-radius: 50%;" />
-                        <aside style="flex: 1; margin-left: 15px; text-align: left; padding-top: 10px;">
-                            <p style="margin: 0;">{{ Auth::user()->name }}</p>
-                        </aside>
-                    </div>
-                @else
-                    <div>
-                        <a href="/login" class="btn btn-primary">Đăng nhập</a>
-                        <a href="/register" class="btn btn-outline-secondary">Đăng kí</a>
-                    </div>
-                @endauth
-
-                <a href="/post" class="btn btn-primary">Đăng tin mới<img style="width: 20px;" src="{{ asset('assets/img/edit-header.svg') }}" alt="Đăng tin" /></a>
+                <div>
+                    <a href="sellernet/dang-nhap" class="btn btn-primary">Đăng nhập</a>
+                    <a href="dang-ki" class="btn btn-outline-secondary">Đăng kí</a>
+                </div>
+                <a href="sellernet/dang-tin" class="btn btn-primary">Đăng tin mới<img style="width: 20px;" src="assets/img/edit-header.svg" alt="Đăng tin" /></a>
             </div>
 
-            <ul class="navbar-nav mr-auto d-lg-flex">
+            <ul class="navbar-nav  mr-auto d-lg-flex">
                 <li class="item-menu d-flex d-lg-none">
                     <a class="item-nav-link" href="sellernet/manage-posts"> Danh sách tin </a>
                 </li>
@@ -136,78 +128,39 @@
                     <a class="item-nav-link" href="/su-kien">Sự kiện</a>
                 </li>
 
-                <li class="item-menu">
+                <!-- <li class="item-menu">
                     <a class="item-nav-link" href="/chuyen-de">Chuyên đề</a>
                 </li>
 
                 <li class="item-menu">
                     <a class="item-nav-link" href="/thu-vien">Thư viện</a>
-                </li>
+                </li> -->
 
                 <li class="item-menu d-flex d-lg-none">
                     <a class="item-nav-link" href="tin-da-luu"> Danh sách tin lưu </a>
                 </li>
-                @auth
-                <li class="item-menu d-flex d-lg-none">
-                    <a class="item-nav-link" href="https://batdongsan.vn/tin-da-luu"> Danh sách tin lưu </a>
-                </li>
-                <li class="item-menu d-flex d-lg-none">
-                    <a class="item-nav-link" href="https://batdongsan.vn/sellernet/thong-tin-ca-nhan"> Cài đặt tài khoản </a>
-                </li>
-
-                <li class="item-menu d-flex d-lg-none">
-                    <a class="item-nav-link" href="https://batdongsan.vn/logout"> Đăng xuất </a>
-                </li>
-                @endauth
             </ul>
         </div>
         <div class="nav-overlay" onclick="this.previousElementSibling.previousElementSibling.click()"></div>
         <ul class="navbar-nav d-none d-lg-flex" style="display: none;">
-
-            @auth
-
-            <li class="item-menu" onclick="clickShowSubmenu()" style="padding: 8px 12px; cursor: pointer; border-radius: 24px; border: 1px solid #ecedf1; box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);">
+            <li class="item-menu item-menu__login-profile" onclick="clickShowSubmenu()" style="padding: 8px 12px; cursor: pointer; border-radius: 24px; border: 1px solid #ecedf1; box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);">
                 <div>
-                    <img style="width: 24px; cursor: pointer;" src="https://batdongsan.vn/assets/img/profile-circle.svg" alt="" />
-                </div>
-                {{ Auth::user()->name }}
-
-                <ul class="sub-menu" id="profile-submenu" style="display: none;">
-                    <li>
-                        <a href="/manage-posts" style="background: #ffffff;">Quản lý tin đăng</a>
-                    </li>
-                    <li>
-                        <a href="/thong-tin-ca-nhan" style="background: #ffffff;">Cài đặt tài khoản</a>
-                    </li>
-                    <li style="border-top: 1px solid #ecedf1;">
-                        <a href="/logout" style="background: #ffffff;">Đăng xuất</a>
-                    </li>
-                </ul>
-            </li>
-
-            @else
-
-            <li class="item-menu" onclick="clickShowSubmenu()" style="padding: 8px 12px; cursor: pointer; border-radius: 24px; border: 1px solid #ecedf1; box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);">
-                <div>
-                    <img style="width: 24px; cursor: pointer;" src="{{ asset('assets/img/menu.svg') }}" alt="" />
-                    <img style="width: 24px; cursor: pointer;" src="{{ asset('assets/img/profile-circle.svg') }}" alt="" />
+                    <img style="width: 24px; cursor: pointer;" src="assets/img/menu.svg" alt="" />
+                    <img style="width: 24px; cursor: pointer;" src="assets/img/profile-circle.svg" alt="" />
                 </div>
                 <ul class="sub-menu" id="profile-submenu" style="display: none;">
                     <li>
-                        <a href="/login" style="background: #ffffff;">Đăng nhập</a>
+                        <a href="/login" style="">Đăng nhập</a>
                     </li>
                     <li style="border-top: 1px solid #ecedf1;">
-                        <a href="/register" style="background: #ffffff;">Tạo tài khoản mới</a>
+                        <a href="/register" style="">Tạo tài khoản mới</a>
                     </li>
                 </ul>
             </li>
-
-            @endauth
-
             <li class="item-menu" style="padding: 8px 12px; background: rgb(224, 60, 49); border-radius: 24px;">
                 <a title="Đăng Tin" href="/post">
                     <span style="color: #ffffff; font-weight: 600; font-size: 14px; line-height: 22px;">Đăng Tin</span>
-                    <img style="width: 20px;" src="{{ asset('assets/img/edit-header.svg') }}" alt="Đăng tin" />
+                    <img style="width: 20px;" src="assets/img/edit-header.svg" alt="Đăng tin" />
                 </a>
             </li>
         </ul>

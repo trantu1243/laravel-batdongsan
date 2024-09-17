@@ -1,13 +1,13 @@
-<footer style="background: #ecedf1;">
+<footer>
     <div class="footer container pt-1 gap-w">
         <div class="footer-top row">
-            <div class="col-md-4 text-center text-md-left">
+            <div class="col-md-3 text-center text-md-left">
                 <a href="">
-                    <img src="images/batdongsan.png" width="220" height="" alt="" />
+                    <img src="images/batdongsan.png" style="width: 140px;height: 70px;object-fit: cover;" alt="" />
                 </a>
             </div>
 
-            <div class="col-md-2 col-12">
+            <div class="col-md-3 col-12">
                 <div class="item d-flex gap-1 align-items-center">
                     <div class="img" style="float: left;">
                         <img src="images/call-calling.svg" alt="" />
@@ -26,19 +26,19 @@
                     <div class="text">
                         <div class="text-top">Hỗ trợ khách hàng</div>
                         <a href="/cdn-cgi/l/email-protection#56252326263924221634372232393831253738782038" class="text-bot">
-                            <span class="__cf_email__" data-cfemail="ec9f999c9c839e98ac8e8d988883828b9f8d82c29a82">[email&#160;protected]</span>
+                            <span class="__cf_email__">TanNguyen.vn</span>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="item d-flex gap-1 align-items-center justify-content-md-end text-md-left">
+                <div class="item d-flex gap-1 align-items-center ">
                     <div class="img" style="float: left;">
                         <img src="images/cskh.svg" alt="" />
                     </div>
                     <div class="text">
                         <div class="text-top">Chăm sóc khách hàng</div>
-                        <div href="mailto:contact@batdongsan.vn" class="text-bot"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e98a86879d888a9da98b889d8d86878e9a8887c79f87">[email&#160;protected]</a></div>
+                        <div href="mailto:contact@TanNguyen.vn" class="text-bot"><a href="/cdn-cgi/l/email-protection" class="__cf_email__">TanNguyen.vn</a></div>
                     </div>
                 </div>
             </div>
@@ -142,11 +142,11 @@
         <hr />
         <div class="row footer-local mat-48">
             <div class="col-md-12">
-                <h2 class="title">Công ty Cổ phần Đầu tư Tiếp thị Bất động sản Việt Nam (Batdongsan.vn.,JSC)</h2>
+                <h2 class="title">Công ty Cổ phần Đầu tư Tiếp thị Bất động sản Việt Nam (TanNguyen.vn.,JSC)</h2>
             </div>
             <div class="col-md-12">
                 <ul class="flex-wrap">
-                    <li>Copyright © 2021 Batdongsan.vn, All rights reserved.</li>
+                    <li>Copyright © 2021 TanNguyen.vn, All rights reserved.</li>
                     <li><a href="dieu-khoan-thoa-thuan">Điều khoản thỏa thuận</a></li>
                     <li><a href="chinh-sach-bao-mat">Chính sách bảo mật</a></li>
                     <li><a href="quy-che-hoat-dong">Quy chế hoạt động</a></li>
@@ -162,7 +162,7 @@
             </div>
             <div class="col-md-12 mt-3" style="padding-bottom: 10px;">
                 <span style="font-size: 12px;">
-                    Batdongsan.vn là Website thuộc sở hữu của Công ty Cổ phần Đầu tư Tiếp thị Bất động sản Việt Nam (Batdongsan.vn.,JSC), thành lập ngày 14/10/2015, Mã số Doanh nghiệp 0107025430 và trụ sở tại Số 14 Villa D, The Manor, Khu
+                    TanNguyen.vn là Website thuộc sở hữu của Công ty Cổ phần Đầu tư Tiếp thị Bất động sản Việt Nam (TanNguyen.vn.,JSC), thành lập ngày 14/10/2015, Mã số Doanh nghiệp 0107025430 và trụ sở tại Số 14 Villa D, The Manor, Khu
                     đô thị mới Mỹ Đình Mễ Trì, Phường Mỹ Đình 1, Quận Nam Từ Liêm, Thành phố Hà Nội.
                 </span>
             </div>
