@@ -18,7 +18,7 @@ class AuthenticationMiddleware
     {
         if (Auth::id() != null) {
             toastr()->success('Bạn đã đăng nhập');
-            return redirect()->route('home')->with('success', 'Bạn đã đăng nhập');
+            return redirect()->route('home');
         }
         return $next($request);
     }
