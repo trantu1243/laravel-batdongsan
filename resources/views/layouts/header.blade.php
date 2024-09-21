@@ -6,7 +6,7 @@
     <nav class="navbar navbar-expand-lg menu navbar-light justify-content-lg-start justify-content-center" style=" padding: 10px;">
         <!-- Links -->
         <!-- Brand/logo -->
-        <a style="margin-right: 42px;" class="navbar-brand ml-lg-0 ml-auto" href=""><img class="img-logo" src="images/batdongsan.png" alt="Batdongsan.vn" width="180" /></a>
+        <a style="margin-right: 42px;" class="navbar-brand ml-lg-0 ml-auto" href=""><img class="img-logo" src="images/batdongsan.png" alt="Batdongsan.vn" /></a>
 
         <a href="/" class="d-lg-none d-block ml-lg-4 ml-auto"> </a>
 

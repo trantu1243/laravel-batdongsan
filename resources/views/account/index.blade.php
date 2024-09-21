@@ -45,9 +45,9 @@
         </div>
         <div class="col-lg-7 login-bg">
             <div class="login-img">
-                <div><img src="/assets/img/Frame 320.png" /></div>
+                <div><img src="/assets/img/img-account.jpg" /></div>
                 <div>
-                    <label>Ngập tràn khuyến mại khi đăng tin trên <span>Batdongsan!</span></label>
+                    <label>Ngập tràn khuyến mại khi đăng tin trên <span>Website Batdongsan</span></label>
                 </div>
             </div>
         </div>

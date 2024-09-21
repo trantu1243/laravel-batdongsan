@@ -4686,7 +4686,7 @@ label[dir="rtl"] .range-slider {
 .login-form .btn-submit {
     background-color: #24812f;
     color: #fff;
-    transition:background-color 0.5s ease-in-out ,color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 .login-form .btn-submit:hover {
     background-color: #08089f;
@@ -4723,8 +4723,10 @@ label[dir="rtl"] .range-slider {
 }
 
 .login-img img {
-    width: 474px;
+    width: 700px;
+    object-fit: cover;
     height: 360px;
+    border-radius: 10px;
 }
 
 .login-img label {
