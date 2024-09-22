@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\Auth\AdminLoginController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Home\HomeController;
+use App\Http\Middleware\AdminAuthMiddleware;
+use App\Http\Middleware\AdminVerifyMiddleware;
 use App\Http\Middleware\AuthenticationMiddleware;
 use Illuminate\Support\Facades\Route;
 
@@ -32,4 +35,17 @@ Route::get('/post', function () {
 
 Route::get('/detail', function () {
     return view('batdongsan.index');
+});
+
+Route::middleware([AdminAuthMiddleware::class])->group(function (){
+    Route::get('/admin/login', [AdminLoginController::class, 'show'])->name('admin.login');
+    Route::post('/admin/login', [AdminLoginController::class, 'login'])->name('admin.post.login');
+});
+
+Route::middleware([AdminVerifyMiddleware::class])->group(function (){
+    Route::get('/admin', function () {
+        return view('admin.index');
+    })->name('dashboard');
+
+    Route::get('/admin/logout', [AdminLoginController::class, 'logout']);
 });

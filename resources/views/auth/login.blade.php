@@ -136,14 +136,20 @@
                 </div>
 
                 <div class="form">
-                    <form id="login-form" method="post" action="/sellernet/dang-nhap" data-sitekey="6LeDHhYqAAAAADnhqvjYEccw4teIrS7cNXkwqu3I">
-                        <input type="hidden" name="_token" value="0mTnDMqOd3qiYpZnVndGJ01fPgjgapaJAEwN7ATF" />
+                    <form id="login-form" method="post" action="{{ Route('auth.post.login') }}">
+                        @csrf
                         <div class="form-group email">
                             <input value="" type="email" placeholder="Email" name="email" />
+                            @error('email')
+                            <p id="error-signup-fullName-input" class="text-danger error">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div class="form-group mat-16">
                             <input placeholder="Mật khẩu" value="" type="password" name="password" />
+                            @error('password')
+                            <p id="error-signup-fullName-input" class="text-danger error">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <input type="hidden" name="g-recaptcha-response" id="recaptcha-token" />

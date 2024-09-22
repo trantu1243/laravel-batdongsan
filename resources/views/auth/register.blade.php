@@ -133,22 +133,32 @@
                 </div>
 
                 <div class="form">
-                    <form method="post" action="/register" data-sitekey="6LeDHhYqAAAAADnhqvjYEccw4teIrS7cNXkwqu3I">
-                        <input type="hidden" name="_token" value="0mTnDMqOd3qiYpZnVndGJ01fPgjgapaJAEwN7ATF" />
+                    <form method="POST" action="{{ Route('auth.post.register') }}">
+                        @csrf
                         <div class="form-group email">
                             <input value="" type="text" placeholder="Họ tên" name="name" />
                         </div>
-
+                        @error('name')
+                            <p id="error-signup-fullName-input" class="text-danger error">{{ $message }}</p>
+                        @enderror
                         <div class="form-group email">
                             <input value="" type="email" placeholder="Email" name="email" />
                         </div>
+                        @error('email')
+                            <p id="error-signup-fullName-input" class="text-danger error">{{ $message }}</p>
+                        @enderror
                         <div class="form-group phone">
                             <input value="" type="text" placeholder="Số điện thoại" name="phone" />
                         </div>
+                        @error('phone')
+                            <p id="error-signup-fullName-input" class="text-danger error">{{ $message }}</p>
+                        @enderror
                         <div class="form-group mat-16">
                             <input placeholder="Mật khẩu" value="" type="password" name="password" />
                         </div>
-
+                        @error('password')
+                            <p id="error-signup-fullName-input" class="text-danger error">{{ $message }}</p>
+                        @enderror
                         <div class="form-group mat-16">
                             <input placeholder="Nhập lại mật khẩu" value="" type="password" name="password_confirmation" />
                         </div>
@@ -158,7 +168,8 @@
                         <button type="submit" class="btn btn-submit mt-3">Đăng kí</button>
 
                         <div class="">
-                            <div class="dangky">Bạn đã có tài khoản? <a href="/login">Đăng nhập</a></div>
+                            <div class="dangky">Bạn đã có tài khoản? <a href="/login" style="color: #007bff !important;">Đăng nhập</a></div>
+
                         </div>
                     </form>
                 </div>
