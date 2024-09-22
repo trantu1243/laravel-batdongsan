@@ -118,7 +118,7 @@
 
         <div class="search-main">
             <input type="text" name="KeywordOrigin" id="KeywordOrigin" placeholder="Tìm kiếm địa chỉ, dự án..." />
-            <button type="submit" style="width: 159px; background: rgb(224, 60, 49); border-radius: 0px 28px 28px 0px; color: #ffffff;">
+            <button type="submit" style="width: 159px; background: #41aed5; border-radius: 0px 28px 28px 0px; color: #ffffff;">
                 <i class="fa fa-search" aria-hidden="true" style="color: #ffffff;"></i>
                 Tìm kiếm
             </button>

@@ -604,7 +604,7 @@ body#dangtintuc .title-collapse {
 #danhmuc .selectpicker ~ .dropdown-menu .dropdown-item:active,
 body#dangtintuc .row-bds .count-container .btn-minus.active,
 body#dangtintuc .row-bds .count-container .btn-plus.active {
-    background: #e03c31;
+    background: #3fd0c8;
 }
 
 #danhmuc .selectpicker ~ .dropdown-menu .dropdown-item.active.selected span,
@@ -895,7 +895,7 @@ body#dangtintuc .dangtintuc-image:hover {
     font-size: 14px;
     line-height: 22px;
     color: #fff;
-    background-color: #e03c31;
+    background-color: #31cee0;
     border-radius: 19px;
 }
 
@@ -1985,7 +1985,7 @@ body#dangtintuc .title-collapse .thugon.collapsed:hover::after {
     bottom: calc(100% + 12px);
     left: 0;
     content: "Đang mở bán";
-    background: #e03c31;
+    background: #48bfc0;
     display: flex;
     align-items: center;
     padding: 4px 8px;
@@ -2420,7 +2420,7 @@ body#dangtintuc .container-left-side .element-collapse .element-collapse-title {
 
 #sub-filter .btn-group-toggle .btn.active,
 .page-link:hover {
-    background: #e03c31;
+    background: #31d2e0;
     color: #fff;
 }
 
@@ -3125,13 +3125,13 @@ body#dangtintuc .dangtintuc-image.active {
 }
 
 .range-slider {
-    --primary-color: rgb(224, 60, 49);
+    --primary-color: #6ed5eb; /* Đổi thành màu 6ed5eb */
     --value-offset-y: var(--ticks-gap);
     --value-active-color: white;
     --value-background: transparent;
     --value-background-hover: var(--primary-color);
     --value-font: 700 12px/1 Arial;
-    --fill-color: var(--primary-color);
+    --fill-color: var(--primary-color); /* Đổi thành màu 6ed5eb */
     --progress-background: #ecedf1;
     --progress-radius: 20px;
     --track-height: 4px;
@@ -3139,7 +3139,7 @@ body#dangtintuc .dangtintuc-image.active {
     --min-max-opacity: 0.5;
     --min-max-x-offset: 10%;
     --thumb-size: 24px;
-    --thumb-color: rgb(224, 60, 49);
+    --thumb-color: #6ed5eb; /* Đổi thành màu 6ed5eb */
     --thumb-shadow: 0 0 3px rgba(0, 0, 0, 0.4), 0 0 1px rgba(0, 0, 0, 0.5) inset,
         0 0 0 99px var(--thumb-color) inset;
     --thumb-shadow-active: 0 0 0 calc(var(--thumb-size) / 4) inset
@@ -4929,7 +4929,7 @@ body#dangtintuc .dangtintuc-image .title-imgage {
 }
 
 body#dangtintuc .btn-footer-watching {
-    background: #f6d1d9;
+    background: #ccf4f6;
     height: 84px;
     border-radius: 8px;
     width: 100%;
@@ -4944,7 +4944,7 @@ body#dangtintuc .btn-footer-watching .btn-container .btn {
 body#dangtintuc .btn-footer-watching .btn-container .btn-container-footer {
     margin-left: auto;
     margin-right: 24px;
-    background: #e03c31;
+    background: #31bae0;
     border-radius: 8px;
     display: flex;
     flex-direction: row;
@@ -5025,7 +5025,7 @@ body#dangtintuc .container-left-side .value-container {
     font-style: normal;
     font-weight: 600;
     font-size: 48px;
-    color: #e03c31;
+    color: #31e0de;
 }
 
 body#dangtintuc .container-left-side .btn-title {

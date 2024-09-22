@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="batdongsan.vn" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Đăng ký | Batdongsan.vn" />
-    <meta property="og:url" content="/dang-ki" />
+    <meta property="og:url" content="/register" />
     <meta property="og:image" content="" />
     <meta property="og:description" content="Tin tức bất động sản; cập nhật thông tin thị trường bất động sản, thông tin dự án, quy hoạch và nhận định từ chuyên gia." />
 
@@ -33,7 +33,7 @@
     <meta property="fb:app_id" content="478840744097490" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="requiresActiveX=true" />
-    <link rel="canonical" href="/dang-ki" />
+    <link rel="canonical" href="/register" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
@@ -158,7 +158,7 @@
                         <button type="submit" class="btn btn-submit mt-3">Đăng kí</button>
 
                         <div class="">
-                            <div class="dangky">Bạn đã có tài khoản? <a href="/sellernet/dang-nhap">Đăng nhập</a></div>
+                            <div class="dangky">Bạn đã có tài khoản? <a href="/login">Đăng nhập</a></div>
                         </div>
                     </form>
                 </div>

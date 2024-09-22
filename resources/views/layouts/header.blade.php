@@ -157,7 +157,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="item-menu" style="padding: 8px 12px; background: rgb(224, 60, 49); border-radius: 24px;">
+            <li class="item-menu" style="padding: 8px 12px; background: #35bcdd; border-radius: 24px;">
                 <a title="Đăng Tin" href="/post">
                     <span style="color: #ffffff; font-weight: 600; font-size: 14px; line-height: 22px;">Đăng Tin</span>
                     <img style="width: 20px;" src="assets/img/edit-header.svg" alt="Đăng tin" />
