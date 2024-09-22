@@ -162,7 +162,7 @@
                         <button type="button" class="btn"><img src="/assets/icon/google.svg" />Đăng nhập bằng Google</button>
                         <button type="button" class="btn"><img src="/assets/icon/facebook.svg" />Đăng nhập bằng Facebook</button>
                         <div class="">
-                            <div class="dangky">Chưa có tài khoản? <a style="color: #007bff;" href="/register">Đăng ký</a></div>
+                            <div class="dangky">Chưa có tài khoản? <a href="/register">Đăng ký</a></div>
                         </div>
                     </form>
                 </div>
