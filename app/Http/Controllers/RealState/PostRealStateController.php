@@ -8,6 +8,7 @@ use App\Models\Property;
 use App\Models\PropertyImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class PostRealStateController extends Controller
 {
@@ -19,7 +20,8 @@ class PostRealStateController extends Controller
     }
 
     public function create(RealStateRequest $request){
-        $realState = Property::create([
+        try{
+            $realState = Property::create([
             'user_id' => Auth::id(),
             'property_type' => $request->input('property_type'),
             'property_category' => $request->input('property_category'),
@@ -61,5 +63,12 @@ class PostRealStateController extends Controller
 
         toastr()->success('Đã tạo bất động sản thành công');
         return redirect(route('manage'));
+        }
+        catch (\Exception $e) {
+            Log::error($e);
+            toastr()->error($e);
+            return back();
+        }
+
     }
 }

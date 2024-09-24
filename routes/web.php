@@ -24,7 +24,7 @@ Route::middleware([AuthenticationMiddleware::class])->group(function () {
     Route::post('register', [RegisterController::class, 'register'])->name('auth.post.register');
 });
 
-Route::middleware([VerifyMiddleware::class])->group((function () {
+Route::middleware([VerifyMiddleware::class])->group(function () {
     Route::get('/account', function () {
         return view('account.index');
     })->name('account');
@@ -33,7 +33,7 @@ Route::middleware([VerifyMiddleware::class])->group((function () {
 
     Route::get('/post', [PostRealStateController::class, 'show'])->name('real-state-post');
     Route::post('/post', [PostRealStateController::class, 'create'])->name('create-real-state');
-}));
+});
 
 Route::get('logout', [LoginController::class, 'logout'])->name('auth.logout');
 
