@@ -544,20 +544,20 @@
                         </a>
                         <ul class="nav nav-treeview" style="margin-left: 20px;">
                             <li class="nav-item">
-                                <a href="https://batdongsan.vn/sellernet/dang-tin" class="nav-link">
+                                <a href="/post" class="nav-link">
                                     <i class="fa fa-circle nav-icon"></i>
                                     <p>Đăng mới</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://batdongsan.vn/sellernet/manage-posts" class="nav-link">
+                                <a href="/manage" class="nav-link">
                                     <i class="fa fa-circle nav-icon"></i>
 
                                     <p>Tất cả tin (1)</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://batdongsan.vn/sellernet/manage-posts/status/2" class="nav-link">
+                                <a href="/manage/status/2" class="nav-link">
                                     <i class="fa fa-circle nav-icon"></i>
 
                                     <p>Tin đang đăng (0)</p>
@@ -565,7 +565,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="https://batdongsan.vn/sellernet/manage-posts/status/1" class="nav-link">
+                                <a href="/manage/status/1" class="nav-link">
                                     <i class="fa fa-circle nav-icon"></i>
 
                                     <p>Tin chờ duyệt (1)</p>
@@ -573,15 +573,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="https://batdongsan.vn/sellernet/manage-posts/status/3" class="nav-link">
-                                    <i class="fa fa-circle nav-icon"></i>
-
-                                    <p>Tin sửa chờ duyệt (0)</p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="https://batdongsan.vn/sellernet/manage-posts/status/4" class="nav-link">
+                                <a href="/manage/status/3" class="nav-link">
                                     <i class="fa fa-circle nav-icon"></i>
                                     <p>Tin không duyệt (0)</p>
                                 </a>
@@ -656,13 +648,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($realStates as $index => $item)
                                     <tr>
-                                        <td>1</td>
+                                        <td>{{ $index+1 }}</td>
 
                                         <td style="border-right: 1px solid #dee2e6;">
                                             <div class="sc-cQEFXY wYwaw">
                                                 <h6 class="sc-jSgupP jnxXQS sc-fKuJET bDsSzR" type="primary">
-                                                    Bán nhà riêng 50m2 tại cầu giấy
+                                                    {{ $item->title }}
                                                 </h6>
                                             </div>
 
@@ -673,23 +666,35 @@
                                                         <div class="sc-fubCfw eeaWWy sc-ieGSVO fGIfUh" type="secondary">
                                                             <div color="gray" class="sc-ebkicu gpcSQh">
                                                                 <div color="gray" class="sc-fodVxV sUpQc sc-jtazYL eTTgQK" type="primary">
-                                                                    <span class="badge badge-warning">Chờ duyệt</span>
+                                                                    @php
+                                                                        $status = $item->post_status;
+                                                                        $badge = 'primary';
+                                                                        if ($item->post_status == "pending_approval") {
+                                                                            $status = "Chờ duyệt";
+                                                                            $badge = 'warning';
+                                                                        } else if ($item->post_status == "pending_revision") {
+                                                                            $status = "Sửa chờ duyệt";
+                                                                            $badge = 'warning';
+                                                                        } else if ($item->post_status == "rejected") {
+                                                                            $status = "Không duyệt";
+                                                                            $badge = 'danger';
+                                                                        } else if ($item->post_status == "active") {
+                                                                            $status = "Tin đang đăng";
+                                                                            $badge = 'success';
+                                                                        }
+                                                                    @endphp
+                                                                    <span class="badge badge-{{ $badge }}">{{ $status }}</span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="sc-hHdvca shBlC">
-                                                    <div class="sc-bMYSqt cdBuCE">
-                                                        <div type="tertiary" class="sc-fubCfw kzuyPj">Mã tin</div>
-                                                        <div class="sc-iBPRYJ fTqJhL sc-ieGSVO fGIfUh" type="secondary"><span style="cursor: pointer;">117366</span></div>
-                                                    </div>
-                                                </div>
+
                                                 <div class="sc-hHdvca shBlC">
                                                     <div class="sc-bMYSqt cdBuCE">
                                                         <div type="tertiary" class="sc-fubCfw kzuyPj">Ngày đăng</div>
                                                         <div class="sc-iBPRYJ fTqJhL sc-ieGSVO fGIfUh" type="secondary">
-                                                            25/08/2024
+                                                            {{ $item->start_date }}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -698,7 +703,7 @@
                                                     <div class="sc-bMYSqt cdBuCE">
                                                         <div type="tertiary" class="sc-fubCfw kzuyPj">Số ngày đăng</div>
                                                         <div class="sc-iBPRYJ fTqJhL sc-ieGSVO fGIfUh" type="secondary">
-                                                            10 ngày
+                                                            {{ $item->post_days }}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -706,7 +711,7 @@
                                                 <div class="sc-hHdvca shBlC">
                                                     <div class="sc-bMYSqt cdBuCE">
                                                         <div type="tertiary" class="sc-fubCfw kzuyPj">Lượt xem</div>
-                                                        <div class="sc-iBPRYJ fTqJhL sc-ieGSVO fGIfUh" type="secondary">0</div>
+                                                        <div class="sc-iBPRYJ fTqJhL sc-ieGSVO fGIfUh" type="secondary">{{ $item->view }}</div>
                                                     </div>
                                                 </div>
 
@@ -743,6 +748,7 @@
                                             </div>
                                         </td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

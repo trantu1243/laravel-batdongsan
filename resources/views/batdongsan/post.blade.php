@@ -407,9 +407,9 @@
                                                         <div class="col-md-3">
                                                             <label class="form-label"> Đơn vị </label>
                                                             <select id="don_vi_gia" class="selectpicker ptanh-custom-select form-control" title="Chọn đơn vị" name="price_unit">
-                                                                <option value="VNĐ" selected>VNĐ</option>
-                                                                <option value="gia-m2">Giá / m2</option>
-                                                                <option value="Thỏa thuận">Thỏa thuận </option>
+                                                                <option value="vnd" selected>VNĐ</option>
+                                                                <option value="price_per_m2">Giá / m2</option>
+                                                                <option value="negotiable">Thỏa thuận </option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -419,10 +419,10 @@
                                                                 Giấy tờ pháp lý
                                                             </label>
                                                             <select name="legal_documents" class="selectpicker ptanh-custom-select form-control">
-                                                                <option value="0">Không</option>
-                                                                <option value="1">Sổ đỏ/ Sổ hồng</option>
-                                                                <option value="2">Hợp đồng mua bán</option>
-                                                                <option value="3">Đang chờ sổ</option>
+                                                                <option value="none">Không</option>
+                                                                <option value="red_book">Sổ đỏ/ Sổ hồng</option>
+                                                                <option value="sale_contract">Hợp đồng mua bán</option>
+                                                                <option value="pending">Đang chờ sổ</option>
                                                             </select>
                                                             <div class="clear-select-bootstrap">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
@@ -477,14 +477,14 @@
                                                         <div class="col-md-6">
                                                             <label class="form-label">Hướng nhà</label>
                                                             <select name="house_direction" class="selectpicker ptanh-custom-select form-control" title="Chọn hướng">
-                                                                <option value="Đông">Đông</option>
-                                                                <option value="Tây">Tây</option>
-                                                                <option value="Nam">Nam</option>
-                                                                <option value="Bắc">Bắc</option>
-                                                                <option value="Đông Bắc">Đông Bắc</option>
-                                                                <option value="Tây Bắc">Tây Bắc</option>
-                                                                <option value="Tây Nam">Tây Nam</option>
-                                                                <option value="Đông Nam">Đông Nam</option>
+                                                                <option value="east">Đông</option>
+                                                                <option value="west">Tây</option>
+                                                                <option value="south">Nam</option>
+                                                                <option value="north">Bắc</option>
+                                                                <option value="northeast">Đông Bắc</option>
+                                                                <option value="northwest">Tây Bắc</option>
+                                                                <option value="southeast">Tây Nam</option>
+                                                                <option value="southwest">Đông Nam</option>
                                                             </select>
                                                             <div class="clear-select-bootstrap">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
@@ -496,14 +496,14 @@
                                                         <div class="col-md-6">
                                                             <label class="form-label">Hướng ban công</label>
                                                             <select name="balcony_direction" class="selectpicker ptanh-custom-select form-control" title="Chọn hướng">
-                                                                <option value="Đông">Đông</option>
-                                                                <option value="Tây">Tây</option>
-                                                                <option value="Nam">Nam</option>
-                                                                <option value="Bắc">Bắc</option>
-                                                                <option value="Đông Bắc">Đông Bắc</option>
-                                                                <option value="Tây Bắc">Tây Bắc</option>
-                                                                <option value="Tây Nam">Tây Nam</option>
-                                                                <option value="Đông Nam">Đông Nam</option>
+                                                                <option value="east">Đông</option>
+                                                                <option value="west">Tây</option>
+                                                                <option value="south">Nam</option>
+                                                                <option value="north">Bắc</option>
+                                                                <option value="northeast">Đông Bắc</option>
+                                                                <option value="northwest">Tây Bắc</option>
+                                                                <option value="southeast">Tây Nam</option>
+                                                                <option value="southwest">Đông Nam</option>
                                                             </select>
                                                             <div class="clear-select-bootstrap">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
@@ -607,19 +607,19 @@
                                                         <div class="row row-element">
                                                             <div class="col-md-6 col-sm-12">
                                                                 <label for="validationCustom04" class="form-label"> Tên liên hệ <span class="batbuoc">*</span> </label>
-                                                                <input name="name" type="text" value="Tu Tran" class="ptanh-custom-input form-control" placeholder="Nhập tên" />
+                                                                <input name="name" type="text" value="{{ $user->name }}" class="ptanh-custom-input form-control" placeholder="Nhập tên" />
                                                                 <div class="author_name_error text-danger"></div>
                                                             </div>
                                                             <div class="col-md-6 col-sm-12">
                                                                 <label for="validationCustom04" class="form-label"> Số điện thoại <span class="batbuoc">*</span> </label>
-                                                                <input type="text" name="phone" class="ptanh-custom-input form-control" placeholder="Nhập số điện thoại" value="0333627251" />
+                                                                <input type="text" name="phone" class="ptanh-custom-input form-control" placeholder="Nhập số điện thoại" value="{{$user->phone}}" />
                                                                 <div class="author_phone_error text-danger"></div>
                                                             </div>
                                                         </div>
                                                         <div class="row row-element">
                                                             <div class="col-md-6 col-sm-12">
                                                                 <label for="validationCustom04" class="form-label"> Email <span class="batbuoc">*</span> </label>
-                                                                <input name="email" type="text" class="ptanh-custom-input form-control" placeholder="Nhập email" value="trantu1242003@gmail.com" />
+                                                                <input name="email" type="text" class="ptanh-custom-input form-control" placeholder="Nhập email" value="{{ $user->email }}" />
                                                                 <div class="author_email_error text-danger"></div>
                                                             </div>
                                                         </div>

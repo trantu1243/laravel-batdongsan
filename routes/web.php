@@ -1,10 +1,14 @@
 <?php
 
 use App\Http\Controllers\Admin\Auth\AdminLoginController;
+use App\Http\Controllers\Admin\Batdongsan\BatdongsanController;
+use App\Http\Controllers\Admin\Batdongsan\BatdongsanDetailController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Home\HomeController;
+use App\Http\Controllers\Manage\ManageController;
 use App\Http\Controllers\RealState\PostRealStateController;
+use App\Http\Controllers\RealState\RealStateController;
 use App\Http\Middleware\AdminAuthMiddleware;
 use App\Http\Middleware\AdminVerifyMiddleware;
 use App\Http\Middleware\AuthenticationMiddleware;
@@ -22,12 +26,10 @@ Route::middleware([AuthenticationMiddleware::class])->group(function () {
 
 Route::middleware([VerifyMiddleware::class])->group((function () {
     Route::get('/account', function () {
-        return view('account.index')->name('account');
-    });
+        return view('account.index');
+    })->name('account');
 
-    Route::get('/manage', function () {
-        return view('manage.index')->name('manage');
-    });
+    Route::get('/manage', [ManageController::class, 'show'])->name('manage');
 
     Route::get('/post', [PostRealStateController::class, 'show'])->name('real-state-post');
     Route::post('/post', [PostRealStateController::class, 'create'])->name('create-real-state');
@@ -39,9 +41,7 @@ Route::get('/category', function () {
     return view('category.index');
 });
 
-Route::get('/detail', function () {
-    return view('batdongsan.index');
-});
+Route::get('/real-state/{id}', [RealStateController::class, 'show']);
 
 Route::middleware([AdminAuthMiddleware::class])->group(function (){
     Route::get('/admin/login', [AdminLoginController::class, 'show'])->name('admin.login');
@@ -52,6 +52,9 @@ Route::middleware([AdminVerifyMiddleware::class])->group(function (){
     Route::get('/admin', function () {
         return view('admin.index');
     })->name('dashboard');
+
+    Route::get('/admin/real-state', [BatdongsanController::class, 'show'])->name('admin.real-state');
+    Route::get('/admin/real-state/{id}', [BatdongsanDetailController::class, 'show'])->name('detail.real-state');
 
     Route::get('/admin/logout', [AdminLoginController::class, 'logout']);
 });

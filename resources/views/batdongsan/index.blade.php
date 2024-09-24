@@ -228,7 +228,7 @@
                                             </svg>
                                         </div>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <select
                                             id="select-duong"
                                             name="StreetIdsAsString"
@@ -247,8 +247,8 @@
                                                 />
                                             </svg>
                                         </div>
-                                    </li>
-                                    <li>
+                                    </li> --}}
+                                    {{-- <li>
                                         <select
                                             id="select-duan"
                                             name="ProjectIdsAsString[]"
@@ -273,7 +273,7 @@
                                                 />
                                             </svg>
                                         </div>
-                                    </li>
+                                    </li> --}}
                                     <li class="form-footer">
                                         <p class="form-checkbox-resetall">
                                             <img src="/assets/img/refresh-2.svg" alt="" />
@@ -714,82 +714,30 @@
 
                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" data-zoom="1" class="swiper mySwiper2">
                     <div class="swiper-wrapper">
+                        @foreach ($images as $item)
                         <div class="swiper-slide">
                             <img
-                                alt="Bán biệt thự 267.2m2 Trịnh Quang Nghị 4 tầng Phong Phú Bình Chánh  giá chỉ 30,5 tỷ"
+                                alt="{{ $realState->title }}"
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII="
-                                lazy-src="https://media.batdongsan.vn/posts/117359_66c9f32bc3f48.jpg"
+                                lazy-src="{{ $item->image_url }}"
                             />
                         </div>
-                        <div class="swiper-slide">
-                            <img
-                                alt="Bán biệt thự 267.2m2 Trịnh Quang Nghị 4 tầng Phong Phú Bình Chánh  giá chỉ 30,5 tỷ"
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII="
-                                lazy-src="https://media.batdongsan.vn/posts/117359_66c9f32bc7113.jpg"
-                            />
-                        </div>
-                        <div class="swiper-slide">
-                            <img
-                                alt="Bán biệt thự 267.2m2 Trịnh Quang Nghị 4 tầng Phong Phú Bình Chánh  giá chỉ 30,5 tỷ"
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII="
-                                lazy-src="https://media.batdongsan.vn/posts/117359_66c9f32bc77de.jpg"
-                            />
-                        </div>
-                        <div class="swiper-slide">
-                            <img
-                                alt="Bán biệt thự 267.2m2 Trịnh Quang Nghị 4 tầng Phong Phú Bình Chánh  giá chỉ 30,5 tỷ"
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII="
-                                lazy-src="https://media.batdongsan.vn/posts/117359_66c9f32bc7c35.jpg"
-                            />
-                        </div>
-                        <div class="swiper-slide">
-                            <img
-                                alt="Bán biệt thự 267.2m2 Trịnh Quang Nghị 4 tầng Phong Phú Bình Chánh  giá chỉ 30,5 tỷ"
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII="
-                                lazy-src="https://media.batdongsan.vn/posts/117359_66c9f32bc8149.jpg"
-                            />
-                        </div>
+                        @endforeach
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
                 <div thumbsSlider="" class="swiper mySwiper">
                     <div class="swiper-wrapper">
+                        @foreach ($images as $item)
                         <div class="swiper-slide">
                             <img
-                                alt="Bán biệt thự 267.2m2 Trịnh Quang Nghị 4 tầng Phong Phú Bình Chánh  giá chỉ 30,5 tỷ"
+                                alt="{{ $realState->title }}"
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII="
-                                lazy-src="https://media.batdongsan.vn/posts/117359_66c9f32bc3f48.jpg"
+                                lazy-src="{{ $item->image_url }}"
                             />
                         </div>
-                        <div class="swiper-slide">
-                            <img
-                                alt="Bán biệt thự 267.2m2 Trịnh Quang Nghị 4 tầng Phong Phú Bình Chánh  giá chỉ 30,5 tỷ"
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII="
-                                lazy-src="https://media.batdongsan.vn/posts/117359_66c9f32bc7113.jpg"
-                            />
-                        </div>
-                        <div class="swiper-slide">
-                            <img
-                                alt="Bán biệt thự 267.2m2 Trịnh Quang Nghị 4 tầng Phong Phú Bình Chánh  giá chỉ 30,5 tỷ"
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII="
-                                lazy-src="https://media.batdongsan.vn/posts/117359_66c9f32bc77de.jpg"
-                            />
-                        </div>
-                        <div class="swiper-slide">
-                            <img
-                                alt="Bán biệt thự 267.2m2 Trịnh Quang Nghị 4 tầng Phong Phú Bình Chánh  giá chỉ 30,5 tỷ"
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII="
-                                lazy-src="https://media.batdongsan.vn/posts/117359_66c9f32bc7c35.jpg"
-                            />
-                        </div>
-                        <div class="swiper-slide">
-                            <img
-                                alt="Bán biệt thự 267.2m2 Trịnh Quang Nghị 4 tầng Phong Phú Bình Chánh  giá chỉ 30,5 tỷ"
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII="
-                                lazy-src="https://media.batdongsan.vn/posts/117359_66c9f32bc8149.jpg"
-                            />
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -799,35 +747,39 @@
                     <div class="title mb-3 re__breadcrumb">
                         <a style="color: #999;" class="re__link-se" href="/">Trang chủ</a> /
 
-                        <a style="color: #999;" class="re__link-se" href="/ban-biet-thu">Bán Biệt thự</a> /
+                        <a style="color: #999;" class="re__link-se" href="/ban-biet-thu">{{ $realState->property_category }}</a> /
 
-                        <a style="color: #999;" class="re__link-se" href="/ban-biet-thu-ho-chi-minh">Hồ Chí Minh</a> /
+                        <a style="color: #999;" class="re__link-se" href="/ban-biet-thu-ho-chi-minh">{{ $realState->city }}</a> /
 
-                        <a style="color: #999;" class="re__link-se" href="/ban-biet-thu-binh-chanh-ho-chi-minh">Bình Chánh</a> / Bán biệt thự 267.2m2 Trịnh Quang Nghị 4 tầng Phong Phú Bình Chánh giá chỉ 30,5 tỷ
+                        <a style="color: #999;" class="re__link-se" href="/ban-biet-thu-binh-chanh-ho-chi-minh">{{ $realState->district }}</a>
                     </div>
                     <div class="content">
-                        <h1 style="font-size: 24px; line-height: 34px; font-weight: 600;">Bán biệt thự 267.2m2 Trịnh Quang Nghị 4 tầng Phong Phú Bình Chánh giá chỉ 30,5 tỷ</h1>
+                        <h1 style="font-size: 24px; line-height: 34px; font-weight: 600;">{{ $realState->title }}</h1>
                     </div>
 
                     <div class="footer">
-                        Đường Trịnh Quang Nghị, Phong Phú
+                        {{ $realState->detailAddress }}
 
                         <div class="box mt-3 pta">
                             <div class="box-text">
                                 <div>
                                     <div class="label">Mức giá</div>
                                     <div class="value">
-                                        30 tỷ
+                                        {{ $realState->price }}
                                     </div>
                                 </div>
                                 <div>
                                     <div class="label">Diện tích</div>
-                                    <div class="value">267 m²</div>
+                                    <div class="value">{{ $realState->area }} m²</div>
                                 </div>
+
                                 <div>
                                     <div class="label">Phòng ngủ</div>
-                                    <div class="value">8 Phòng ngủ</div>
+                                    <div class="value">{{ $realState->num_of_bedrooms }} Phòng ngủ</div>
                                 </div>
+
+
+
                             </div>
                             <div class="box-icon d-none d-sm-flex">
                                 <div>
@@ -865,23 +817,27 @@
                     </div>
                 </div>
                 <div class="col-md-12 text mt-3">
+                    @if (Str::length($realState->description) > 100)
                     <div id="more">
-                        Bán biệt thự 17x20 Trịnh Quang Nghị 4 tầng Phong Phú Bình Chánh giá chỉ 30,5 tỷ <br />
-                        - Biệt thự nằm trong khu vip ở Lovera Park Khang Điền đang mở tuyết đường song hành với Quốc Lộ 50 nên giao thông tương lai vô cùng duy chuyển...
+                        {!! Str::limit($realState->description, 100) !!}
                         <span id="dots">...</span>
                     </div>
                     <div id="more1" style="display: none;">
-                        Bán biệt thự 17x20 Trịnh Quang Nghị 4 tầng Phong Phú Bình Chánh giá chỉ 30,5 tỷ <br />
-                        - Biệt thự nằm trong khu vip ở Lovera Park Khang Điền đang mở tuyết đường song hành với Quốc Lộ 50 nên giao thông tương lai vô cùng duy chuyển tiện ích vô cùng.<br />
-                        - Khu đáng sống cực kỳ an ninh, Biệt thự mặt tiền nhựa lớn tiện kết hợp đầu tư kinh doanh đâ ngành nghề tương lai không giá khu này tăng cao mua 1 lời 100 nhé.<br />
-                        - KC Biệt thự trệt 3 lầu, phòng khách , 1pn Master 2 pn thường, khu vực tiệc họp mặt cuối tuần. cực sang trọng.<br />
-                        - SHR, pháp lý cực chuẩn, hoàn công , sổ hồng sang tay cho khách ngay luôn.<br />
-                        LH EM CHÍ NHÀ PHỐ CHUYÊN KHU VỰC PHONG PHÚ&lt;BÌNH HƯNG. BÌNH CHÁNH
+                        {!! $realState->description !!}
                     </div>
+                    @else
+                        <div id="more">
+                            {!! $realState->description !!}
+                        </div>
+                    @endif
+
                 </div>
+                @if (Str::length($realState->description) > 100)
                 <div class="btn-see-more col-md-12">
                     <p id="myBtn" onclick="myFunction()">Xem Thêm</p>
                 </div>
+                @endif
+
             </div>
             <div class="box-characteristics row">
                 <div class="col-md-12 title">Đặc điểm bất động sản</div>
@@ -894,33 +850,40 @@
                             <div class="col">
                                 <div class="line">
                                     <div class="line-label"><img src="/images/icon-dien-tich.svg" /> Diện tích</div>
-                                    <div class="line-text">267 m²</div>
+                                    <div class="line-text">{{ $realState->area }} m²</div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="line">
                                     <div class="line-label"><img src="/assets/icon/tabler_sofa.svg" />Số phòng ngủ</div>
-                                    <div class="line-text">8 phòng</div>
+                                    <div class="line-text">{{ $realState->num_of_bedrooms }} phòng</div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="line">
                                     <div class="line-label"><img src="/assets/icon/document-text.svg" /> Pháp lý</div>
-                                    <div class="line-text">Sổ đỏ/ Sổ hồng</div>
+                                    @php
+                                        $legal = $realState->legal_documents;
+                                        if ($realState->legal_documents == 'none') $legal = 'Không';
+                                        else if ($realState->legal_documents == 'red_book') $legal = 'Sổ đỏ/ Sổ hồng';
+                                        else if ($realState->legal_documents == 'sale_contract') $legal = 'Hợp đồng mua bán';
+                                        else if ($realState->legal_documents == 'pending') $legal = 'Đang chờ sổ';
+                                    @endphp
+                                    <div class="line-text">{{ $legal }}</div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="line">
                                     <div class="line-label"><img src="/assets/icon/moneys.svg" />Mức giá</div>
                                     <div class="line-text">
-                                        30 tỷ
+                                        {{ $realState->price }}
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="line">
-                                    <div class="line-label"><img src="/assets/icon/uil_bath.svg" />Số toilet</div>
-                                    <div class="line-text">8 phòng</div>
+                                    <div class="line-label"><img src="/assets/icon/uil_bath.svg" />Số toilet, phòng tắm</div>
+                                    <div class="line-text">{{ $realState->num_of_bathrooms }} phòng</div>
                                 </div>
                             </div>
                         </div>
@@ -933,7 +896,7 @@
                     <div class="box-text row row-cols-2 row-cols-md-4 gap-0 flex-grow-1">
                         <div class="col">
                             <div class="label">Ngày đăng</div>
-                            <div class="value">24/08/2024</div>
+                            <div class="value">{{ $realState->start_date }}</div>
                         </div>
                         <div class="col"></div>
                         <div class="col">
@@ -941,14 +904,11 @@
 
                             <div class="value">Tin Thường</div>
                         </div>
-                        <div class="col">
-                            <div class="label">Mã tin</div>
-                            <div class="value">117359</div>
-                        </div>
+
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
+            {{-- <div class="row mt-5">
                 <div id="batdongsannoibat" class="container">
                     <div>
                         <div class="swiper batdongsannoibat2-swiper">
@@ -1487,11 +1447,11 @@ BIỆT THỰ MINI KHU TÊN LỬA - B.TÂN - 96M2 - 4 TẦNG - 10,8 TỶ"
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="row text footer-text mb-4">
                 <p>
-                    Quý vị đang xem nội dung tin rao "<strong style="font-weight: bold !important;">Bán biệt thự 267.2m2 Trịnh Quang Nghị 4 tầng Phong Phú Bình Chánh giá chỉ 30,5 tỷ</strong>" -
-                    <strong style="font-weight: bold !important;">Mã tin 117359</strong>. Mọi thông tin, nội dung liên quan tới tin rao này là do người đăng tin đăng tải và chịu trách nhiệm. Batdongsan.vn luôn cố gắng để các thông tin được
+                    Quý vị đang xem nội dung tin rao "<strong style="font-weight: bold !important;">{{ $realState->title }}</strong>" -
+                    Mọi thông tin, nội dung liên quan tới tin rao này là do người đăng tin đăng tải và chịu trách nhiệm. Batdongsan.vn luôn cố gắng để các thông tin được
                     hữu ích nhất cho quý vị tuy nhiên Batdongsan.vn không đảm bảo và không chịu trách nhiệm về bất kỳ thông tin, nội dung nào liên quan tới tin rao này. Trường hợp phát hiện nội dung tin đăng không chính xác, Quý vị hãy
                     thông báo và cung cấp thông tin cho Ban quản trị Batdongsan.vn theo <span style="font-weight: bold;">Hotline ..... </span>
                     để được hỗ trợ nhanh và kịp thời nhất.
@@ -1504,20 +1464,20 @@ BIỆT THỰ MINI KHU TÊN LỬA - B.TÂN - 96M2 - 4 TẦNG - 10,8 TỶ"
                 <div class="profile-avatar">
                     <span class="re__contact-avatar">P</span>
                     <span class="upload-by">Được đăng bởi</span>
-                    <span class="name">PHẠM VĂN CHÍ</span>
+                    <span class="name">{{ $realState->name }}</span>
                 </div>
                 <div class="detail-container">
                     <div
                         class="btn"
-                        data-show="0706306647 - Ẩn số"
-                        data-hide="0706306*** - Hiện số"
+                        data-show="{{ $realState->phone }} - Ẩn số"
+                        data-hide="{{ Str::limit($realState->phone, 7) }}*** - Hiện số"
                         data-isShow="true"
                         style="background: #c8f1df; border-radius: 8px; font-weight: 600; font-size: 14px; line-height: 22px;"
                         onclick="showHide.call(this)"
                     >
-                        0706306***- Hiện số
+                        {{ Str::limit($realState->phone, 7) }}***- Hiện số
                     </div>
-                    <a class="btn" href="/cdn-cgi/l/email-protection#35515a5b5244404c030502755258545c591b565a58">
+                    <a class="btn" href="">
                         Gửi email
                     </a>
                     <button class="btn" data-toggle="modal" data-target="#contactModal">Yêu cầu liên hệ lại</button>
@@ -1526,7 +1486,7 @@ BIỆT THỰ MINI KHU TÊN LỬA - B.TÂN - 96M2 - 4 TẦNG - 10,8 TỶ"
                 <!-- Modal -->
             </div>
 
-            <div class="list-bds">
+            {{-- <div class="list-bds">
                 <div class="title">
                     Dự án nổi bật
                 </div>
@@ -1572,7 +1532,7 @@ BIỆT THỰ MINI KHU TÊN LỬA - B.TÂN - 96M2 - 4 TẦNG - 10,8 TỶ"
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
     <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
