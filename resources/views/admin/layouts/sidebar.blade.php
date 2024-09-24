@@ -31,6 +31,34 @@
                 </a>
             </li>
 
+            <li class="nav-item {{ Route::currentRouteName() == 'admin.real-state' ? 'menu-open' : '' }}">
+                <a href="" class="nav-link">
+                    <i class="nav-icon fa fa-cog"></i>
+                    <p>Bất động sản
+                        <i class="fas fa-angle-left right"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="/admin/real-state" class="nav-link {{ Route::currentRouteName() == 'admin.real-state' ? 'active' : '' }}">
+                            <i class="fa fa-genderless nav-icon"></i>
+                            <p>Tất cả</p>
+                        </a>
+                    </li>
+
+
+
+                    {{-- <li class="nav-item">
+                        <a href="/admin/setting/code" class="nav-link {{ Route::currentRouteName() == 'show-code' ? 'active' : '' }}">
+                            <i class="fa fa-genderless nav-icon"></i>
+                            <p>Thêm code</p>
+                        </a>
+                    </li> --}}
+
+                </ul>
+
+            </li>
+
 
             <li class="nav-header">ACTIONS</li>
             <li class="nav-item">
