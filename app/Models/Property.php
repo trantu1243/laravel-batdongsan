@@ -16,7 +16,6 @@ class Property extends Model
         'city',
         'district',
         'commune',
-        'street',
         'detailAddress',
         'title',
         'description',

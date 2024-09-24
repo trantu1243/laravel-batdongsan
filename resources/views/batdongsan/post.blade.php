@@ -23,8 +23,8 @@
         <div class="d-flex fl-column">
             <div class="title">Đăng tin</div>
         </div>
-        <form action="dang-tin" method="post" enctype="multipart/form-data" id="frm">
-            <input type="hidden" name="_token" value="0mTnDMqOd3qiYpZnVndGJ01fPgjgapaJAEwN7ATF" />
+        <form action="{{Route('create-real-state')}}" method="post" enctype="multipart/form-data" id="frm">
+            @csrf
             <div id="dangtin-main" class="mt-3">
                 <div class="row">
                     <div class="col-12 col-lg-9 left-element">
@@ -54,33 +54,42 @@
                                                                 <li class="nav-item col">
                                                                     <a class="nav-link" href="#buzz" role="tab" data-toggle="tab" data-value="2">Cho thuê</a>
                                                                 </li>
+                                                                <input type="hidden" value="sale" id="property_type" name="property_type">
+                                                                <script>
+                                                                    document.querySelectorAll('.nav-link').forEach(item => {
+                                                                        item.addEventListener('click', function() {
+                                                                            let propertyType = (this.getAttribute('data-value') == "1") ? "sale" : "rent";
+                                                                            document.getElementById('property_type').value = propertyType;
+                                                                        });
+                                                                    });
+                                                                </script>
                                                             </ul>
                                                         </div>
                                                         <div class="row row-element">
                                                             <div class="col-md-12 col-sm-12">
                                                                 <label for="validationCustom04" class="form-label"> Loại bất động sản <span class="batbuoc">*</span> </label>
-                                                                <select name="cate_id" class="selectpicker ptanh-custom-select form-control skip" id="render-html" title="VD: Nhà riêng" data-live-search="true">
-                                                                    <option value="11">Bán Nhà</option>
+                                                                <select name="property_category" class="selectpicker ptanh-custom-select form-control skip" id="render-html" title="VD: Nhà riêng" data-live-search="true">
+                                                                    <option value="house">Nhà</option>
 
-                                                                    <option value="12">Bán Đất</option>
+                                                                    <option value="land">Đất</option>
 
-                                                                    <option value="13">Bán Biệt thự</option>
+                                                                    <option value="apartment">Biệt thự</option>
 
-                                                                    <option value="14">Bán BĐS thương mại</option>
+                                                                    <option value="office">BĐS thương mại</option>
 
-                                                                    <option value="15">Bán Căn hộ chung cư</option>
+                                                                    <option value="villa">Căn hộ chung cư</option>
 
-                                                                    <option value="16">Bán Văn phòng</option>
+                                                                    <option value="commercial">Văn phòng</option>
 
-                                                                    <option value="17">Bán BĐS công nghiệp</option>
+                                                                    <option value="industrial">BĐS công nghiệp</option>
 
-                                                                    <option value="18">Bán BĐS nông nghiệp</option>
+                                                                    <option value="agricultural">BĐS nông nghiệp</option>
 
-                                                                    <option value="19">Bán BĐS tâm linh</option>
+                                                                    <option value="spiritual">BĐS tâm linh</option>
 
-                                                                    <option value="20">Bán BĐS khác</option>
+                                                                    <option value="service">BĐS dịch vụ</option>
 
-                                                                    <option value="62">Bán BĐS dịch vụ</option>
+                                                                    <option value="orther">BĐS khác</option>
                                                                 </select>
 
                                                                 <div class="clear-select-bootstrap">
@@ -90,8 +99,13 @@
                                                                     </svg>
                                                                 </div>
                                                             </div>
+
                                                             <div class="col-md-12">
-                                                                <div class="cate_id_error text-danger"></div>
+                                                                <div class="cate_id_error text-danger">
+                                                                    @error('property_category')
+                                                                        <div class="text-danger">Loại bất động sản là bắt buộc.</div>
+                                                                    @enderror
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="row row-element">
@@ -103,132 +117,70 @@
                                                         <div class="row row-element">
                                                             <div class="col-md-6 col-sm-12">
                                                                 <label for="validationCustom04" class="form-label"> Tinh, thành phố <span class="batbuoc">*</span> </label>
-                                                                <select class="selectpicker ptanh-custom-select form-control" title="Chọn" data-live-search="true" id="tbProvince" name="province_id" data-dependance-name="tinhthanh">
-                                                                    <option value="1">Hồ Chí Minh</option>
-
-                                                                    <option value="2">Hà Nội</option>
-
-                                                                    <option value="3">Đà Nẵng</option>
-
-                                                                    <option value="4">Bình Dương</option>
-
-                                                                    <option value="5">Đồng Nai</option>
-
-                                                                    <option value="6">Khánh Hòa</option>
-
-                                                                    <option value="7">Hải Phòng</option>
-
-                                                                    <option value="8">Long An</option>
-
-                                                                    <option value="9">Quảng Nam</option>
-
-                                                                    <option value="10">Bà Rịa Vũng Tàu</option>
-
-                                                                    <option value="11">Đắk Lắk</option>
-
-                                                                    <option value="12">Cần Thơ</option>
-
-                                                                    <option value="13">Bình Thuận </option>
-
-                                                                    <option value="14">Lâm Đồng</option>
-
-                                                                    <option value="15">Thừa Thiên Huế</option>
-
-                                                                    <option value="16">Kiên Giang</option>
-
-                                                                    <option value="17">Bắc Ninh</option>
-
-                                                                    <option value="18">Quảng Ninh</option>
-
-                                                                    <option value="19">Thanh Hóa</option>
-
-                                                                    <option value="20">Nghệ An</option>
-
-                                                                    <option value="21">Hải Dương</option>
-
-                                                                    <option value="22">Gia Lai</option>
-
-                                                                    <option value="23">Bình Phước</option>
-
-                                                                    <option value="24">Hưng Yên</option>
-
-                                                                    <option value="25">Bình Định</option>
-
-                                                                    <option value="26">Tiền Giang</option>
-
-                                                                    <option value="27">Thái Bình</option>
-
-                                                                    <option value="28">Bắc Giang</option>
-
-                                                                    <option value="29">Hòa Bình</option>
-
-                                                                    <option value="30">An Giang</option>
-
-                                                                    <option value="31">Vĩnh Phúc</option>
-
-                                                                    <option value="32">Tây Ninh</option>
-
-                                                                    <option value="33">Thái Nguyên</option>
-
-                                                                    <option value="34">Lào Cai</option>
-
-                                                                    <option value="35">Nam Định</option>
-
-                                                                    <option value="36">Quảng Ngãi</option>
-
-                                                                    <option value="37">Bến Tre</option>
-
-                                                                    <option value="38">Đắk Nông</option>
-
-                                                                    <option value="39">Cà Mau</option>
-
-                                                                    <option value="40">Vĩnh Long</option>
-
-                                                                    <option value="41">Ninh Bình</option>
-
-                                                                    <option value="42">Phú Thọ</option>
-
-                                                                    <option value="43">Ninh Thuận</option>
-
-                                                                    <option value="44">Phú Yên</option>
-
-                                                                    <option value="45">Hà Nam</option>
-
-                                                                    <option value="46">Hà Tĩnh</option>
-
-                                                                    <option value="47">Đồng Tháp</option>
-
-                                                                    <option value="48">Sóc Trăng</option>
-
-                                                                    <option value="49">Kon Tum</option>
-
-                                                                    <option value="50">Quảng Bình</option>
-
-                                                                    <option value="51">Quảng Trị</option>
-
-                                                                    <option value="52">Trà Vinh</option>
-
-                                                                    <option value="53">Hậu Giang</option>
-
-                                                                    <option value="54">Sơn La</option>
-
-                                                                    <option value="55">Bạc Liêu</option>
-
-                                                                    <option value="56">Yên Bái</option>
-
-                                                                    <option value="57">Tuyên Quang</option>
-
-                                                                    <option value="58">Điện Biên</option>
-
-                                                                    <option value="59">Lai Châu</option>
-
-                                                                    <option value="60">Lạng Sơn</option>
-
-                                                                    <option value="61">Hà Giang</option>
-
-                                                                    <option value="62">Bắc Kạn</option>
-
-                                                                    <option value="63">Cao Bằng</option>
+                                                                <select class="selectpicker ptanh-custom-select form-control" title="Chọn" data-live-search="true" id="tbProvince" name="city" data-dependance-name="tinhthanh">
+                                                                    <option value="89">Tỉnh An Giang</option>
+                                                                    <option value="77">Tỉnh Bà Rịa - Vũng Tàu</option>
+                                                                    <option value="24">Tỉnh Bắc Giang</option>
+                                                                    <option value="06">Tỉnh Bắc Kạn</option>
+                                                                    <option value="95">Tỉnh Bạc Liêu</option>
+                                                                    <option value="27">Tỉnh Bắc Ninh</option>
+                                                                    <option value="83">Tỉnh Bến Tre</option>
+                                                                    <option value="74">Tỉnh Bình Dương</option>
+                                                                    <option value="70">Tỉnh Bình Phước</option>
+                                                                    <option value="60">Tỉnh Bình Thuận</option>
+                                                                    <option value="52">Tỉnh Bình Định</option>
+                                                                    <option value="96">Tỉnh Cà Mau</option>
+                                                                    <option value="92">Thành phố Cần Thơ</option>
+                                                                    <option value="04">Tỉnh Cao Bằng</option>
+                                                                    <option value="64">Tỉnh Gia Lai</option>
+                                                                    <option value="02">Tỉnh Hà Giang</option>
+                                                                    <option value="35">Tỉnh Hà Nam</option>
+                                                                    <option value="01">Thành phố Hà Nội</option>
+                                                                    <option value="42">Tỉnh Hà Tĩnh</option>
+                                                                    <option value="30">Tỉnh Hải Dương</option>
+                                                                    <option value="31">Thành phố Hải Phòng</option>
+                                                                    <option value="93">Tỉnh Hậu Giang</option>
+                                                                    <option value="79">Thành phố Hồ Chí Minh</option>
+                                                                    <option value="17">Tỉnh Hoà Bình</option>
+                                                                    <option value="33">Tỉnh Hưng Yên</option>
+                                                                    <option value="56">Tỉnh Khánh Hòa</option>
+                                                                    <option value="91">Tỉnh Kiên Giang</option>
+                                                                    <option value="62">Tỉnh Kon Tum</option>
+                                                                    <option value="12">Tỉnh Lai Châu</option>
+                                                                    <option value="68">Tỉnh Lâm Đồng</option>
+                                                                    <option value="20">Tỉnh Lạng Sơn</option>
+                                                                    <option value="10">Tỉnh Lào Cai</option>
+                                                                    <option value="80">Tỉnh Long An</option>
+                                                                    <option value="36">Tỉnh Nam Định</option>
+                                                                    <option value="40">Tỉnh Nghệ An</option>
+                                                                    <option value="37">Tỉnh Ninh Bình</option>
+                                                                    <option value="58">Tỉnh Ninh Thuận</option>
+                                                                    <option value="25">Tỉnh Phú Thọ</option>
+                                                                    <option value="54">Tỉnh Phú Yên</option>
+                                                                    <option value="44">Tỉnh Quảng Bình</option>
+                                                                    <option value="49">Tỉnh Quảng Nam</option>
+                                                                    <option value="51">Tỉnh Quảng Ngãi</option>
+                                                                    <option value="22">Tỉnh Quảng Ninh</option>
+                                                                    <option value="45">Tỉnh Quảng Trị</option>
+                                                                    <option value="94">Tỉnh Sóc Trăng</option>
+                                                                    <option value="14">Tỉnh Sơn La</option>
+                                                                    <option value="72">Tỉnh Tây Ninh</option>
+                                                                    <option value="34">Tỉnh Thái Bình</option>
+                                                                    <option value="19">Tỉnh Thái Nguyên</option>
+                                                                    <option value="38">Tỉnh Thanh Hóa</option>
+                                                                    <option value="46">Tỉnh Thừa Thiên Huế</option>
+                                                                    <option value="82">Tỉnh Tiền Giang</option>
+                                                                    <option value="84">Tỉnh Trà Vinh</option>
+                                                                    <option value="08">Tỉnh Tuyên Quang</option>
+                                                                    <option value="86">Tỉnh Vĩnh Long</option>
+                                                                    <option value="26">Tỉnh Vĩnh Phúc</option>
+                                                                    <option value="15">Tỉnh Yên Bái</option>
+                                                                    <option value="48">Thành phố Đà Nẵng</option>
+                                                                    <option value="66">Tỉnh Đắk Lắk</option>
+                                                                    <option value="67">Tỉnh Đắk Nông</option>
+                                                                    <option value="11">Tỉnh Điện Biên</option>
+                                                                    <option value="75">Tỉnh Đồng Nai</option>
+                                                                    <option value="87">Tỉnh Đồng Tháp</option>
 
                                                                     <option data-tokens="frosting">Tinh</option>
                                                                 </select>
@@ -240,7 +192,11 @@
                                                                     </svg>
                                                                 </div>
 
-                                                                <div class="province_id_error text-danger"></div>
+                                                                <div class="province_id_error text-danger">
+                                                                    @error('city')
+                                                                        <div class="text-danger">Tỉnh, thành phố là bắt buộc.</div>
+                                                                    @enderror
+                                                                </div>
                                                             </div>
                                                             <div class="col-md-6 col-sm-12">
                                                                 <label for="validationCustom04" class="form-label"> Quận, huyện <span class="batbuoc">*</span> </label>
@@ -248,7 +204,7 @@
                                                                     class="selectpicker ptanh-custom-select form-control"
                                                                     title="Chọn"
                                                                     id="tbDistricts"
-                                                                    name="district_id"
+                                                                    name="district"
                                                                     data-live-search="true"
                                                                     data-dependance-name="quanhuyen"
                                                                     data-dependance="tinhthanh">
@@ -260,13 +216,17 @@
                                                                             d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                                                                     </svg>
                                                                 </div>
-                                                                <div class="district_id_error text-danger"></div>
+                                                                <div class="district_id_error text-danger">
+                                                                    @error('district')
+                                                                    <div class="text-danger">Quận, huyện là bắt buộc.</div>
+                                                                    @enderror
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="row row-element">
                                                             <div class="col-md-6 col-sm-12">
                                                                 <label for="validationCustom04" class="form-label"> Phường, xã <span class="batbuoc">*</span> </label>
-                                                                <select class="selectpicker ptanh-custom-select form-control" title="Chọn" data-live-search="true" id="ward_project" name="ward_id" data-dependance="quanhuyen"> </select>
+                                                                <select class="selectpicker ptanh-custom-select form-control" title="Chọn" data-live-search="true" id="ward_project" name="commune" data-dependance="quanhuyen"> </select>
 
                                                                 <div class="clear-select-bootstrap">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
@@ -274,9 +234,13 @@
                                                                             d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                                                                     </svg>
                                                                 </div>
-                                                                <div class="ward_id_error text-danger"></div>
+                                                                <div class="ward_id_error text-danger">
+                                                                    @error('commune')
+                                                                    <div class="text-danger">Phường, xã là bắt buộc.</div>
+                                                                    @enderror
+                                                                </div>
                                                             </div>
-                                                            <div class="col-md-6 col-sm-12" style="width: 100%;">
+                                                            {{-- <div class="col-md-6 col-sm-12" style="width: 100%;">
                                                                 <label for="validationCustom04" class="form-label">
                                                                     Đường, phố
                                                                 </label>
@@ -290,10 +254,10 @@
                                                                 <div class="invalid-feedback">
                                                                     Please select a valid state.
                                                                 </div>
-                                                            </div>
+                                                            </div> --}}
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col-md-12 col-sm-12 mb-4">
+                                                            {{-- <div class="col-md-12 col-sm-12 mb-4">
                                                                 <label for="validationCustom04" class="form-label">
                                                                     Dự án
                                                                 </label>
@@ -316,11 +280,16 @@
                                                                 <div class="invalid-feedback">
                                                                     Please select a valid state.
                                                                 </div>
-                                                            </div>
+                                                            </div> --}}
                                                             <div class="col-md-12 col-sm-12">
                                                                 <label for="validationCustom04" class="form-label"> Địa chỉ hiển thị trên tin đăng <span class="batbuoc">*</span> </label>
-                                                                <input type="text" name="address" class="ptanh-custom-input form-control" placeholder="Bạn có thể bổ sung hẻm, ngách, ngõ..." />
+                                                                <input type="text" name="detailAddress" class="ptanh-custom-input form-control" placeholder="Bạn có thể bổ sung hẻm, ngách, ngõ..." />
                                                                 <div class="address_error text-danger"></div>
+                                                            </div>
+                                                            <div class="address_error text-danger">
+                                                                @error('detailAddress')
+                                                                <div class="text-danger">Địa chỉ hiển thị trên tin đăng là bắt buộc.</div>
+                                                                @enderror
                                                             </div>
                                                         </div>
                                                     </div>
@@ -362,6 +331,9 @@
                                                             </p>
                                                         </div>
                                                     </div>
+                                                    @error('title')
+                                                    <div class="title_error text-danger"><div class="text-danger">Tiêu đề là bắt buộc.</div></div>
+                                                    @enderror
                                                     <div class="was-validated">
                                                         <div class="mb-3">
                                                             <label for="validationTextarea2" class="form-label">Mô tả <span class="batbuoc">*</span></label>
@@ -377,6 +349,9 @@
                                                             </p>
                                                         </div>
                                                     </div>
+                                                    @error('description')
+                                                    <div class="description_error text-danger"><div class="text-danger">Mô tả là bắt buộc.</div></div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
@@ -412,14 +387,22 @@
                                                                     <img src="./assets/img/m2.svg" alt="" style="width: 19px; height: 20px; margin: auto;" />
                                                                 </div>
                                                             </div>
-                                                            <div class="area_error text-danger"></div>
+                                                            <div class="area_error text-danger">
+                                                                @error('area')
+                                                                <div class="text-danger">Diện tích là bắt buộc.</div>
+                                                                @enderror
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="row row-bds">
                                                         <div class="col-md-9" style="display: flex; flex-direction: column;">
                                                             <label class="form-label" style="padding-top: 3px;"> Mức giá <span class="batbuoc">*</span> </label>
                                                             <input name="price" id="price" type="text" class="ptanh-custom-input form-control" placeholder="Nhập giá" />
-                                                            <div class="price_error text-danger"></div>
+                                                            <div class="price_error text-danger">
+                                                                @error('price')
+                                                                <div class="text-danger">Mức giá là bắt buộc.</div>
+                                                                @enderror
+                                                            </div>
                                                         </div>
                                                         <div class="col-md-3">
                                                             <label class="form-label"> Đơn vị </label>
@@ -435,7 +418,7 @@
                                                             <label class="form-label">
                                                                 Giấy tờ pháp lý
                                                             </label>
-                                                            <select name="legal" class="selectpicker ptanh-custom-select form-control">
+                                                            <select name="legal_documents" class="selectpicker ptanh-custom-select form-control">
                                                                 <option value="0">Không</option>
                                                                 <option value="1">Sổ đỏ/ Sổ hồng</option>
                                                                 <option value="2">Hợp đồng mua bán</option>
@@ -455,7 +438,7 @@
                                                         <div class="col-md-3">
                                                             <div class="count-container" style="background: #ecedf1; display: flex; padding: 3px 3px; border: 1px solid #ecedf1; border-radius: 8px;">
                                                                 <div class="btn-minus" onclick="bedroom.minus('count-bedroom')"></div>
-                                                                <input type="number" name="bedrooms" min="0" style="margin: auto; width: 70px; text-align: center;" id="count-bedroom" value="0" />
+                                                                <input type="number" name="num_of_bedrooms" min="0" style="margin: auto; width: 70px; text-align: center;" id="count-bedroom" value="0" />
                                                                 <div class="btn-plus active" onclick="bedroom.plus('count-bedroom')"></div>
                                                             </div>
                                                         </div>
@@ -468,7 +451,7 @@
                                                             <div class="count-container" style="background: #ecedf1; display: flex; padding: 3px 3px; border: 1px solid #ecedf1; border-radius: 8px;">
                                                                 <div class="btn-minus" onclick="bathroom.minus('count-bathroom')"></div>
 
-                                                                <input type="number" name="bathrooms" style="margin: auto; width: 70px; text-align: center;" id="count-bathroom" value="0" min="0" />
+                                                                <input type="number" name="num_of_bathrooms" style="margin: auto; width: 70px; text-align: center;" id="count-bathroom" value="0" min="0" />
                                                                 <div class="btn-plus active" onclick="bathroom.plus('count-bathroom')"></div>
                                                             </div>
                                                         </div>
@@ -479,7 +462,7 @@
                                                             <div class="count-container" style="background: #ecedf1; display: flex; padding: 3px 3px; border: 1px solid #ecedf1; border-radius: 8px;">
                                                                 <div class="btn-minus" onclick="flat.minus('count-flat')"></div>
 
-                                                                <input type="number" name="floors" style="margin: auto; width: 70px; text-align: center;" id="count-flat" value="0" min="0" />
+                                                                <input type="number" name="num_of_floors" style="margin: auto; width: 70px; text-align: center;" id="count-flat" value="0" min="0" />
 
                                                                 <div class="btn-plus active" onclick="flat.plus('count-flat')"></div>
                                                             </div>
@@ -581,7 +564,11 @@
                                                                 <span class="on-drop">Drop images here</span>
                                                                 <input id="file" name="file[]" type="file" class="file" multiple accept="image/*" />
                                                             </div>
-                                                            <div class="file_error text-danger"></div>
+                                                            <div class="file_error text-danger">
+                                                                @error('file')
+                                                                <div class="text-danger">Ảnh là bắt buộc.</div>
+                                                                @enderror
+                                                            </div>
 
                                                             <!-- IMAGE PREVIEW CONTAINER -->
                                                             <div class="img-container pb-3"></div>
@@ -591,7 +578,7 @@
                                                         <label class="form-label" style="padding-top: 3px;">
                                                             Thêm video từ Youtube
                                                         </label>
-                                                        <input type="text" name="linkYoutube" class="ptanh-custom-input form-control" placeholder="VD: https://www.youtube.com/watch?v=Y-Dw0NpfRug" />
+                                                        <input type="text" name="video_link" class="ptanh-custom-input form-control" placeholder="VD: https://www.youtube.com/watch?v=Y-Dw0NpfRug" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -620,19 +607,19 @@
                                                         <div class="row row-element">
                                                             <div class="col-md-6 col-sm-12">
                                                                 <label for="validationCustom04" class="form-label"> Tên liên hệ <span class="batbuoc">*</span> </label>
-                                                                <input name="author_name" type="text" value="Tu Tran" class="ptanh-custom-input form-control" placeholder="Nhập tên" />
+                                                                <input name="name" type="text" value="Tu Tran" class="ptanh-custom-input form-control" placeholder="Nhập tên" />
                                                                 <div class="author_name_error text-danger"></div>
                                                             </div>
                                                             <div class="col-md-6 col-sm-12">
                                                                 <label for="validationCustom04" class="form-label"> Số điện thoại <span class="batbuoc">*</span> </label>
-                                                                <input type="text" name="author_phone" class="ptanh-custom-input form-control" placeholder="Nhập số điện thoại" value="0333627251" />
+                                                                <input type="text" name="phone" class="ptanh-custom-input form-control" placeholder="Nhập số điện thoại" value="0333627251" />
                                                                 <div class="author_phone_error text-danger"></div>
                                                             </div>
                                                         </div>
                                                         <div class="row row-element">
                                                             <div class="col-md-6 col-sm-12">
                                                                 <label for="validationCustom04" class="form-label"> Email <span class="batbuoc">*</span> </label>
-                                                                <input name="author_email" type="text" class="ptanh-custom-input form-control" placeholder="Nhập email" value="trantu1242003@gmail.com" />
+                                                                <input name="email" type="text" class="ptanh-custom-input form-control" placeholder="Nhập email" value="trantu1242003@gmail.com" />
                                                                 <div class="author_email_error text-danger"></div>
                                                             </div>
                                                         </div>
@@ -653,7 +640,7 @@
                                                 <span class="introduce">Chọn gói tin đăng</span>
                                             </div>
                                             <div class="dropdown-divider mt-4 mb-3" style="margin-bottom: 16px;"></div>
-                                            <div class="row pta-row" style="margin-bottom: 24px;">
+                                            {{-- <div class="row pta-row" style="margin-bottom: 24px;">
                                                 <div class="col-md-3">
                                                     <label class="dangtintuc-image active">
                                                         <input type="radio" name="type" value="4" class="d-none" />
@@ -682,7 +669,7 @@
                                                         <img class="pt-3" src="./assets/img/Group 103.png" alt="" style="width: 130px;" />
                                                     </label>
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                             <input type="hidden" name="selected_ad_type" id="selected_ad_type" />
 
                                             <div class="row">
@@ -690,7 +677,7 @@
                                                     <label for="validationCustom04" class="form-label">
                                                         Số ngày đăng
                                                     </label>
-                                                    <select id="so_ngay_dang" name="number_day" class="selectpicker ptanh-custom-select form-control" data-live-search="true">
+                                                    <select id="so_ngay_dang" name="post_days" class="selectpicker ptanh-custom-select form-control" data-live-search="true">
                                                         <option value="7">7 ngày </option>
                                                         <option value="8">8 ngày </option>
                                                         <option value="9">9 ngày </option>
@@ -735,7 +722,7 @@
                                                         <input
                                                             id="ngay_bat_dau"
                                                             type="date"
-                                                            name="start_day"
+                                                            name="start_date"
                                                             class="ptanh-custom-input form-control"
                                                             height="42"
                                                             style="height: 42px;"
@@ -863,5 +850,325 @@
         </form>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
 
+        $('#tbProvince').on('change', function () {
+
+            var city_id = $(this).val();
+            fetch(`https://esgoo.net/api-tinhthanh/2/${city_id}.htm`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    $('#tbDistricts').empty();
+                    data.data.forEach(value => {
+                        const option = document.createElement("option");
+                        option.innerText = value.name;
+                        option.value = value.id;
+                        document.getElementById("tbDistricts").appendChild(option);
+                    });
+                    $("#tbDistricts").selectpicker('refresh');
+                })
+                .catch(error => {
+                    console.error('There has been a problem with your fetch operation:', error);
+                });
+
+            // lay du an cua tinh do
+            // $.ajax({
+            //     url: "/getDuanTheoTinh",
+            //     type: "POST",
+            //     data: {'id': city_id},
+            //     dataType: "json",
+            //     cache: false,
+            //     success: function (data) {
+            //         $('#list_project').empty();
+            //         $.each(data.data, function (key, value) {
+            //             const option = document.createElement("option");
+            //             option.innerText = value.name;
+            //             option.value = value.id;
+
+
+            //             document.getElementById("list_project").append(option);
+
+
+            //         });
+            //         $("#list_project").selectpicker('refresh');
+
+            //     }
+            // });
+
+            // lay duong theo tinh
+            // $.ajax({
+            //     url: "/getDuongTheoTinh",
+            //     type: "POST",
+            //     data: {id: city_id},
+            //     dataType: "json",
+            //     cache: false,
+            //     success: function (data) {
+            //         $('#street_project').empty();
+            //         $.each(data.data, function (key, value) {
+            //             const option = document.createElement("option");
+            //             option.innerText = value._prefix + " " + value._name;
+            //             option.value = value.id;
+
+
+            //             document.getElementById("street_project").append(option);
+            //         });
+
+            //         $("#street_project").selectpicker('refresh');
+
+            //     }
+            // });
+
+        });
+
+        $("#tbDistricts").on('change', function () {
+            var id_quan = $(this).val();
+
+            fetch(`https://esgoo.net/api-tinhthanh/3/${id_quan}.htm`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    $('#ward_project').empty();
+                    data.data.forEach(value => {
+                        const option = document.createElement("option");
+                        option.innerText = value.name;
+                        option.value = value.id;
+                        document.getElementById("ward_project").appendChild(option);
+                    });
+                    $("#ward_project").selectpicker('refresh');
+                })
+                .catch(error => {
+                    console.error('There has been a problem with your fetch operation:', error);
+                });
+
+
+            // lay duong theo huyen
+            // $.ajax({
+            //     url: "/getDuongTheoHuyen",
+            //     type: "POST",
+            //     data: {id_quan: id_quan},
+            //     dataType: "json",
+            //     cache: false,
+            //     success: function (data) {
+            //         $('#street_project').empty();
+            //         $.each(data.data, function (key, value) {
+            //             const option = document.createElement("option");
+            //             option.innerText = value._prefix + " " + value._name;
+            //             option.value = value.id;
+
+            //             document.getElementById("street_project").append(option);
+            //         });
+
+            //         $("#street_project").selectpicker('refresh');
+
+            //     }
+            // });
+        });
+
+
+        $('#price').on('keyup', function (e) {
+
+            if (e.keyCode != 37 && e.keyCode != 38 && e.keyCode != 39 && e.keyCode != 40) { //Prevent if push prev or next keys
+
+                var _this = this,
+                    num = _this.value.replace(/\./g, '');
+
+                if (!isNaN(num)) {
+                    num = num.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+                    num = num.split('').reverse().join('').replace(/^[\.]/, '');
+                    _this.value = num;
+
+                    // store current positions in variables
+                    var start = _this.selectionStart,
+                        end = _this.selectionEnd;
+
+                    // restore from variables...
+                    _this.setSelectionRange(start, end);
+                } else {
+                    alert('Vui lòng nhập số!');
+                    _this.value = _this.value.replace(/[^\d\.]*/g, '');
+                }
+            }
+
+        });
+
+        $("#don_vi_gia").on('change', function () {
+            if ($(this).val() == 'Thỏa thuận') {
+                $("#price").attr('disabled', 'disabled');
+                $("#price").val('Thỏa thuận');
+            } else {
+                $("#price").removeAttr('disabled');
+            }
+
+            if ($(this).val() != 'Thỏa thuận' && $("#price").val() == 'Thỏa thuận') {
+                $("#price").val('');
+            }
+        });
+    });
+
+    $('input, select, textarea').on('input change', function() {
+        let name = $(this).attr('name');
+        if (name.includes('[')) {
+            name = name.replace(/\[\]/g, '_'); // Thay thế [] bằng _
+        }
+        let errorDiv = $('.' + name + '_error');
+        errorDiv.empty();
+
+    });
+
+    $('input[type="file"]').on('change', function() {
+        let name = $(this).attr('name');
+        if (name.includes('[')) {
+            name = name.replace(/\[\]/g, '_'); // Thay thế [] bằng _
+        }
+        let errorDiv = $('.' + name + '_error');
+        errorDiv.empty();
+    });
+
+    $('#frm').on('submit', function (e) {
+
+        e.preventDefault();
+
+        let formData = new FormData(this);
+
+        $.ajax({
+            url: $(this).attr('action'),
+            type: $(this).attr('method'),
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                window.location.href = response.redirect_url;
+            },
+            error: function (response) {
+                // Xử lý khi có lỗi
+                if (response.status === 422) {
+                    let firstErrorElement = null;
+                    let errors = response.responseJSON.errors;
+                    // Xóa các lỗi cũ (không cần thiết nếu chúng ta đã xóa khi người dùng chỉnh sửa)
+
+                    $.each(errors, function(key, value) {
+                        let inputName = key;
+                        if (key.includes('.')) {
+                            inputName = key.split('.')[0]; // Lấy tên gốc nếu có dấu chấm
+                        }
+                        if (inputName.includes('[')) {
+                            inputName = inputName.replace(/\[\]/g, '_'); // Thay thế [] bằng _
+                        }
+                        let errorDiv = $('.' + inputName + '_error');
+                        errorDiv.empty(); // Xóa lỗi cũ
+
+                        // Lặp qua tất cả các lỗi và thêm chúng vào errorDiv
+                        $.each(value, function(index, error) {
+                            errorDiv.append('<div class="text-danger">' + error + '</div>');
+                        });
+
+                        // Lưu input đầu tiên có lỗi
+                        if (!firstErrorElement) {
+                            firstErrorElement = $('[name="' + key + '"]');
+                        }
+                    });
+                    // Cuộn đến input đầu tiên có lỗi
+                    if (firstErrorElement) {
+                        $('html, body').animate({
+                            scrollTop: firstErrorElement.offset().top
+                        }, 500);
+                        firstErrorElement.focus();
+                    }
+
+
+                }
+            }
+        });
+    });
+</script>
+
+<script>
+    let files = [],
+  dragArea = document.querySelector('#upload-img .drag-area'),
+  input = document.querySelector('#upload-img .drag-area input'),
+  button = document.querySelector('#upload-img .card button'),
+  select = document.querySelector('#upload-img .drag-area.select'),
+  container = document.querySelector('#upload-img .img-container');
+
+/** CLICK LISTENER */
+select.addEventListener('click', () => input.click());
+
+/* INPUT CHANGE EVENT */
+input.addEventListener('change', () => {
+  let file = input.files;
+
+  // if user select no image
+  if (file.length == 0) return;
+
+  for (let i = 0; i < file.length; i++) {
+    if (file[i].type.split('/')[0] != 'image') continue;
+    if (!files.some((e) => e.name == file[i].name)) files.push(file[i]);
+  }
+
+  showImages();
+});
+
+/** SHOW IMAGES */
+function showImages() {
+  container.innerHTML = files.reduce((prev, curr, index) => {
+    return `${prev}
+		    <div class="image">
+			    <span onclick="delImage(${index})"></span>
+			    <img src="${URL.createObjectURL(curr)}" />
+			</div>`;
+  }, '');
+    function FileListItems(files) {
+        var b = new ClipboardEvent('').clipboardData || new DataTransfer();
+        for (var i = 0, len = files.length; i < len; i++) b.items.add(files[i]);
+        return b.files;
+    }
+    input.files = new FileListItems(files);
+}
+
+/* DELETE IMAGE */
+function delImage(index) {
+  files.splice(index, 1);
+  showImages();
+}
+
+/* DRAG & DROP */
+dragArea.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dragArea.classList.add('dragover');
+});
+
+/* DRAG LEAVE */
+dragArea.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dragArea.classList.remove('dragover');
+});
+
+/* DROP EVENT */
+dragArea.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dragArea.classList.remove('dragover');
+
+  let file = e.dataTransfer.files;
+  for (let i = 0; i < file.length; i++) {
+    /** Check selected file is image */
+    if (file[i].type.split('/')[0] != 'image') continue;
+
+    if (!files.some((e) => e.name == file[i].name)) files.push(file[i]);
+  }
+  showImages();
+});
+
+</script>
+<script src="/js/dangtintuc.js"></script>
 @endsection

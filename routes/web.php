@@ -4,9 +4,11 @@ use App\Http\Controllers\Admin\Auth\AdminLoginController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Home\HomeController;
+use App\Http\Controllers\RealState\PostRealStateController;
 use App\Http\Middleware\AdminAuthMiddleware;
 use App\Http\Middleware\AdminVerifyMiddleware;
 use App\Http\Middleware\AuthenticationMiddleware;
+use App\Http\Middleware\VerifyMiddleware;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'show'])->name('home');
@@ -18,19 +20,23 @@ Route::middleware([AuthenticationMiddleware::class])->group(function () {
     Route::post('register', [RegisterController::class, 'register'])->name('auth.post.register');
 });
 
-Route::get('logout', [LoginController::class, 'logout'])->name('auth.logout');
+Route::middleware([VerifyMiddleware::class])->group((function () {
+    Route::get('/account', function () {
+        return view('account.index')->name('account');
+    });
 
+    Route::get('/manage', function () {
+        return view('manage.index')->name('manage');
+    });
+
+    Route::get('/post', [PostRealStateController::class, 'show'])->name('real-state-post');
+    Route::post('/post', [PostRealStateController::class, 'create'])->name('create-real-state');
+}));
+
+Route::get('logout', [LoginController::class, 'logout'])->name('auth.logout');
 
 Route::get('/category', function () {
     return view('category.index');
-});
-
-Route::get('/account', function () {
-    return view('account.index');
-});
-
-Route::get('/post', function () {
-    return view('batdongsan.post');
 });
 
 Route::get('/detail', function () {
