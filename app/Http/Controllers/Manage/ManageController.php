@@ -11,9 +11,11 @@ class ManageController extends Controller
 {
     public function show(){
         $id =  Auth::id();
+        $name = Auth::user()->name;
         $realStates = Property::where('user_id', $id)->get();
         $totalCount = Property::where('user_id', $id)->count();
         return view('manage.index', [
+            'name' => $name,
             'realStates' => $realStates,
             'totalCount' => $totalCount
         ]);

@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\Batdongsan\BatdongsanDetailController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Home\HomeController;
+use App\Http\Controllers\Manage\EditRealStateController;
 use App\Http\Controllers\Manage\ManageController;
 use App\Http\Controllers\RealState\PostRealStateController;
 use App\Http\Controllers\RealState\RealStateController;
@@ -18,10 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'show'])->name('home');
 
 Route::middleware([AuthenticationMiddleware::class])->group(function () {
-    Route::get('login', [LoginController::class, 'show'])->name('auth.login');
-    Route::post('login', [LoginController::class, 'login'])->name('auth.post.login');
-    Route::get('register', [RegisterController::class, 'show'])->name('auth.register');
-    Route::post('register', [RegisterController::class, 'register'])->name('auth.post.register');
+    Route::get('/login', [LoginController::class, 'show'])->name('auth.login');
+    Route::post('/login', [LoginController::class, 'login'])->name('auth.post.login');
+    Route::get('/register', [RegisterController::class, 'show'])->name('auth.register');
+    Route::post('/register', [RegisterController::class, 'register'])->name('auth.post.register');
 });
 
 Route::middleware([VerifyMiddleware::class])->group(function () {
@@ -29,7 +30,8 @@ Route::middleware([VerifyMiddleware::class])->group(function () {
         return view('account.index');
     })->name('account');
 
-    Route::get('/manage', [ManageController::class, 'show'])->name('manage');
+    Route::get('/manage', [ManageController::class, 'show'])->name('show-manage');
+    Route::get('/manage/edit/{id}', [EditRealStateController::class, 'show'])->name('show-edit-manage');
 
     Route::get('/post', [PostRealStateController::class, 'show'])->name('real-state-post');
     Route::post('/post', [PostRealStateController::class, 'create'])->name('create-real-state');
