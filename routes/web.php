@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\Auth\AdminLoginController;
 use App\Http\Controllers\Admin\Batdongsan\BatdongsanController;
 use App\Http\Controllers\Admin\Batdongsan\BatdongsanDetailController;
+use App\Http\Controllers\Admin\Batdongsan\PendingBatdonsanController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Home\HomeController;
@@ -32,6 +33,7 @@ Route::middleware([VerifyMiddleware::class])->group(function () {
 
     Route::get('/manage', [ManageController::class, 'show'])->name('show-manage');
     Route::get('/manage/edit/{id}', [EditRealStateController::class, 'show'])->name('show-edit-manage');
+    Route::post('/manage/edit/{id}', [EditRealStateController::class, 'edit'])->name('post-edit-manage');
 
     Route::get('/post', [PostRealStateController::class, 'show'])->name('real-state-post');
     Route::post('/post', [PostRealStateController::class, 'create'])->name('create-real-state');
@@ -57,6 +59,10 @@ Route::middleware([AdminVerifyMiddleware::class])->group(function (){
 
     Route::get('/admin/real-state', [BatdongsanController::class, 'show'])->name('admin.real-state');
     Route::get('/admin/real-state/{id}', [BatdongsanDetailController::class, 'show'])->name('detail.real-state');
+    Route::delete('/admin/delete/real-state/{id}', [BatdongsanController::class, 'destroy'])->name('delete.real-state');
+
+    Route::post('/admin/real-state/pending/{id}', [BatdongsanDetailController::class, 'accept'])->name('pending.real-state');
+    Route::get('/admin/pending/real-state', [PendingBatdonsanController::class, 'show'])->name('show-pending');
 
     Route::get('/admin/logout', [AdminLoginController::class, 'logout']);
 });

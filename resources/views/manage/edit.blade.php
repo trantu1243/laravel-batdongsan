@@ -507,7 +507,7 @@
                     <div class="d-flex fl-column">
                         <div class="title">Sửa tin</div>
                     </div>
-                    <form action="{{Route('create-real-state')}}" method="post" enctype="multipart/form-data" id="frm">
+                    <form action="{{Route('post-edit-manage', ['id' => $realState->id ])}}" method="post" enctype="multipart/form-data" id="frm">
                         @csrf
                         <div id="dangtin-main" class="mt-3">
                             <div class="row">

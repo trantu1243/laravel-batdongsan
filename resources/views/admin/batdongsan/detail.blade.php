@@ -240,7 +240,18 @@
                                         </select>
 
                                     </div>
-                                    
+
+                                    <div class="form-group">
+                                        <label for="" style="display: block">Images:</label>
+
+                                        @foreach ($images as $item)
+                                            <div class="col-sm-3">
+                                                <img src="{{ $item->image_url}}" alt="" style="width: 100%" />
+                                            </div>
+                                        @endforeach
+
+
+                                    </div>
 
 
 
@@ -252,6 +263,14 @@
                 </div>
             </div>
         </form>
+
+        @if ($realState->post_status == "pending_approval")
+        <form action="{{ Route('pending.real-state', ['id' => $realState->id] )}}" method="POST">
+            @csrf
+            <button class="btn btn-primary" type="submit">Duyệt</button>
+        </form>
+
+        @endif
     </div>
 </section>
 
