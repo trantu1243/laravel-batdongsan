@@ -696,17 +696,7 @@
 </form>
 
 <div class="chuyenmuc container mt-4" id="danhmuc">
-    <div class="fl-column">
-        <div class="title re__breadcrumb">
-            <a style="color: #999;" class="re__link-se" title="Nhà đất bán tại Việt Nam" href="ban-nha-dat">Bán</a> /
 
-            <a title="Bán Nhà tại Việt Nam" href="ban-nha">Bán Nhà</a>
-        </div>
-
-        <h1 class="mb-2 mb-sm-3" style="font-size: 24px; font-weight: 700; margin-top: 8px;">Bán Nhà</h1>
-
-        <div class="title">Hiện có 17,580 bất động sản</div>
-    </div>
     <div class="row mt-sm-4 mt-3">
         <div class="col-md-9 col-sm-12 left-element">
             <div class="sp-b d-flex">
