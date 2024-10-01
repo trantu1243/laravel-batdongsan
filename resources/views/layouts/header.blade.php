@@ -143,7 +143,14 @@
         </div>
         <div class="nav-overlay" onclick="this.previousElementSibling.previousElementSibling.click()"></div>
         <ul class="navbar-nav d-none d-lg-flex" style="display: none;">
+            <li style="display: flex; justify-content: center;align-items: center; margin-right: 15px;">
+                <a href="saved-posts" style="display: flex; justify-content: center;align-items: center; ">
+                    <img style="width: 24px; cursor: pointer; background: transparent; border-radius: 50%;" src="assets/icon/icon_heard.jpg" alt="" />
+                </a>
+            </li>
+
             <li class="item-menu item-menu__login-profile" onclick="clickShowSubmenu()" style="padding: 8px 12px; cursor: pointer; border-radius: 24px; border: 1px solid #ecedf1; box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);">
+
                 <div>
                     <img style="width: 24px; cursor: pointer;" src="assets/img/menu.svg" alt="" />
                     <img style="width: 24px; cursor: pointer;" src="assets/img/profile-circle.svg" alt="" />

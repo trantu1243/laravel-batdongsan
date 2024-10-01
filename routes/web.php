@@ -9,6 +9,7 @@ use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\Manage\ManageController;
 use App\Http\Controllers\RealState\PostRealStateController;
 use App\Http\Controllers\RealState\RealStateController;
+use App\Http\Controllers\RealState\SavedPostController;
 use App\Http\Middleware\AdminAuthMiddleware;
 use App\Http\Middleware\AdminVerifyMiddleware;
 use App\Http\Middleware\AuthenticationMiddleware;
@@ -33,6 +34,11 @@ Route::middleware([VerifyMiddleware::class])->group((function () {
 
     Route::get('/post', [PostRealStateController::class, 'show'])->name('real-state-post');
     Route::post('/post', [PostRealStateController::class, 'create'])->name('create-real-state');
+
+    // tan lam
+    Route::get('/saved-posts', [SavedPostController::class, 'show'])->name('saved.posts.index');
+    Route::post('/save-post/{postId}', [SavedPostController::class, 'save'])->name('save.post');
+    Route::delete('/saved-post/{id}', [SavedPostController::class, 'destroy'])->name('delete.saved.post');
 }));
 
 Route::get('logout', [LoginController::class, 'logout'])->name('auth.logout');
@@ -43,12 +49,12 @@ Route::get('/category', function () {
 
 Route::get('/real-state/{id}', [RealStateController::class, 'show']);
 
-Route::middleware([AdminAuthMiddleware::class])->group(function (){
+Route::middleware([AdminAuthMiddleware::class])->group(function () {
     Route::get('/admin/login', [AdminLoginController::class, 'show'])->name('admin.login');
     Route::post('/admin/login', [AdminLoginController::class, 'login'])->name('admin.post.login');
 });
 
-Route::middleware([AdminVerifyMiddleware::class])->group(function (){
+Route::middleware([AdminVerifyMiddleware::class])->group(function () {
     Route::get('/admin', function () {
         return view('admin.index');
     })->name('dashboard');
