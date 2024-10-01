@@ -52,6 +52,9 @@
                         @endforeach
                     </tbody>
                   </table>
+                  <div class="card-footer">
+                    {{ $realStates->links('pagination::bootstrap-4') }}
+                </div>
                 </div>
                 <!-- /.card-body -->
 
