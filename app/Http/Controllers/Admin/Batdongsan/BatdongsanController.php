@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Storage;
 class BatdongsanController extends Controller
 {
     public function show(){
-        $realStates = Property::paginate(15);
+        $realStates = Property::paginate(24);
         return view('admin.batdongsan.index', [
             'realStates' => $realStates
         ]);

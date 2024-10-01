@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class PendingBatdonsanController extends Controller
 {
     public function show(){
-        $realStates = Property::with(['user'])->where('post_status', 'pending_approval')->get();
+        $realStates = Property::with(['user'])->where('post_status', 'pending_approval')->paginate(24);
         $user = Auth::user();
         return view('admin.batdongsan.pending', [
             'realStates' => $realStates,
