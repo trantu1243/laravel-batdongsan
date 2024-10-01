@@ -747,11 +747,11 @@
                     <div class="title mb-3 re__breadcrumb">
                         <a style="color: #999;" class="re__link-se" href="/">Trang chủ</a> /
 
-                        <a style="color: #999;" class="re__link-se" href="/ban-biet-thu">{{ $realState->property_category }}</a> /
 
-                        <a style="color: #999;" class="re__link-se" href="/ban-biet-thu-ho-chi-minh">{{ $realState->city }}</a> /
 
-                        <a style="color: #999;" class="re__link-se" href="/ban-biet-thu-binh-chanh-ho-chi-minh">{{ $realState->district }}</a>
+                        <a style="color: #999;" class="re__link-se" href="/category?city={{ $realState->city }}">{{ $realState->province->name }}</a> /
+
+                        <a style="color: #999;" class="re__link-se" href="/ban-biet-thu-binh-chanh-ho-chi-minh">{{ $realState->huyen->name }}</a>
                     </div>
                     <div class="content">
                         <h1 style="font-size: 24px; line-height: 34px; font-weight: 600;">{{ $realState->title }}</h1>

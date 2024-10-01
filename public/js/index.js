@@ -988,23 +988,23 @@ const resetText = () => {
         .querySelectorAll('.category-filter .form-checkbox-resetall')
         .forEach((item) => item.click());
 };
-document.querySelector('.main-radio')?.addEventListener('change', (e) => {
-    const checkedValue = e.target.value;
-    const data = DATA[Number(checkedValue) - 1];
-    document.querySelectorAll('.render-html').forEach((item, index) => {
-        const html = formatHtml(data, index);
-        item.innerHTML = html;
-    });
-    resetText();
-    runCheckAll();
-});
-$('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
-    const checkedValue = event.target.dataset.value;
-    const data = DATA[Number(checkedValue) - 1];
-    document.querySelectorAll('.render-html').forEach((item, index) => {
-        const html = formatHtml(data, index);
-        item.innerHTML = html;
-    });
-    resetText();
-    runCheckAll();
-});
+// document.querySelector('.main-radio')?.addEventListener('change', (e) => {
+//     const checkedValue = e.target.value;
+//     const data = DATA[Number(checkedValue) - 1];
+//     document.querySelectorAll('.render-html').forEach((item, index) => {
+//         const html = formatHtml(data, index);
+//         item.innerHTML = html;
+//     });
+//     resetText();
+//     runCheckAll();
+// });
+// $('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
+//     const checkedValue = event.target.dataset.value;
+//     const data = DATA[Number(checkedValue) - 1];
+//     document.querySelectorAll('.render-html').forEach((item, index) => {
+//         const html = formatHtml(data, index);
+//         item.innerHTML = html;
+//     });
+//     resetText();
+//     runCheckAll();
+// });

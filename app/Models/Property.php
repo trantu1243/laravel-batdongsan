@@ -52,4 +52,14 @@ class Property extends Model
         return $this->hasMany(PropertyImage::class);
     }
 
+    public function province()
+    {
+        return $this->hasOne(Province::class, '_id', 'city');
+    }
+
+    public function huyen()
+    {
+        return $this->hasOne(District::class, '_id', 'district');
+    }
+
 }
