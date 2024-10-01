@@ -7,7 +7,7 @@
 
 <h1 style="display: none;"> Nền tảng Quản Lí Bất Động Sản Việt Nam</h1>
 
-<form id="main" class="mt-4 container" method="get" action="search-duan">
+<form id="main" class="mt-4 container" method="get" action="{{Route('show-category')}}">
     <h2 class="mb-3 d-none d-sm-block">Chào mừng bạn đến với Website Batdongsan!</h2>
     <div class="desc d-none d-sm-flex" style="gap: 16px;">
         <span>Tìm nhà phố, dự án, cho thuê và nhiều hơn nữa</span>
@@ -17,11 +17,11 @@
     </div>
     <div class="main-radio d-none d-sm-flex gap-24 align-items-center mt-4">
         <div class="form-radio d-flex align-items-center gap-8">
-            <input type="radio" id="home-radio1" name="the_loai" class="custom-radio" value="1" checked />
+            <input type="radio" id="home-radio1" name="property_type" class="custom-radio" value="sale" checked />
             <label for="home-radio1" class="mb-0">Nhà đất bán</label>
         </div>
         <div class="form-radio d-flex align-items-center gap-8">
-            <input type="radio" id="home-radio2" name="the_loai" class="custom-radio" value="2" />
+            <input type="radio" id="home-radio2" name="property_type" class="custom-radio" value="rent" />
             <label for="home-radio2" class="mb-0">Cho thuê</label>
         </div>
     </div>
@@ -52,56 +52,60 @@
                 <ul class="dropdown-container form-checkbox-container category-filter">
                     <div class="p-0 d-flex flex-grow-1 flex-column render-html" style="flex: 1; overflow-y: scroll; background-color: #fff;">
                         <li class="form-checkbox" data-count="0">
-                            <label for="main-checkbox-sub-m-1">Tất cả nhà đất</label>
-                            <input id="main-checkbox-sub-m-1" type="checkbox" value="tat-ca-nha-dat-ban" name="tat_ca_nha_dat_ban" />
+                            <label for="main-checkbox-sub-1">Tất cả nhà đất</label>
+                            <input id="main-checkbox-sub-1" name="tat_ca_nha_dat_ban" value="tat-ca-nha-dat-ban" type="checkbox" />
                         </li>
                         <li class="form-checkbox">
-                            <label for="main-checkbox-sub-m-2">Bán Nhà</label>
-                            <input id="main-checkbox-sub-m-2" type="checkbox" value="11" name="CategoryIdsAsString[]" />
+                            <label for="main-checkbox-sub-2">Nhà</label>
+                            <input name="CategoryIdsAsString[]" value="house" id="main-checkbox-sub-12" type="checkbox" />
                         </li>
                         <li class="form-checkbox">
-                            <label for="main-checkbox-sub-m-3">Bán Đất</label>
-                            <input id="main-checkbox-sub-m-3" type="checkbox" value="12" name="CategoryIdsAsString[]" />
-                        </li>
-                        <li class="form-checkbox">
-                            <label for="main-checkbox-sub-m-4">Bán Biệt thự</label>
-                            <input id="main-checkbox-sub-m-4" type="checkbox" value="13" name="CategoryIdsAsString[]" />
-                        </li>
-                        <li class="form-checkbox">
-                            <label for="main-checkbox-sub-m-5">Bán BĐS thương mại</label>
-                            <input id="main-checkbox-sub-m-5" type="checkbox" value="14" name="CategoryIdsAsString[]" />
-                        </li>
-                        <li class="form-checkbox">
-                            <label for="main-checkbox-sub-m-6">Bán Căn hộ chung cư</label>
-                            <input id="main-checkbox-sub-m-6" type="checkbox" value="15" name="CategoryIdsAsString[]" />
-                        </li>
-                        <li class="form-checkbox">
-                            <label for="main-checkbox-sub-m-7">Bán Văn phòng</label>
-                            <input id="main-checkbox-sub-m-7" type="checkbox" value="16" name="CategoryIdsAsString[]" />
-                        </li>
-                        <li class="form-checkbox">
-                            <label for="main-checkbox-sub-m-8">Bán BĐS công nghiệp</label>
-                            <input id="main-checkbox-sub-m-8" type="checkbox" value="17" name="CategoryIdsAsString[]" />
+                            <label for="main-checkbox-sub-3">Đất</label>
+                            <input name="CategoryIdsAsString[]" value="land" id="main-checkbox-sub-13" type="checkbox" />
                         </li>
 
                         <li class="form-checkbox">
-                            <label for="main-checkbox-sub-m-9">Bán BĐS nông nghiệp</label>
-                            <input id="main-checkbox-sub-m-9" type="checkbox" value="18" name="CategoryIdsAsString[]" />
+                            <label for="main-checkbox-sub-4">Biệt thự</label>
+                            <input name="CategoryIdsAsString[]" value="apartment" id="main-checkbox-sub-14" type="checkbox" />
                         </li>
 
                         <li class="form-checkbox">
-                            <label for="main-checkbox-sub-m-10">Bán BĐS tâm linh</label>
-                            <input id="main-checkbox-sub-m-10" type="checkbox" value="19" name="CategoryIdsAsString[]" />
+                            <label for="main-checkbox-sub-5">BĐS thương mại</label>
+                            <input name="CategoryIdsAsString[]" value="office" id="main-checkbox-sub-15" type="checkbox" />
                         </li>
 
                         <li class="form-checkbox">
-                            <label for="main-checkbox-sub-m-11">Bán BĐS khác</label>
-                            <input id="main-checkbox-sub-m-11" type="checkbox" value="20" name="CategoryIdsAsString[]" />
+                            <label for="main-checkbox-sub-6">Căn hộ chung cư</label>
+                            <input name="CategoryIdsAsString[]" value="villa" id="main-checkbox-sub-16" type="checkbox" />
                         </li>
 
                         <li class="form-checkbox">
-                            <label for="main-checkbox-sub-m-12">Bán BĐS dịch vụ</label>
-                            <input id="main-checkbox-sub-m-12" type="checkbox" value="62" name="CategoryIdsAsString[]" />
+                            <label for="main-checkbox-sub-7">Văn phòng</label>
+                            <input name="CategoryIdsAsString[]" value="commercial" id="main-checkbox-sub-17" type="checkbox" />
+                        </li>
+
+                        <li class="form-checkbox">
+                            <label for="main-checkbox-sub-8">BĐS công nghiệp</label>
+                            <input name="CategoryIdsAsString[]" value="industrial" id="main-checkbox-sub-18" type="checkbox" />
+                        </li>
+
+                        <li class="form-checkbox">
+                            <label for="main-checkbox-sub-9">BĐS nông nghiệp</label>
+                            <input name="CategoryIdsAsString[]" value="agricultural" id="main-checkbox-sub-19" type="checkbox" />
+                        </li>
+                        <li class="form-checkbox">
+                            <label for="main-checkbox-sub-10">BĐS tâm linh</label>
+                            <input name="CategoryIdsAsString[]" value="spiritual" id="main-checkbox-sub-20" type="checkbox" />
+                        </li>
+
+                        <li class="form-checkbox">
+                            <label for="main-checkbox-sub-11">BĐS dịch vụ</label>
+                            <input name="CategoryIdsAsString[]" value="service" id="main-checkbox-sub-21" type="checkbox" />
+                        </li>
+
+                        <li class="form-checkbox">
+                            <label for="main-checkbox-sub-12">BĐS khác</label>
+                            <input name="CategoryIdsAsString[]" value="orther" id="main-checkbox-sub-22" type="checkbox" />
                         </li>
                     </div>
 
@@ -117,7 +121,7 @@
         </div>
 
         <div class="search-main">
-            <input type="text" name="KeywordOrigin" id="KeywordOrigin" placeholder="Tìm kiếm địa chỉ, dự án..." />
+            <input type="text" name="title" id="KeywordOrigin" placeholder="Tìm kiếm địa chỉ, dự án..." />
             <button type="submit" style="width: 159px; background: #41aed5; border-radius: 0px 28px 28px 0px; color: #ffffff;">
                 <i class="fa fa-search" aria-hidden="true" style="color: #ffffff;"></i>
                 Tìm kiếm
@@ -180,56 +184,56 @@
                                     <input id="main-checkbox-sub-1" name="tat_ca_nha_dat_ban" value="tat-ca-nha-dat-ban" type="checkbox" />
                                 </li>
                                 <li class="form-checkbox">
-                                    <label for="main-checkbox-sub-2">Căn hộ chung cư</label>
-                                    <input name="CategoryIdsAsString[]" value="1" id="main-checkbox-sub-2" type="checkbox" />
+                                    <label for="main-checkbox-sub-2">Nhà</label>
+                                    <input name="CategoryIdsAsString[]" value="house" id="main-checkbox-sub-2" type="checkbox" />
                                 </li>
                                 <li class="form-checkbox">
-                                    <label for="main-checkbox-sub-3">Bán nhà riêng</label>
-                                    <input name="CategoryIdsAsString[]" value="2" id="main-checkbox-sub-3" type="checkbox" />
-                                </li>
-
-                                <li class="form-checkbox">
-                                    <label for="main-checkbox-sub-4">Bán nhà biệt thự, liền kề</label>
-                                    <input name="CategoryIdsAsString[]" value="3" id="main-checkbox-sub-4" type="checkbox" />
+                                    <label for="main-checkbox-sub-3">Đất</label>
+                                    <input name="CategoryIdsAsString[]" value="land" id="main-checkbox-sub-3" type="checkbox" />
                                 </li>
 
                                 <li class="form-checkbox">
-                                    <label for="main-checkbox-sub-5">Bán nhà mặt phố</label>
-                                    <input name="CategoryIdsAsString[]" value="4" id="main-checkbox-sub-5" type="checkbox" />
+                                    <label for="main-checkbox-sub-4">Biệt thự</label>
+                                    <input name="CategoryIdsAsString[]" value="apartment" id="main-checkbox-sub-4" type="checkbox" />
                                 </li>
 
                                 <li class="form-checkbox">
-                                    <label for="main-checkbox-sub-6">Shophouse, nhà phố</label>
-                                    <input name="CategoryIdsAsString[]" value="5" id="main-checkbox-sub-6" type="checkbox" />
+                                    <label for="main-checkbox-sub-5">BĐS thương mại</label>
+                                    <input name="CategoryIdsAsString[]" value="office" id="main-checkbox-sub-5" type="checkbox" />
                                 </li>
 
                                 <li class="form-checkbox">
-                                    <label for="main-checkbox-sub-7">Bán đất nền dự án</label>
-                                    <input name="CategoryIdsAsString[]" value="6" id="main-checkbox-sub-7" type="checkbox" />
+                                    <label for="main-checkbox-sub-6">Căn hộ chung cư</label>
+                                    <input name="CategoryIdsAsString[]" value="villa" id="main-checkbox-sub-6" type="checkbox" />
                                 </li>
 
                                 <li class="form-checkbox">
-                                    <label for="main-checkbox-sub-8">Bán đất</label>
-                                    <input name="CategoryIdsAsString[]" value="7" id="main-checkbox-sub-8" type="checkbox" />
+                                    <label for="main-checkbox-sub-7">Văn phòng</label>
+                                    <input name="CategoryIdsAsString[]" value="commercial" id="main-checkbox-sub-7" type="checkbox" />
                                 </li>
 
                                 <li class="form-checkbox">
-                                    <label for="main-checkbox-sub-9">Trang trại, khu nghỉ dưỡng</label>
-                                    <input name="CategoryIdsAsString[]" value="8" id="main-checkbox-sub-9" type="checkbox" />
-                                </li>
-                                <li class="form-checkbox">
-                                    <label for="main-checkbox-sub-10">Bán condotel</label>
-                                    <input name="CategoryIdsAsString[]" value="9" id="main-checkbox-sub-10" type="checkbox" />
+                                    <label for="main-checkbox-sub-8">BĐS công nghiệp</label>
+                                    <input name="CategoryIdsAsString[]" value="industrial" id="main-checkbox-sub-8" type="checkbox" />
                                 </li>
 
                                 <li class="form-checkbox">
-                                    <label for="main-checkbox-sub-11">Bán kho, nhà xưởng</label>
-                                    <input name="CategoryIdsAsString[]" value="10" id="main-checkbox-sub-11" type="checkbox" />
+                                    <label for="main-checkbox-sub-9">BĐS nông nghiệp</label>
+                                    <input name="CategoryIdsAsString[]" value="agricultural" id="main-checkbox-sub-9" type="checkbox" />
+                                </li>
+                                <li class="form-checkbox">
+                                    <label for="main-checkbox-sub-10">BĐS tâm linh</label>
+                                    <input name="CategoryIdsAsString[]" value="spiritual" id="main-checkbox-sub-10" type="checkbox" />
                                 </li>
 
                                 <li class="form-checkbox">
-                                    <label for="main-checkbox-sub-12">Bán loại bất động sản khác</label>
-                                    <input name="CategoryIdsAsString[]" value="11" id="main-checkbox-sub-12" type="checkbox" />
+                                    <label for="main-checkbox-sub-11">BĐS dịch vụ</label>
+                                    <input name="CategoryIdsAsString[]" value="service" id="main-checkbox-sub-11" type="checkbox" />
+                                </li>
+
+                                <li class="form-checkbox">
+                                    <label for="main-checkbox-sub-12">BĐS khác</label>
+                                    <input name="CategoryIdsAsString[]" value="orther" id="main-checkbox-sub-12" type="checkbox" />
                                 </li>
                             </div>
 
@@ -275,69 +279,69 @@
                                     data-size="200"
                                     data-live-search-placeholder="Tìm tỉnh thành"
                                     data-dependance-name="tinhthanh">
-                                    <option title="Hồ Chí Minh" value="1">Hồ Chí Minh</option>
-                                    <option title="Hà Nội" value="2">Hà Nội</option>
-                                    <option title="Đà Nẵng" value="3">Đà Nẵng</option>
-                                    <option title="Bình Dương" value="4">Bình Dương</option>
-                                    <option title="Đồng Nai" value="5">Đồng Nai</option>
-                                    <option title="Khánh Hòa" value="6">Khánh Hòa</option>
-                                    <option title="Hải Phòng" value="7">Hải Phòng</option>
-                                    <option title="Long An" value="8">Long An</option>
-                                    <option title="Quảng Nam" value="9">Quảng Nam</option>
-                                    <option title="Bà Rịa Vũng Tàu" value="10">Bà Rịa Vũng Tàu</option>
-                                    <option title="Đắk Lắk" value="11">Đắk Lắk</option>
-                                    <option title="Cần Thơ" value="12">Cần Thơ</option>
-                                    <option title="Bình Thuận  " value="13">Bình Thuận </option>
-                                    <option title="Lâm Đồng" value="14">Lâm Đồng</option>
-                                    <option title="Thừa Thiên Huế" value="15">Thừa Thiên Huế</option>
-                                    <option title="Kiên Giang" value="16">Kiên Giang</option>
-                                    <option title="Bắc Ninh" value="17">Bắc Ninh</option>
-                                    <option title="Quảng Ninh" value="18">Quảng Ninh</option>
-                                    <option title="Thanh Hóa" value="19">Thanh Hóa</option>
-                                    <option title="Nghệ An" value="20">Nghệ An</option>
-                                    <option title="Hải Dương" value="21">Hải Dương</option>
-                                    <option title="Gia Lai" value="22">Gia Lai</option>
-                                    <option title="Bình Phước" value="23">Bình Phước</option>
-                                    <option title="Hưng Yên" value="24">Hưng Yên</option>
-                                    <option title="Bình Định" value="25">Bình Định</option>
-                                    <option title="Tiền Giang" value="26">Tiền Giang</option>
-                                    <option title="Thái Bình" value="27">Thái Bình</option>
-                                    <option title="Bắc Giang" value="28">Bắc Giang</option>
-                                    <option title="Hòa Bình" value="29">Hòa Bình</option>
-                                    <option title="An Giang" value="30">An Giang</option>
-                                    <option title="Vĩnh Phúc" value="31">Vĩnh Phúc</option>
-                                    <option title="Tây Ninh" value="32">Tây Ninh</option>
-                                    <option title="Thái Nguyên" value="33">Thái Nguyên</option>
-                                    <option title="Lào Cai" value="34">Lào Cai</option>
-                                    <option title="Nam Định" value="35">Nam Định</option>
-                                    <option title="Quảng Ngãi" value="36">Quảng Ngãi</option>
-                                    <option title="Bến Tre" value="37">Bến Tre</option>
-                                    <option title="Đắk Nông" value="38">Đắk Nông</option>
-                                    <option title="Cà Mau" value="39">Cà Mau</option>
-                                    <option title="Vĩnh Long" value="40">Vĩnh Long</option>
-                                    <option title="Ninh Bình" value="41">Ninh Bình</option>
-                                    <option title="Phú Thọ" value="42">Phú Thọ</option>
-                                    <option title="Ninh Thuận" value="43">Ninh Thuận</option>
-                                    <option title="Phú Yên" value="44">Phú Yên</option>
-                                    <option title="Hà Nam" value="45">Hà Nam</option>
-                                    <option title="Hà Tĩnh" value="46">Hà Tĩnh</option>
-                                    <option title="Đồng Tháp" value="47">Đồng Tháp</option>
-                                    <option title="Sóc Trăng" value="48">Sóc Trăng</option>
-                                    <option title="Kon Tum" value="49">Kon Tum</option>
-                                    <option title="Quảng Bình" value="50">Quảng Bình</option>
-                                    <option title="Quảng Trị" value="51">Quảng Trị</option>
-                                    <option title="Trà Vinh" value="52">Trà Vinh</option>
-                                    <option title="Hậu Giang" value="53">Hậu Giang</option>
-                                    <option title="Sơn La" value="54">Sơn La</option>
-                                    <option title="Bạc Liêu" value="55">Bạc Liêu</option>
-                                    <option title="Yên Bái" value="56">Yên Bái</option>
-                                    <option title="Tuyên Quang" value="57">Tuyên Quang</option>
-                                    <option title="Điện Biên" value="58">Điện Biên</option>
-                                    <option title="Lai Châu" value="59">Lai Châu</option>
-                                    <option title="Lạng Sơn" value="60">Lạng Sơn</option>
-                                    <option title="Hà Giang" value="61">Hà Giang</option>
-                                    <option title="Bắc Kạn" value="62">Bắc Kạn</option>
-                                    <option title="Cao Bằng" value="63">Cao Bằng</option>
+                                    <option value="89">Tỉnh An Giang</option>
+                                    <option value="77">Tỉnh Bà Rịa - Vũng Tàu</option>
+                                    <option value="24">Tỉnh Bắc Giang</option>
+                                    <option value="06">Tỉnh Bắc Kạn</option>
+                                    <option value="95">Tỉnh Bạc Liêu</option>
+                                    <option value="27">Tỉnh Bắc Ninh</option>
+                                    <option value="83">Tỉnh Bến Tre</option>
+                                    <option value="74">Tỉnh Bình Dương</option>
+                                    <option value="70">Tỉnh Bình Phước</option>
+                                    <option value="60">Tỉnh Bình Thuận</option>
+                                    <option value="52">Tỉnh Bình Định</option>
+                                    <option value="96">Tỉnh Cà Mau</option>
+                                    <option value="92">Thành phố Cần Thơ</option>
+                                    <option value="04">Tỉnh Cao Bằng</option>
+                                    <option value="64">Tỉnh Gia Lai</option>
+                                    <option value="02">Tỉnh Hà Giang</option>
+                                    <option value="35">Tỉnh Hà Nam</option>
+                                    <option value="01">Thành phố Hà Nội</option>
+                                    <option value="42">Tỉnh Hà Tĩnh</option>
+                                    <option value="30">Tỉnh Hải Dương</option>
+                                    <option value="31">Thành phố Hải Phòng</option>
+                                    <option value="93">Tỉnh Hậu Giang</option>
+                                    <option value="79">Thành phố Hồ Chí Minh</option>
+                                    <option value="17">Tỉnh Hoà Bình</option>
+                                    <option value="33">Tỉnh Hưng Yên</option>
+                                    <option value="56">Tỉnh Khánh Hòa</option>
+                                    <option value="91">Tỉnh Kiên Giang</option>
+                                    <option value="62">Tỉnh Kon Tum</option>
+                                    <option value="12">Tỉnh Lai Châu</option>
+                                    <option value="68">Tỉnh Lâm Đồng</option>
+                                    <option value="20">Tỉnh Lạng Sơn</option>
+                                    <option value="10">Tỉnh Lào Cai</option>
+                                    <option value="80">Tỉnh Long An</option>
+                                    <option value="36">Tỉnh Nam Định</option>
+                                    <option value="40">Tỉnh Nghệ An</option>
+                                    <option value="37">Tỉnh Ninh Bình</option>
+                                    <option value="58">Tỉnh Ninh Thuận</option>
+                                    <option value="25">Tỉnh Phú Thọ</option>
+                                    <option value="54">Tỉnh Phú Yên</option>
+                                    <option value="44">Tỉnh Quảng Bình</option>
+                                    <option value="49">Tỉnh Quảng Nam</option>
+                                    <option value="51">Tỉnh Quảng Ngãi</option>
+                                    <option value="22">Tỉnh Quảng Ninh</option>
+                                    <option value="45">Tỉnh Quảng Trị</option>
+                                    <option value="94">Tỉnh Sóc Trăng</option>
+                                    <option value="14">Tỉnh Sơn La</option>
+                                    <option value="72">Tỉnh Tây Ninh</option>
+                                    <option value="34">Tỉnh Thái Bình</option>
+                                    <option value="19">Tỉnh Thái Nguyên</option>
+                                    <option value="38">Tỉnh Thanh Hóa</option>
+                                    <option value="46">Tỉnh Thừa Thiên Huế</option>
+                                    <option value="82">Tỉnh Tiền Giang</option>
+                                    <option value="84">Tỉnh Trà Vinh</option>
+                                    <option value="08">Tỉnh Tuyên Quang</option>
+                                    <option value="86">Tỉnh Vĩnh Long</option>
+                                    <option value="26">Tỉnh Vĩnh Phúc</option>
+                                    <option value="15">Tỉnh Yên Bái</option>
+                                    <option value="48">Thành phố Đà Nẵng</option>
+                                    <option value="66">Tỉnh Đắk Lắk</option>
+                                    <option value="67">Tỉnh Đắk Nông</option>
+                                    <option value="11">Tỉnh Điện Biên</option>
+                                    <option value="75">Tỉnh Đồng Nai</option>
+                                    <option value="87">Tỉnh Đồng Tháp</option>
                                 </select>
                                 <div class="clear-select-bootstrap">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
@@ -351,7 +355,7 @@
                                 <select
                                     id="select-huyen"
                                     title="Quận/Huyện"
-                                    name="DistrictIdsAsString[]"
+                                    name="DistrictIdsAsString"
                                     class="selectpicker filter-select-boostrap"
                                     data-live-search="true"
                                     data-size="2000"
@@ -375,7 +379,7 @@
                             <li>
                                 <select
                                     id="select-phuong-xa"
-                                    name="WardIdsAsString[]"
+                                    name="WardIdsAsString"
                                     title="Phương/Xã"
                                     data-dependance="quanhuyen"
                                     class="selectpicker filter-select-boostrap"
@@ -394,7 +398,7 @@
                                     </svg>
                                 </div>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <select
                                     id="select-duong"
                                     name="StreetIdsAsString"
@@ -412,8 +416,8 @@
                                             d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                                     </svg>
                                 </div>
-                            </li>
-                            <li>
+                            </li> --}}
+                            {{-- <li>
                                 <select
                                     id="select-duan"
                                     name="ProjectIdsAsString[]"
@@ -437,7 +441,7 @@
                                             d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                                     </svg>
                                 </div>
-                            </li>
+                            </li> --}}
                             <li class="form-footer">
                                 <p class="form-checkbox-resetall">
                                     <img src="./assets/img/refresh-2.svg" alt="" />
@@ -617,40 +621,40 @@
                                 <span class="title">Hướng nhà</span>
                                 <div class="checkbox-container">
                                     <div class="form-custom-checkbox">
-                                        <input type="checkbox" value="dong" name="DirectionsAsString[]" />
+                                        <input type="checkbox" value="east" name="DirectionsAsString[]" />
                                         <label for="">Đông</label>
                                     </div>
                                     <div class="form-custom-checkbox">
-                                        <input type="checkbox" value="tay" name="DirectionsAsString[]" />
+                                        <input type="checkbox" value="west" name="DirectionsAsString[]" />
                                         <label for="">Tây</label>
                                     </div>
                                     <div class="form-custom-checkbox">
-                                        <input type="checkbox" value="nam" name="DirectionsAsString[]" />
+                                        <input type="checkbox" value="south" name="DirectionsAsString[]" />
                                         <label for="">Nam</label>
                                     </div>
                                     <div class="form-custom-checkbox">
-                                        <input type="checkbox" value="bac" name="DirectionsAsString[]" />
+                                        <input type="checkbox" value="north" name="DirectionsAsString[]" />
                                         <label for="">Bắc</label>
                                     </div>
                                     <div class="form-custom-checkbox">
-                                        <input type="checkbox" value="dong-bac" name="DirectionsAsString[]" />
+                                        <input type="checkbox" value="northeast" name="DirectionsAsString[]" />
                                         <label for="">Đông - Bắc</label>
                                     </div>
                                     <div class="form-custom-checkbox">
-                                        <input type="checkbox" value="tay-bac" name="DirectionsAsString[]" />
+                                        <input type="checkbox" value="northwest" name="DirectionsAsString[]" />
                                         <label for="">Tây - Bắc</label>
                                     </div>
                                     <div class="form-custom-checkbox">
-                                        <input type="checkbox" value="tay-nam" name="DirectionsAsString[]" />
+                                        <input type="checkbox" value="southeast" name="DirectionsAsString[]" />
                                         <label for="">Tây - Nam</label>
                                     </div>
                                     <div class="form-custom-checkbox">
-                                        <input type="checkbox" value="dong-nam" name="DirectionsAsString[]" />
+                                        <input type="checkbox" value="southwest" name="DirectionsAsString[]" />
                                         <label for="">Đông - Nam</label>
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <span class="title">Nội dung tin có</span>
                                 <div class="checkbox-container">
                                     <div class="form-custom-checkbox">
@@ -666,7 +670,7 @@
                                         <label for="">3D & 360o</label>
                                     </div>
                                 </div>
-                            </li>
+                            </li> --}}
                             <li class="form-footer">
                                 <p class="form-checkbox-resetall">
                                     <img src="./assets/img/refresh-2.svg" alt="" />
@@ -698,7 +702,7 @@
     <h3 class="title">Tìm trong danh mục</h3>
     <div class="row row-cols-2 row-cols-md-4 d-flex d-lg-none">
         <div class="col mb-2">
-            <a href="ban-nha" title="Bán nhà">
+            <a href="/categoty" title="Bán nhà">
                 <div class="danhmuc-item">
                     <div>
                         <img src="images/nha-rieng.svg" alt="" />
@@ -968,12 +972,12 @@
                 </button>
             </div>
             <div class="swiper-wrapper">
+                @foreach ($newRealStates as $item)
                 <div class="swiper-slide">
                     <div class="d-flex flex-column gap-4" style="gap: 24px;">
-                        <a href="ban-biet-thu-2672m2-trinh-quang-nghi-4-tang-phong-phu-binh-chanh-gia-chi-305-ty-r117359" class="main-item noi-bat">
+                        <a href="/real-state/{{ $item->id }}" class="main-item noi-bat">
                             <div class="image-item h-150">
-                                <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117359_66c9f32bc3f48.jpg alt="Bán biệt thự 267.2m2 Trịnh Quang Nghị 4 tầng Phong Phú Bình Chánh giá chỉ 30,5
-                                tỷ" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
+                                <img class="news_image img-thumbnail-home" lazy-src={{ $item->images[0]->image_url}} alt="{{$item->title}}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
                                 <div class="list-img">
                                     <img src="assets/img/camera.png" alt="" />
                                     <span class="qty">5</span>
@@ -982,12 +986,12 @@
 
                             <div class="info">
                                 <h3 class="title">
-                                    Bán biệt thự 267.2m2 Trịnh Quang Nghị 4...
+                                    {{ Str::limit( $item->title, 40, '...') }}
                                 </h3>
                                 <div class="price-area">
                                     <span class="price">
                                         <img src="assets/img/price.png" alt="" />
-                                        <span style="margin-left: 5px;"> 30 tỷ </span>
+                                        <span style="margin-left: 5px;"> {{ $item->price }} </span>
                                     </span>
 
                                     <span class="area">
@@ -998,12 +1002,14 @@
                                     </span>
                                 </div>
                                 <div class="address">
-                                    Bình Chánh, Hồ Chí Minh
+                                    {{ $item->detailAddress }}
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
+                @endforeach
+
 
                 <div class="swiper-slide">
                     <div class="d-flex flex-column gap-4" style="gap: 24px;">

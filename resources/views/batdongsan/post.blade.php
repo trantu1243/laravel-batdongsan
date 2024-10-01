@@ -579,6 +579,11 @@
                                                             Thêm video từ Youtube
                                                         </label>
                                                         <input type="text" name="video_link" class="ptanh-custom-input form-control" placeholder="VD: https://www.youtube.com/watch?v=Y-Dw0NpfRug" />
+                                                        <div class="text-danger">
+                                                            @error('link_video')
+                                                            <div class="text-danger">Link video là bắt buộc.</div>
+                                                            @enderror
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -608,19 +613,31 @@
                                                             <div class="col-md-6 col-sm-12">
                                                                 <label for="validationCustom04" class="form-label"> Tên liên hệ <span class="batbuoc">*</span> </label>
                                                                 <input name="name" type="text" value="{{ $user->name }}" class="ptanh-custom-input form-control" placeholder="Nhập tên" />
-                                                                <div class="author_name_error text-danger"></div>
+                                                                <div class="author_name_error text-danger">
+                                                                    @error('name')
+                                                                    <div class="text-danger">Tên là bắt buộc.</div>
+                                                                    @enderror
+                                                                </div>
                                                             </div>
                                                             <div class="col-md-6 col-sm-12">
                                                                 <label for="validationCustom04" class="form-label"> Số điện thoại <span class="batbuoc">*</span> </label>
                                                                 <input type="text" name="phone" class="ptanh-custom-input form-control" placeholder="Nhập số điện thoại" value="{{$user->phone}}" />
-                                                                <div class="author_phone_error text-danger"></div>
+                                                                <div class="author_phone_error text-danger">
+                                                                    @error('phone')
+                                                                    <div class="text-danger">SĐT là bắt buộc.</div>
+                                                                    @enderror
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="row row-element">
                                                             <div class="col-md-6 col-sm-12">
                                                                 <label for="validationCustom04" class="form-label"> Email <span class="batbuoc">*</span> </label>
                                                                 <input name="email" type="text" class="ptanh-custom-input form-control" placeholder="Nhập email" value="{{ $user->email }}" />
-                                                                <div class="author_email_error text-danger"></div>
+                                                                <div class="author_email_error text-danger">
+                                                                    @error('email')
+                                                                    <div class="text-danger">Email là bắt buộc.</div>
+                                                                    @enderror
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -713,6 +730,8 @@
                                                                 d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                                                         </svg>
                                                     </div>
+
+
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label for="validationCustom04" class="form-label">
@@ -731,6 +750,12 @@
                                                             min="1997-01-01"
                                                             max="2030-12-31" />
                                                     </div>
+
+                                                    <div class="start_date_error text-danger">
+                                                        @error('start_date')
+                                                        <div class="text-danger">Ngày bắt đầu là bắt buộc.</div>
+                                                        @enderror
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -743,108 +768,13 @@
                                 <div style="display: flex; align-items: center;" class="btn-container">
                                     <button style="color: #f0f0f0;" type="submit" class="btn-next btn btn-container-footer">
                                         Tiếp tục
-                                        <img src="./assets/img/btn-vector-footer.svg" alt="" style="width: 8px; height: 15px;" />
+                                        <img src="/assets/img/btn-vector-footer.svg" alt="" style="width: 8px; height: 15px;" />
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-lg-3 right-element d-none d-lg-block">
-                        <div class="container-left-side">
-                            <div class="chart-container">
-                                <div class="title" style="margin-top: 24px; margin-bottom: 24px;">
-                                    Điểm uy tín
-                                </div>
-                                <div class="circular-progress">
-                                    <div class="value-container">0%</div>
-                                </div>
-                            </div>
-                            <div class="content-container" style="padding: 0 24px 24px 24px;">
-                                <div class="description" style="text-align: center; margin-bottom: 15px;">
-                                    Chưa đủ thông tin để người xem ra quyết định
-                                </div>
-                                <div class="accordion" id="accordionExample">
-                                    <div class="card card-element">
-                                        <div class="card-header" id="headingOne">
-                                            <h2 class="mb-0" style="display: flex;">
-                                                <button class="btn btn-link btn-block text-left btn-title" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    Thông tin cơ bản
-                                                </button>
-                                                <span class="title-desc">20%</span>
-                                            </h2>
-                                        </div>
 
-                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                            <div class="card card-body" style="box-shadow: none;">
-                                                <div class="element-collapse" style="margin-top: 24px;">
-                                                    <p class="element-collapse-title">Nhu cầu</p>
-                                                    <span class="element-collapse-value">+1</span>
-                                                </div>
-                                                <div class="element-collapse">
-                                                    <p class="element-collapse-title">
-                                                        Loại bất động sản
-                                                    </p>
-                                                    <span class="element-collapse-value">+1</span>
-                                                </div>
-                                                <div class="element-collapse">
-                                                    <p class="element-collapse-title">Tỉnh/thành phố</p>
-                                                    <span class="element-collapse-value">+1</span>
-                                                </div>
-                                                <div class="element-collapse">
-                                                    <p class="element-collapse-title">Quận/huyện</p>
-                                                    <span class="element-collapse-value">+1</span>
-                                                </div>
-                                                <div class="element-collapse">
-                                                    <p class="element-collapse-title">Phường/xã</p>
-                                                    <span class="element-collapse-value">+1</span>
-                                                </div>
-                                                <div class="element-collapse">
-                                                    <p class="element-collapse-title">Đường, phố</p>
-                                                    <span class="element-collapse-value">+1</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card card-element">
-                                        <div class="card-header" id="headingOne2">
-                                            <h2 class="mb-0" style="display: flex;">
-                                                <button class="btn btn-link btn-block text-left btn-title" type="button" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
-                                                    Thông tin mô tả
-                                                </button>
-                                                <span class="title-desc">20%</span>
-                                            </h2>
-                                        </div>
-                                    </div>
-                                    <div class="dropdown-divider" style="margin: 0;"></div>
-                                    <div class="card card-element">
-                                        <div class="card-header" id="headingOne3">
-                                            <h2 class="mb-0" style="display: flex;">
-                                                <button class="btn btn-link btn-block text-left btn-title" type="button" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
-                                                    Thông tin khác
-                                                </button>
-                                                <span class="title-desc">20%</span>
-                                            </h2>
-                                        </div>
-                                    </div>
-                                    <div class="dropdown-divider" style="margin: 0;"></div>
-
-                                    <div class="card card-element">
-                                        <div class="card-header" id="headingOne4">
-                                            <h2 class="mb-0" style="display: flex;">
-                                                <button class="btn btn-link btn-block text-left btn-title" type="button" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
-                                                    Thông tin liên hệ
-                                                </button>
-                                                <span class="title-desc">20%</span>
-                                            </h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="description">
-                                    Để tăng lượt xem tin và nâng cao tỷ lệ tiếp cận đến nhiều khách hàng, sử dụng ngay các gói TIN ĐĂNG VIP và UPTIN lên top đầu tìm kiếm
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </form>
@@ -1035,62 +965,62 @@
         errorDiv.empty();
     });
 
-    $('#frm').on('submit', function (e) {
+    // $('#frm').on('submit', function (e) {
 
-        e.preventDefault();
+    //     e.preventDefault();
 
-        let formData = new FormData(this);
+    //     let formData = new FormData(this);
 
-        $.ajax({
-            url: $(this).attr('action'),
-            type: $(this).attr('method'),
-            data: formData,
-            processData: false,
-            contentType: false,
-            success: function (response) {
-                window.location.href = response.redirect_url;
-            },
-            error: function (response) {
-                // Xử lý khi có lỗi
-                if (response.status === 422) {
-                    let firstErrorElement = null;
-                    let errors = response.responseJSON.errors;
-                    // Xóa các lỗi cũ (không cần thiết nếu chúng ta đã xóa khi người dùng chỉnh sửa)
+    //     $.ajax({
+    //         url: $(this).attr('action'),
+    //         type: $(this).attr('method'),
+    //         data: formData,
+    //         processData: false,
+    //         contentType: false,
+    //         success: function (response) {
+    //             window.location.href = response.redirect_url;
+    //         },
+    //         error: function (response) {
+    //             // Xử lý khi có lỗi
+    //             if (response.status === 422) {
+    //                 let firstErrorElement = null;
+    //                 let errors = response.responseJSON.errors;
+    //                 // Xóa các lỗi cũ (không cần thiết nếu chúng ta đã xóa khi người dùng chỉnh sửa)
 
-                    $.each(errors, function(key, value) {
-                        let inputName = key;
-                        if (key.includes('.')) {
-                            inputName = key.split('.')[0]; // Lấy tên gốc nếu có dấu chấm
-                        }
-                        if (inputName.includes('[')) {
-                            inputName = inputName.replace(/\[\]/g, '_'); // Thay thế [] bằng _
-                        }
-                        let errorDiv = $('.' + inputName + '_error');
-                        errorDiv.empty(); // Xóa lỗi cũ
+    //                 $.each(errors, function(key, value) {
+    //                     let inputName = key;
+    //                     if (key.includes('.')) {
+    //                         inputName = key.split('.')[0]; // Lấy tên gốc nếu có dấu chấm
+    //                     }
+    //                     if (inputName.includes('[')) {
+    //                         inputName = inputName.replace(/\[\]/g, '_'); // Thay thế [] bằng _
+    //                     }
+    //                     let errorDiv = $('.' + inputName + '_error');
+    //                     errorDiv.empty(); // Xóa lỗi cũ
 
-                        // Lặp qua tất cả các lỗi và thêm chúng vào errorDiv
-                        $.each(value, function(index, error) {
-                            errorDiv.append('<div class="text-danger">' + error + '</div>');
-                        });
+    //                     // Lặp qua tất cả các lỗi và thêm chúng vào errorDiv
+    //                     $.each(value, function(index, error) {
+    //                         errorDiv.append('<div class="text-danger">' + error + '</div>');
+    //                     });
 
-                        // Lưu input đầu tiên có lỗi
-                        if (!firstErrorElement) {
-                            firstErrorElement = $('[name="' + key + '"]');
-                        }
-                    });
-                    // Cuộn đến input đầu tiên có lỗi
-                    if (firstErrorElement) {
-                        $('html, body').animate({
-                            scrollTop: firstErrorElement.offset().top
-                        }, 500);
-                        firstErrorElement.focus();
-                    }
+    //                     // Lưu input đầu tiên có lỗi
+    //                     if (!firstErrorElement) {
+    //                         firstErrorElement = $('[name="' + key + '"]');
+    //                     }
+    //                 });
+    //                 // Cuộn đến input đầu tiên có lỗi
+    //                 if (firstErrorElement) {
+    //                     $('html, body').animate({
+    //                         scrollTop: firstErrorElement.offset().top
+    //                     }, 500);
+    //                     firstErrorElement.focus();
+    //                 }
 
 
-                }
-            }
-        });
-    });
+    //             }
+    //         }
+    //     });
+    // });
 </script>
 
 <script>

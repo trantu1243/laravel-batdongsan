@@ -75,7 +75,7 @@
     </script>
 </head>
 
-<body>
+<body {{ Route::currentRouteName() == 'show-edit-manage' ? 'class="hold-transition sidebar-mini" id=dangtintuc' : '' }}>
     @include('layouts.header')
     @yield('content')
     @include('layouts.footer')

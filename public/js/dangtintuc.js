@@ -3,7 +3,6 @@ let countBathroomInit = 0;
 let countFlatInit = 0;
 
 function countBedroom() {
-    console.log('aaaa');
     countBedroomInit -= 1;
     document.getElementById('text-bedroom').innerHTML = countBedroomInit;
     document.getElementById('minus-bedroom-img').style.background = 'red';

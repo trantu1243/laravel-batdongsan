@@ -31,7 +31,7 @@
                 </a>
             </li>
 
-            <li class="nav-item {{ Route::currentRouteName() == 'admin.real-state' ? 'menu-open' : '' }}">
+            <li class="nav-item {{ Route::currentRouteName() == 'admin.real-state' || Route::currentRouteName() == 'show-pending' ? 'menu-open' : '' }}">
                 <a href="" class="nav-link">
                     <i class="nav-icon fa fa-cog"></i>
                     <p>Bất động sản
@@ -43,6 +43,13 @@
                         <a href="/admin/real-state" class="nav-link {{ Route::currentRouteName() == 'admin.real-state' ? 'active' : '' }}">
                             <i class="fa fa-genderless nav-icon"></i>
                             <p>Tất cả</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/admin/pending/real-state" class="nav-link {{ Route::currentRouteName() == 'show-pending' ? 'active' : '' }}">
+                            <i class="fa fa-genderless nav-icon"></i>
+                            <p>Danh sách duyệt</p>
                         </a>
                     </li>
 

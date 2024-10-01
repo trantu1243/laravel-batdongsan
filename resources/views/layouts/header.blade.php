@@ -27,93 +27,95 @@
                     <a class="item-nav-link" href="sellernet/manage-posts"> Danh sách tin </a>
                 </li>
                 <li class="item-menu dropdown">
-                    <a href="/ban-nha-dat">Nhà đất bán</a>
+                    <a href="/category?property_type=sale">Nhà đất bán</a>
                     <a class="nav-link dropdown-toggle item-nav-link ml-auto" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                     <!-- Sub-Menu -->
                     <ul class="sub-menu dropdown-menu" aria-labelledby="navbarDropdown">
                         <li class="dropdown-item">
-                            <a href="ban-nha" title="Bán Nhà">Bán Nhà</a>
+                            <a href="/category?property_type=sale&property_category=house" title="Bán Nhà">Bán Nhà</a>
                         </li>
 
                         <li class="dropdown-item">
-                            <a href="ban-dat" title="Bán Đất">Bán Đất</a>
+                            <a href="/category?property_type=sale&property_category=land" title="Bán Đất">Bán Đất</a>
                         </li>
 
                         <li class="dropdown-item">
-                            <a href="ban-biet-thu" title="Bán Biệt thự">Bán Biệt thự</a>
+                            <a href="/category?property_type=sale&property_category=villa" title="Bán Biệt thự">Bán Biệt thự</a>
                         </li>
 
                         <li class="dropdown-item">
-                            <a href="ban-bds-thuong-mai" title="Bán BĐS thương mại">Bán BĐS thương mại</a>
+                            <a href="/category?property_type=sale&property_category=commercial" title="Bán BĐS thương mại">Bán BĐS thương mại</a>
                         </li>
 
                         <li class="dropdown-item">
-                            <a href="ban-can-ho-chung-cu" title="Bán Căn hộ chung cư">Bán Căn hộ chung cư</a>
+                            <a href="/category?property_type=sale&property_category=apartment" title="Bán Căn hộ chung cư">Bán Căn hộ chung cư</a>
                         </li>
 
                         <li class="dropdown-item">
-                            <a href="ban-van-phong" title="Bán Văn phòng">Bán Văn phòng</a>
+                            <a href="/category?property_type=sale&property_category=office" title="Bán Văn phòng">Bán Văn phòng</a>
                         </li>
 
                         <li class="dropdown-item">
-                            <a href="ban-bds-cong-nghiep" title="Bán BĐS công nghiệp">Bán BĐS công nghiệp</a>
+                            <a href="/category?property_type=sale&property_category=industrial" title="Bán BĐS công nghiệp">Bán BĐS công nghiệp</a>
                         </li>
 
                         <li class="dropdown-item">
-                            <a href="ban-bds-nong-nghiep" title="Bán BĐS nông nghiệp">Bán BĐS nông nghiệp</a>
+                            <a href="/category?property_type=sale&property_category=agricultural" title="Bán BĐS nông nghiệp">Bán BĐS nông nghiệp</a>
                         </li>
 
                         <li class="dropdown-item">
-                            <a href="ban-bds-tam-linh" title="Bán BĐS tâm linh">Bán BĐS tâm linh</a>
+                            <a href="/category?property_type=sale&property_category=spiritual" title="Bán BĐS tâm linh">Bán BĐS tâm linh</a>
                         </li>
 
                         <li class="dropdown-item">
-                            <a href="ban-bds-khac" title="Bán BĐS khác">Bán BĐS khác</a>
+                            <a href="/category?property_type=sale&property_category=service" title="Bán BĐS dịch vụ">Bán BĐS dịch vụ</a>
                         </li>
 
                         <li class="dropdown-item">
-                            <a href="ban-bds-dich-vu" title="Bán BĐS dịch vụ">Bán BĐS dịch vụ</a>
+                            <a href="/category?property_type=sale&property_category=other" title="Bán BĐS khác">Bán BĐS khác</a>
                         </li>
+
+
                     </ul>
                 </li>
 
                 <li class="item-menu dropdown">
-                    <a href="/cho-thue-nha-dat">Nhà đất cho thuê</a>
+                    <a href="/category?property_type=rent">Nhà đất cho thuê</a>
                     <a class="nav-link dropdown-toggle item-nav-link ml-auto" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
 
                     <ul class="sub-menu dropdown-menu" aria-labelledby="navbarDropdown2">
                         <li class="dropdown-item">
-                            <a href="cho-thue-nha" title="Cho thuê Nhà">Cho thuê Nhà</a>
+                            <a href="/category?property_type=rent&property_category=house" title="Cho thuê Nhà">Cho thuê Nhà</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="cho-thue-dat" title="Cho thuê Đất">Cho thuê Đất</a>
+                            <a href="/category?property_type=rent&property_category=land" title="Cho thuê Đất">Cho thuê Đất</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="cho-thue-can-ho-chung-cu" title="Cho thuê Căn hộ chung cư">Cho thuê Căn hộ chung cư</a>
+                            <a href="/category?property_type=rent&property_category=apartment" title="Cho thuê Căn hộ chung cư">Cho thuê Căn hộ chung cư</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="cho-thue-van-phong" title="Cho thuê Văn phòng">Cho thuê Văn phòng</a>
+                            <a href="/category?property_type=rent&property_category=office" title="Cho thuê Văn phòng">Cho thuê Văn phòng</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="cho-thue-biet-thu" title="Cho thuê Biệt thự">Cho thuê Biệt thự</a>
+                            <a href="/category?property_type=rent&property_category=villa" title="Cho thuê Biệt thự">Cho thuê Biệt thự</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="cho-thue-bds-thuong-mai" title="Cho thuê BĐS thương mại">Cho thuê BĐS thương mại</a>
+                            <a href="/category?property_type=rent&property_category=commercial" title="Cho thuê BĐS thương mại">Cho thuê BĐS thương mại</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="cho-thue-bds-cong-nghiep" title="Cho thuê BĐS công nghiệp">Cho thuê BĐS công nghiệp</a>
+                            <a href="/category?property_type=rent&property_category=industrial" title="Cho thuê BĐS công nghiệp">Cho thuê BĐS công nghiệp</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="cho-thue-bds-nong-nghiep" title="Cho thuê BĐS nông nghiệp">Cho thuê BĐS nông nghiệp</a>
+                            <a href="/category?property_type=rent&property_category=agricultural" title="Cho thuê BĐS nông nghiệp">Cho thuê BĐS nông nghiệp</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="cho-thue-bds-tam-linh" title="Cho thuê BĐS tâm linh">Cho thuê BĐS tâm linh</a>
+                            <a href="/category?property_type=rent&property_category=spiritual" title="Cho thuê BĐS tâm linh">Cho thuê BĐS tâm linh</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="cho-thue-bds-khac" title="Cho thuê BĐS khác">Cho thuê BĐS khác</a>
+                            <a href="/category?property_type=rent&property_category=other" title="Cho thuê BĐS khác">Cho thuê BĐS khác</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="cho-thue-bds-dich-vu" title="Cho thuê BĐS dịch vụ">Cho thuê BĐS dịch vụ</a>
+                            <a href="/category?property_type=rent&property_category=service" title="Cho thuê BĐS dịch vụ">Cho thuê BĐS dịch vụ</a>
                         </li>
                     </ul>
                 </li>
@@ -123,9 +125,6 @@
                 </li>
                 <li class="item-menu">
                     <a class="item-nav-link" href="tin-tuc">Tin tức</a>
-                </li>
-                <li class="item-menu">
-                    <a class="item-nav-link" href="/su-kien">Sự kiện</a>
                 </li>
 
                 <!-- <li class="item-menu">

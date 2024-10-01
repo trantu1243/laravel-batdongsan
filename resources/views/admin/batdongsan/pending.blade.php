@@ -1,13 +1,13 @@
 @extends('admin.layouts.index')
 
-@section('title', 'Danh sách bất động sản')
+@section('title', 'Danh sách chờ duyệt')
 
 @section('content')
 <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Danh sách bất động sản</h1>
+          <h1>Danh sách chờ duyệt</h1>
         </div>
 
       </div>
@@ -44,7 +44,7 @@
                                 <td>{{ $item->post_days }}</td>
                                 <td>{{ $item->post_status }}</td>
                                 <td class="project-actions text-right">
-                                    <a class="btn btn-info btn-sm" href="">
+                                    <a class="btn btn-info btn-sm" href="{{ Route('detail.real-state', ['id'=>$item->id]) }}">
                                         Detail
                                     </a>
                                 </td>
@@ -52,6 +52,9 @@
                         @endforeach
                     </tbody>
                   </table>
+                  <div class="card-footer">
+                    {{ $realStates->links('pagination::bootstrap-4') }}
+                </div>
                 </div>
                 <!-- /.card-body -->
 
