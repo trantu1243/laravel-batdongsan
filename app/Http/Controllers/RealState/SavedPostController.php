@@ -18,7 +18,7 @@ class SavedPostController extends Controller
         $savedPosts = SavedPost::where('user_id', Auth::id())->with(['user', 'post'])->get();
         // $this->call(SavedPostSeeder::class);
         return view('saved_posts.index', compact('savedPosts'));
-        // 
+        //
     }
 
     // Lưu bài đăng bất động sản

@@ -781,10 +781,10 @@
                             $isSaved = $savedPosts->contains('post_id', $item->id);
                             @endphp
 
-                            <form action="{{ route('save.post', ['postId' => $item->id]) }}" method="post">
+                            <form action="{{ route('save.post', ['postId' => $item->id]) }}" method="post" id="form-{{$item->id}}">
                                 @csrf
                                 <button type="submit" class="heart btn_parent_btn-save" style="display: inline-block; outline: none; border: none; background-color: #fff;">
-                                    <span style="padding: 5px; display: inline-block;" class="{{ $isSaved ? 'saved' : '' }} btn-save js-btn-save add-like" post_id="{{ $item->id }}" title="{{ $isSaved ? 'Tin đã lưu' : 'Lưu tin này' }}">
+                                    <span style="padding: 5px; display: inline-block;" class="{{ $isSaved ? 'saved' : '' }} btn-save js-btn-save add-like" post_id="{{ $item->id }}" title="{{ $isSaved ? 'Tin đã lưu' : 'Lưu tin này' }}" onclick="document.getElementById('form-{{$item->id}}').submit();">
                                         <i class="icon heart margin-right-0"></i>
                                     </span>
                                 </button>
