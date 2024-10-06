@@ -355,7 +355,7 @@
                                 <select
                                     id="select-huyen"
                                     title="Quận/Huyện"
-                                    name="DistrictIdsAsString"
+                                    name="DistrictIdsAsString[]"
                                     class="selectpicker filter-select-boostrap"
                                     data-live-search="true"
                                     data-size="2000"

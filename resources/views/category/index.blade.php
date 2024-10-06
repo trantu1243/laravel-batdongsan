@@ -4,8 +4,6 @@
 
 @section('content')
 
-
-
 <form id="main" class="mt-4 container" method="get" action="{{Route('show-category')}}">
     <h2 class="mb-3 d-none d-sm-block">Chào mừng bạn đến với Website Batdongsan!</h2>
     <div class="desc d-none d-sm-flex" style="gap: 16px;">
@@ -354,7 +352,7 @@
                                 <select
                                     id="select-huyen"
                                     title="Quận/Huyện"
-                                    name="DistrictIdsAsString[]"
+                                    name="DistrictIdsAsStringp[]"
                                     class="selectpicker filter-select-boostrap"
                                     data-live-search="true"
                                     data-size="2000"
@@ -696,7 +694,6 @@
         </div>
     </div>
 </form>
-
 <div class="chuyenmuc container mt-4" id="danhmuc">
 
     <div class="row mt-sm-4 mt-3">

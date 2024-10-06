@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Home;
 use App\Http\Controllers\Controller;
 use App\Models\Property;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
 class HomeController extends Controller
@@ -18,7 +19,7 @@ class HomeController extends Controller
             ->orderBy('created_at', 'desc')
             ->limit(12)
             ->get();
-        Log::info(json_encode($newRealStates[0]->images));
+        Log::info(json_encode(Auth::user()->notifications));
         return view('index', [
             'newRealStates' => $newRealStates
         ]);

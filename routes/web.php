@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\Batdongsan\BatdongsanController;
 use App\Http\Controllers\Admin\Batdongsan\BatdongsanDetailController;
 use App\Http\Controllers\Admin\Batdongsan\PendingBatdonsanController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\LoginWithGoogle;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Category\CategoryController;
 use App\Http\Controllers\Home\HomeController;
@@ -26,6 +27,8 @@ Route::middleware([AuthenticationMiddleware::class])->group(function () {
     Route::post('/login', [LoginController::class, 'login'])->name('auth.post.login');
     Route::get('/register', [RegisterController::class, 'show'])->name('auth.register');
     Route::post('/register', [RegisterController::class, 'register'])->name('auth.post.register');
+    Route::get('login/google', [LoginWithGoogle::class, 'redirectToGoogle']);
+    Route::get('auth/google/callback', [LoginWithGoogle::class, 'handleGoogleCallback']);
 });
 
 Route::middleware([VerifyMiddleware::class])->group(function () {

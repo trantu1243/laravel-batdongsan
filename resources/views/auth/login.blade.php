@@ -159,8 +159,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-submit mt-3">Đăng nhập</button>
-                        <button type="button" class="btn"><img src="/assets/icon/google.svg" />Đăng nhập bằng Google</button>
-                        <button type="button" class="btn"><img src="/assets/icon/facebook.svg" />Đăng nhập bằng Facebook</button>
+                        <a href="/login/google" class="btn"><img src="/assets/icon/google.svg" />Đăng nhập bằng Google</a>
                         <div class="">
                             <div class="dangky">Chưa có tài khoản? <a href="/register">Đăng ký</a></div>
                         </div>

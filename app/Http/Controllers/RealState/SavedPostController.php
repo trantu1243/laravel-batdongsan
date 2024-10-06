@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\RealState;
 
 use App\Http\Controllers\Controller;
+use App\Models\Notification;
+use App\Models\Property;
 use App\Models\SavedPost;
 use Database\Seeders\SavedPostSeeder;
 use Illuminate\Http\Request;
@@ -37,6 +39,13 @@ class SavedPostController extends Controller
 
         // Kiểm tra xem bản ghi đã tồn tại chưa
         if ($savedPost->wasRecentlyCreated) {
+            $post = Property::find($postId);
+            Notification::create([
+                'user_id' => $post->user_id,
+                'property_id' => $postId,
+                'content' => Auth::user()->name . " đã lưu 1 tin của bạn",
+                'type' => "save",
+            ]);
             return redirect()->back()->with('success', 'Tin đã được lưu');
         } else {
             return redirect()->back()->with('info', 'Tin đã được lưu trước đó');
