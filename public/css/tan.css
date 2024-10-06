@@ -1,6 +1,6 @@
 #header {
   position: sticky;
-  z-index: 99999;
+  z-index: 10;
   top: 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   background-color: #e5f3ff;
@@ -49,7 +49,3 @@ footer .footer .footer-top .list-social a:hover img {
 }
 
 /*# sourceMappingURL=tan.css.map */
-
-.dropdown-menu.show {
-    width: 300px;
-}
