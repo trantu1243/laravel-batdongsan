@@ -73,6 +73,7 @@
         gtag("js", new Date());
         gtag("config", "G-XDYRDK6TGD");
     </script>
+
 </head>
 
 <body {{ Route::currentRouteName() == 'show-edit-manage' ? 'class="hold-transition sidebar-mini" id=dangtintuc' : '' }}>

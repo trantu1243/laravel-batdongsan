@@ -44,10 +44,8 @@ Route::middleware([VerifyMiddleware::class])->group(function () {
     // tan lam
     Route::get('/saved-posts', [SavedPostController::class, 'show'])->name('saved.posts.index');
     Route::post('/save-post/{postId}', [SavedPostController::class, 'save'])->name('save.post');
-    Route::delete('/saved-post/{id}', [SavedPostController::class, 'destroy'])->name('delete.saved.post');
-
+    Route::delete('/un-saved-post/{id}', [SavedPostController::class, 'destroy'])->name('delete.saved.post');
 });
-
 
 Route::get('logout', [LoginController::class, 'logout'])->name('auth.logout');
 

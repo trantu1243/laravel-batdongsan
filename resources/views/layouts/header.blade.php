@@ -142,9 +142,18 @@
         </div>
         <div class="nav-overlay" onclick="this.previousElementSibling.previousElementSibling.click()"></div>
         <ul class="navbar-nav d-none d-lg-flex" style="display: none;">
-            <li style="display: flex; justify-content: center;align-items: center; margin-right: 15px;">
-                <a href="saved-posts" style="display: flex; justify-content: center;align-items: center; ">
-                    <img style="width: 24px; cursor: pointer; background: transparent; border-radius: 50%;" src="assets/icon/icon_heard.jpg" alt="" />
+            <li style="display: flex; justify-content: center;align-items: center; margin-right: 20px;">
+                <a href="saved-posts" style="display: flex; justify-content: center; align-items: center; position: relative;">
+                    <img style="width: 20px;height: 20px; cursor: pointer; background: transparent; border-radius: 50%;" src="assets/icon/heart_header.svg" alt="" />
+
+                    <!-- Hiển thị số lượng bài đăng đã lưu -->
+                    @if ($savedPosts->count() > 0)
+                    <span style="position: absolute; top: -5px; right: -10px; 
+                 background: #d1193f; color: white; border-radius: 50%; 
+                 padding: 2px 5px; font-size: 8px;">
+                        {{ $savedPosts->count() }}
+                    </span>
+                    @endif
                 </a>
             </li>
 

@@ -4,6 +4,8 @@
 
 @section('content')
 
+
+
 <form id="main" class="mt-4 container" method="get" action="{{Route('show-category')}}">
     <h2 class="mb-3 d-none d-sm-block">Chào mừng bạn đến với Website Batdongsan!</h2>
     <div class="desc d-none d-sm-flex" style="gap: 16px;">
@@ -744,48 +746,54 @@
                 </div>
             </div>
 
-            @foreach ($properties as $item)
             <div class="gap-24 d-flex flex-column card-container">
-                <a href="/real-state/{{ $item->id }}" class="card-cm" title="{{$item->title}}">
+                @foreach ($properties as $item)
+                <a href="/real-state/{{ $item->id }}" class="card-cm" title="{{ $item->title }}">
                     <div class="card-image">
                         <img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII="
-                            lazy-src="{{$item->images[0]->image_url}}"
-                            alt="{{$item->title}}" />
+                            lazy-src="{{ $item->images[0]->image_url }}"
+                            alt="{{ $item->title }}" />
                         <div class="see">
                             <div><img src="assets/img/camera.png" /></div>
                             <div>5</div>
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3 class="title">
-                            {{$item->title}}
-                        </h3>
+                        <h3 class="title">{{ $item->title }}</h3>
                         <div>
-                            <div class="description">{{$item->huyen->name}} , {{$item->province->name}}</div>
+                            <div class="description">{{ $item->huyen->name }}, {{ $item->province->name }}</div>
                             <div class="description-tag">
-                                <div class="description-item">{{$item->area}} m2</div>
-                                <div class="description-item">{{$item->num_of_bedrooms}} Phòng ngủ</div>
-                                <div class="description-item">{{$item->num_of_bathrooms}} WC</div>
+                                <div class="description-item">{{ $item->area }} m2</div>
+                                <div class="description-item">{{ $item->num_of_bedrooms }} Phòng ngủ</div>
+                                <div class="description-item">{{ $item->num_of_bathrooms }} WC</div>
                             </div>
                         </div>
                         <div class="content-footer">
                             <div>
-                                <div class="price">
-                                    {{$item->price}}
-                                </div>
+                                <div class="price">{{ number_format($item->price) }} VND</div>
+                                <div class="time">{{ $item->created_at->format('d/m/Y') }}</div>
+                            </div>
 
-                                <div class="time">
-                                    {{$item->created_at}}
-                                </div>
-                            </div>
-                            <div class="heart">
-                                <span class="btn-save js-btn-save add-like" post_id="117358" title=" Lưu tin này " data-original-title="Tin đã lưu"><i class="icon heart margin-right-0"></i></span>
-                            </div>
+                            <!-- Xử lý lưu bài đăng -->
+                            @php
+                            // Kiểm tra nếu bài viết đã được lưu
+                            $isSaved = $savedPosts->contains('post_id', $item->id);
+                            @endphp
+
+                            <form action="{{ route('save.post', ['postId' => $item->id]) }}" method="post">
+                                @csrf
+                                <button type="submit" class="heart btn_parent_btn-save" style="display: inline-block; outline: none; border: none; background-color: #fff;">
+                                    <span style="padding: 5px; display: inline-block;" class="{{ $isSaved ? 'saved' : '' }} btn-save js-btn-save add-like" post_id="{{ $item->id }}" title="{{ $isSaved ? 'Tin đã lưu' : 'Lưu tin này' }}">
+                                        <i class="icon heart margin-right-0"></i>
+                                    </span>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </a>
-            @endforeach
+                @endforeach
+
 
 
 

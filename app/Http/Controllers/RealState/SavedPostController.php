@@ -7,6 +7,7 @@ use App\Models\SavedPost;
 use Database\Seeders\SavedPostSeeder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class SavedPostController extends Controller
 {
@@ -23,13 +24,25 @@ class SavedPostController extends Controller
     // Lưu bài đăng bất động sản
     public function save(Request $request, $postId)
     {
-        $savedPost = SavedPost::create([
-            'user_id' => Auth::id(),
-            'post_id' => $postId,
-        ]);
+        // Ghi log
+        // Log::info('Lưu bài viết đã được lưu');
 
-        return redirect()->back()->with('success', 'Tin đã được lưu');
+        // Tìm hoặc tạo bản ghi mới nếu không có
+        $savedPost = SavedPost::firstOrCreate(
+            [
+                'user_id' => Auth::id(),
+                'post_id' => $postId,
+            ]
+        );
+
+        // Kiểm tra xem bản ghi đã tồn tại chưa
+        if ($savedPost->wasRecentlyCreated) {
+            return redirect()->back()->with('success', 'Tin đã được lưu');
+        } else {
+            return redirect()->back()->with('info', 'Tin đã được lưu trước đó');
+        }
     }
+
 
     // Xóa bài đăng đã lưu
     public function destroy($id)

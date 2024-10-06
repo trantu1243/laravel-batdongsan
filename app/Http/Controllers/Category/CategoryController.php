@@ -4,13 +4,16 @@ namespace App\Http\Controllers\Category;
 
 use App\Http\Controllers\Controller;
 use App\Models\Property;
+use App\Models\SavedPost;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
 class CategoryController extends Controller
 {
-    public function show(Request $request){
-        $query = Property::with(['images','province', 'huyen']);
+    public function show(Request $request)
+    {
+        $query = Property::with(['images', 'province', 'huyen']);
 
         if ($request->has('property_type')) {
             $query->where('property_type', $request->input('property_type'));
@@ -28,10 +31,10 @@ class CategoryController extends Controller
             $query->where('commune', $request->input('WardIdsAsString'));
         }
         if ($request->has('priceMin')) {
-            $query->where('price', '>=', intval($request->input('priceMin'))*1000000);
+            $query->where('price', '>=', intval($request->input('priceMin')) * 1000000);
         }
         if ($request->has('priceMax')) {
-            $query->where('price', '<=', intval($request->input('priceMax'))*1000000);
+            $query->where('price', '<=', intval($request->input('priceMax')) * 1000000);
         }
         if ($request->has('areaMin')) {
             $query->where('area', '>=', $request->input('areaMin'));
@@ -53,9 +56,15 @@ class CategoryController extends Controller
 
         $properties = $query->paginate(24);
 
+        $savedPosts = SavedPost::where('user_id', Auth::id())->get();
+        // $properties = Property::all(); // Hoặc phương thức lấy property của bạn
+
+        // return view('your_view_name', compact('savedPosts', 'properties'));
+
         return view('category.index', [
-            'properties' =>$properties,
-            'filters' => $request->all()
+            'properties' => $properties,
+            'filters' => $request->all(),
+            'savedPosts' => $savedPosts
         ]);
     }
 }
