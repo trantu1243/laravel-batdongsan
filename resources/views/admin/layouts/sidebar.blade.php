@@ -66,6 +66,41 @@
 
             </li>
 
+            <li class="nav-item {{ Route::currentRouteName() == 'admin.news' || Route::currentRouteName() == 'admin.add-news' ? 'menu-open' : '' }}">
+                <a href="" class="nav-link">
+                    <i class="nav-icon fa fa-cog"></i>
+                    <p>Tin tức
+                        <i class="fas fa-angle-left right"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="/admin/news" class="nav-link {{ Route::currentRouteName() == 'admin.news' ? 'active' : '' }}">
+                            <i class="fa fa-genderless nav-icon"></i>
+                            <p>Tất cả</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/admin/add-news" class="nav-link {{ Route::currentRouteName() == 'admin.add-news' ? 'active' : '' }}">
+                            <i class="fa fa-genderless nav-icon"></i>
+                            <p>Thêm tin tức</p>
+                        </a>
+                    </li>
+
+
+
+                    {{-- <li class="nav-item">
+                        <a href="/admin/setting/code" class="nav-link {{ Route::currentRouteName() == 'show-code' ? 'active' : '' }}">
+                            <i class="fa fa-genderless nav-icon"></i>
+                            <p>Thêm code</p>
+                        </a>
+                    </li> --}}
+
+                </ul>
+
+            </li>
+
 
             <li class="nav-header">ACTIONS</li>
             <li class="nav-item">

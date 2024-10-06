@@ -4,6 +4,8 @@ use App\Http\Controllers\Admin\Auth\AdminLoginController;
 use App\Http\Controllers\Admin\Batdongsan\BatdongsanController;
 use App\Http\Controllers\Admin\Batdongsan\BatdongsanDetailController;
 use App\Http\Controllers\Admin\Batdongsan\PendingBatdonsanController;
+use App\Http\Controllers\Admin\News\AddNewsController;
+use App\Http\Controllers\Admin\News\NewsController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LoginWithGoogle;
 use App\Http\Controllers\Auth\RegisterController;
@@ -72,6 +74,10 @@ Route::middleware([AdminVerifyMiddleware::class])->group(function () {
 
     Route::post('/admin/real-state/pending/{id}', [BatdongsanDetailController::class, 'accept'])->name('pending.real-state');
     Route::get('/admin/pending/real-state', [PendingBatdonsanController::class, 'show'])->name('show-pending');
+
+    Route::get('/admin/news', [NewsController::class, 'show'])->name('admin.news');
+    Route::get('/admin/add-news', [AddNewsController::class, 'show'])->name('admin.add-news');
+    Route::post('/admin/add-news', [AddNewsController::class, 'create'])->name('admin.add-news.post');
 
     Route::get('/admin/logout', [AdminLoginController::class, 'logout']);
 });
