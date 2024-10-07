@@ -20,7 +20,6 @@ class HomeController extends Controller
             ->orderBy('created_at', 'desc')
             ->limit(12)
             ->get();
-        Log::info(json_encode(Auth::user()->notifications));
         return view('index', [
             'newRealStates' => $newRealStates
         ]);
