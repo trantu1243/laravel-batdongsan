@@ -147,7 +147,7 @@
                     <img style="width: 20px;height: 20px; cursor: pointer; background: transparent; border-radius: 50%;" src="assets/icon/heart_header.svg" alt="" />
 
                     <!-- Hiển thị số lượng bài đăng đã lưu -->
-                    @if ($savedPosts->count() > 0)
+                    @if (isset($savedPosts) && $savedPosts->count() > 0)
                     <span style="position: absolute; top: -5px; right: -10px; 
                  background: #d1193f; color: white; border-radius: 50%; 
                  padding: 2px 5px; font-size: 8px;">
