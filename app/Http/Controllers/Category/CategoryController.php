@@ -26,10 +26,10 @@ class CategoryController extends Controller
         }
         if ($request->has('DistrictIdsAsString') && $request->input('DistrictIdsAsString')) {
             Log::info(json_encode($request->input('DistrictIdsAsString')));
-            $query->where('district', $request->input('DistrictIdsAsStringv'));
+            $query->whereIn('district', $request->input('DistrictIdsAsString'));
         }
         if ($request->has('WardIdsAsString') && $request->input('WardIdsAsString')) {
-            $query->where('commune', $request->input('WardIdsAsString'));
+            $query->whereIn('commune', $request->input('WardIdsAsString'));
         }
         if ($request->has('priceMin') && $request->input('priceMin')) {
             $query->where('price', '>=', intval($request->input('priceMin')) * 1000000);

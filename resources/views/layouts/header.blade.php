@@ -30,7 +30,7 @@
                     <a href="/category?property_type=sale">Nhà đất bán</a>
                     <a class="nav-link dropdown-toggle item-nav-link ml-auto" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                     <!-- Sub-Menu -->
-                    <ul class="sub-menu dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul class="sub-menu dropdown-menu" aria-labelledby="navbarDropdown" style="z-index: 200">
                         <li class="dropdown-item">
                             <a href="/category?property_type=sale&property_category=house" title="Bán Nhà">Bán Nhà</a>
                         </li>
@@ -83,7 +83,7 @@
                     <a href="/category?property_type=rent">Nhà đất cho thuê</a>
                     <a class="nav-link dropdown-toggle item-nav-link ml-auto" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
 
-                    <ul class="sub-menu dropdown-menu" aria-labelledby="navbarDropdown2">
+                    <ul class="sub-menu dropdown-menu" aria-labelledby="navbarDropdown2" style="z-index: 200">
                         <li class="dropdown-item">
                             <a href="/category?property_type=rent&property_category=house" title="Cho thuê Nhà">Cho thuê Nhà</a>
                         </li>
@@ -299,7 +299,7 @@
                     left: 0px;
                 }
 
-                .red-dot-popup {
+                .red-dot {
                     width: 8px;
                     height: 8px;
                     border-radius: 4px;
@@ -315,18 +315,18 @@
                         </svg>
                     </div>
                 </a>
-                <div id="notification-popup" class="container-popup scroll-bar-popup" style="max-height: calc(-108px + 100vh);">
+                <div id="notification-popup" class="container-popup scroll-bar" style="max-height: calc(-108px + 100vh);z-index:200">
                     <!-- Nội dung thông báo -->
                     <div class="header-popup">
                         <div class="title-popup">
                             <div class="heading-popup heading-sm-popup" style="color: #2c2c2c;">Thông báo</div>
                         </div>
-                        <div class="tabs-popup">
+                        <div class="tabs">
                             <div class="tab active">
-                                <div class=".paragraph-popup paragraph-md-popup" style="color: #2c2c2c;">Tất cả</div>
+                                <div class=".paragraph-popup paragraph-md" style="color: #2c2c2c;">Tất cả</div>
                             </div>
                             <div class="tab">
-                                <div class=".paragraph-popup paragraph-md-popup" style="color: #999999;">Tin đăng</div>
+                                <div class=".paragraph-popup paragraph-md" style="color: #999999;">Tin đăng</div>
                             </div>
                         </div>
                     </div>
