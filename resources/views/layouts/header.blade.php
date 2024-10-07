@@ -120,11 +120,11 @@
                     </ul>
                 </li>
 
-                <li class="item-menu">
+                {{-- <li class="item-menu">
                     <a class="item-nav-link" href="du-an">Dự án</a>
-                </li>
+                </li> --}}
                 <li class="item-menu">
-                    <a class="item-nav-link" href="tin-tuc">Tin tức</a>
+                    <a class="item-nav-link" href="news">Tin tức</a>
                 </li>
 
                 <!-- <li class="item-menu">

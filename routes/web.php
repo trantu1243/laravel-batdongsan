@@ -13,6 +13,8 @@ use App\Http\Controllers\Category\CategoryController;
 use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\Manage\EditRealStateController;
 use App\Http\Controllers\Manage\ManageController;
+use App\Http\Controllers\News\DetailNewsController;
+use App\Http\Controllers\News\IndexNewsController;
 use App\Http\Controllers\RealState\PostRealStateController;
 use App\Http\Controllers\RealState\RealStateController;
 use App\Http\Controllers\RealState\SavedPostController;
@@ -57,6 +59,10 @@ Route::get('logout', [LoginController::class, 'logout'])->name('auth.logout');
 Route::get('/category', [CategoryController::class, 'show'])->name('show-category');
 
 Route::get('/real-state/{id}', [RealStateController::class, 'show']);
+
+Route::get('/news/{id}', [DetailNewsController::class, 'show']);
+Route::get('/news', [IndexNewsController::class, 'show']);
+
 
 Route::middleware([AdminAuthMiddleware::class])->group(function () {
     Route::get('/admin/login', [AdminLoginController::class, 'show'])->name('admin.login');
