@@ -1144,7 +1144,7 @@ body#dangtintuc .dangtintuc-image:hover {
     top: 0;
     right: 0;
     height: 40px;
-    z-index: 9;
+    z-index: 98;
     opacity: 0;
 }
 
@@ -1217,7 +1217,7 @@ body#dangtintuc .dangtintuc-image:hover {
     border-radius: 20px;
     background: #ecedf1;
     position: absolute;
-    z-index: 9;
+    z-index: 97;
     width: 100%;
 }
 
@@ -4575,7 +4575,7 @@ label[dir="rtl"] .range-slider {
     }
 
     #main .dropdown-main {
-        z-index: 9;
+        z-index: 100;
     }
 }
 
