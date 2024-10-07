@@ -744,6 +744,9 @@
             </div>
 
             <div class="gap-24 d-flex flex-column card-container">
+                @if($properties->count() == 0)
+                <p style="color:red; font-size:20px;font-weight: 500;">Không có kết quả phù hợp !!!</p>
+                @endif
                 @foreach ($properties as $item)
                 <a href="/real-state/{{ $item->id }}" class="card-cm" title="{{ $item->title }}">
                     <div class="card-image">

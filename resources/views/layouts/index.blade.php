@@ -61,6 +61,17 @@
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
+    <style>
+        #toast-container {
+            top: 100px;
+
+            /* Adjust the distance from the bottom */
+            right: 10px;
+            /* Adjust the distance from the right */
+            left: auto;
+        }
+    </style>
+
     <meta name="csrf-token" content="0mTnDMqOd3qiYpZnVndGJ01fPgjgapaJAEwN7ATF" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDYRDK6TGD"></script>
@@ -217,6 +228,7 @@
         });
         $(".icon-close re__icon-close-no-circle").css("display", "none");
     </script>
+    <script src="/js/tan.js"></script>
 </body>
 
 </html>
