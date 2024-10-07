@@ -6,17 +6,17 @@
 //  header
 #header {
     position: sticky;
-    z-index: 10;
+    z-index: 9999999;
     top: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: $background-color-header;
-    & > .navbar {
+    &>.navbar {
         background-color: transparent;
         & ul.navbar-nav {
             & .item-menu.item-menu__login-profile {
                 background-color: rgb(239, 237, 235);
                 color: #f1f1f1;
-                & > #profile-submenu > li > a {
+                &>#profile-submenu>li>a {
                     background-color: $background-color-header;
                     &:hover {
                         background-color: #d8d8d8;
@@ -65,5 +65,11 @@ footer {
         width: 100px;
         height: 50px;
         object-fit: cover;
+    }
+}
+
+#toast-container {
+    &>div {
+        z-index: 99999999999999999;
     }
 }
