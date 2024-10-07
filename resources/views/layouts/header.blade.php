@@ -329,9 +329,8 @@
                     <div class="tab-body" style="overflow: auto;">
                         <div class="list-popup" style="max-height: calc(-199px + 100vh);">
                             @php
-                                $user = Auth::user()->load('notifications');
                                 $notifications = [];
-                                if ($user->notifications) $notifications = $user->notifications;
+                                if (Auth::user()->load('notifications')->notifications) $notifications = Auth::user()->load('notifications')->notifications;
                             @endphp
                             @foreach ($notifications as $item)
                             <div class="item-popup">
