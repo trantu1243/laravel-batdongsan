@@ -64,10 +64,7 @@
     <style>
         #toast-container {
             top: 100px;
-
-            /* Adjust the distance from the bottom */
             right: 10px;
-            /* Adjust the distance from the right */
             left: auto;
         }
     </style>
