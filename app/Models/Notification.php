@@ -14,6 +14,7 @@ class Notification extends Model
         'property_id',
         'content',
         'type',
+        'seen'
     ];
 
     // Relationship with User

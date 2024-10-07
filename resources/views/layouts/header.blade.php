@@ -193,19 +193,19 @@
     border-top-left-radius: 8px
 }
 
-.title {
+.title-popup {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 8px;
 }
 
-.heading-sm {
+.heading-sm-popup {
     font-size: 16px;
     line-height: 24px;
 }
 
-.heading {
+.heading-popup {
     font-family: Lexend, Lexend Medium, Nunito, var(--font-bds-lexend);
     font-weight: 500;
     letter-spacing: -0.2px;
@@ -256,14 +256,14 @@
     padding: 8px 16px;
 }
 
-.list {
+.list-popup {
     display: flex;
     flex-direction: column;
     height: fit-content;
     width: 100%;
 }
 
-.item {
+.item-popup {
     padding: 16px 8px;
     display: flex;
     cursor: pointer;
@@ -313,8 +313,8 @@
                 <div id="notification-popup" class="container-popup scroll-bar" style="max-height: calc(-108px + 100vh);">
                     <!-- Nội dung thông báo -->
                     <div class="header-popup">
-                        <div class="title">
-                            <div class="heading heading-sm" style="color: #2c2c2c;">Thông báo</div>
+                        <div class="title-popup">
+                            <div class="heading-popup heading-sm-popup" style="color: #2c2c2c;">Thông báo</div>
                         </div>
                         <div class="tabs">
                             <div class="tab active">
@@ -327,8 +327,14 @@
                     </div>
 
                     <div class="tab-body" style="overflow: auto;">
-                        <div class="list" style="max-height: calc(-199px + 100vh);">
-                            <div class="item">
+                        <div class="list-popup" style="max-height: calc(-199px + 100vh);">
+                            @php
+                                $user = Auth::user()->load('notifications');
+                                $notifications = [];
+                                if ($user->notifications) $notifications = $user->notifications;
+                            @endphp
+                            @foreach ($notifications as $item)
+                            <div class="item-popup">
                                 <div class="item-icon">
                                     <div class="item-dot">
                                         <div class="red-dot" style="background-color: #e03c31;"></div>
@@ -345,10 +351,12 @@
                                     </div>
                                 </div>
                                 <div class="item-info">
-                                    <div class="express express-md" style="color: #2c2c2c;">Sự kiện “Toàn cảnh thị trường BĐS Việt Nam 2024 & Tiêu điểm Bình Dương” sắp diễn ra</div>
-                                    <div class=".paragraph-popup paragraph-sm" style="color: #999999;">12/09/2024</div>
+                                    <div class="express express-md" style="color: #2c2c2c;">{{$item->content}}</div>
+                                    <div class=".paragraph-popup paragraph-sm" style="color: #999999;">{{$item->created_at}}</div>
                                 </div>
                             </div>
+                            @endforeach
+
                         </div>
                     </div>
                 </div>

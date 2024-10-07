@@ -72,12 +72,12 @@
                                     {{$savedPost->post->created_at}}
                                 </div>
                             </div>
-                            <form action="{{Route('delete.saved.post', ['id'=>$savedPost->post->id])}}" method="post">
+                            <form action="{{Route('delete.saved.post', ['id'=>$savedPost->post->id])}}" method="post" id="form-{{$savedPost->post->id}}">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="heart btn_parent_btn-save" style="display: inline-block; outline: none; border: none; background-color: #fff;">
                                     <!-- có class saved là đã lưu -->
-                                    <span style="padding: 5px ; display: inline-block;" class="saved btn-save js-btn-save add-like" post_id="117358" title=" Lưu tin này " data-original-title="Tin đã lưu"><i class="icon heart margin-right-0"></i></span>
+                                    <span style="padding: 5px ; display: inline-block;" class="saved btn-save js-btn-save add-like" post_id="117358" title=" Lưu tin này " data-original-title="Tin đã lưu" onclick="document.getElementById('form-{{$item->id}}').submit();"><i class="icon heart margin-right-0"></i></span>
                                 </button>
 
                             </form>

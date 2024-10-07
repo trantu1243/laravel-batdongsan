@@ -45,6 +45,7 @@ class SavedPostController extends Controller
                 'property_id' => $postId,
                 'content' => Auth::user()->name . " đã lưu 1 tin của bạn",
                 'type' => "save",
+                'seen' => false
             ]);
             return redirect()->back()->with('success', 'Tin đã được lưu');
         } else {
