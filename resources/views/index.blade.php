@@ -702,33 +702,31 @@
     <h3 class="title">Tìm trong danh mục</h3>
     <div class="row row-cols-2 row-cols-md-4 d-flex d-lg-none">
         <div class="col mb-2">
-            <a href="/categoty" title="Bán nhà">
+            <a href="/categoty?property_type=sale&property_category=house" title="Bán nhà">
                 <div class="danhmuc-item">
                     <div>
                         <img src="images/nha-rieng.svg" alt="" />
                     </div>
                     <div>
                         <h5>Bán nhà</h5>
-                        <span>18,042</span>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col mb-2">
-            <a title="Biệt thự" href="ban-biet-thu">
+            <a title="Biệt thự" href="/categoty?property_type=sale&property_category=villa">
                 <div class="danhmuc-item">
                     <div>
                         <img src="images/biet-thu.svg" alt="" />
                     </div>
                     <div>
                         <h5>Biệt thự</h5>
-                        <span>421</span>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col mb-2">
-            <a href="ban-shophouse">
+            <a href="/categoty?property_type=sale&property_category=commercial">
                 <div title="Shop house" class="danhmuc-item">
                     <div>
                         <img src="images/shop-house.svg" alt="" />
@@ -736,13 +734,12 @@
 
                     <div>
                         <h5>Shop house</h5>
-                        <span>194</span>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col mb-2">
-            <a title="Cho thuê nhà riêng" href="cho-thue-nha">
+            <a title="Cho thuê nhà riêng" href="/categoty?property_type=rent&property_category=house">
                 <div class="danhmuc-item">
                     <div>
                         <img src="images/cho-thue.svg" alt="" />
@@ -750,26 +747,24 @@
 
                     <div>
                         <h5>Cho thuê nhà</h5>
-                        <span>1,010</span>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col mb-2">
-            <a title="Cho thuê Văn phòng" href="/cho-thue-van-phong">
+            <a title="Cho thuê Văn phòng" href="/categoty?property_type=sale&property_category=office">
                 <div class="danhmuc-item">
                     <div>
                         <img src="images/van-phong.svg" alt="" />
                     </div>
                     <div>
                         <h5>Văn phòng</h5>
-                        <span>462</span>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col mb-2">
-            <a href="ban-dat-nen-du-an" title="Bán đất nền">
+            <a href="/categoty?property_type=sale&property_category=land" title="Bán đất nền">
                 <div class="danhmuc-item">
                     <div>
                         <img src="images/dat-nen.svg" alt="" />
@@ -777,7 +772,6 @@
 
                     <div>
                         <h5>Bán đất nền</h5>
-                        <span>1,150</span>
                     </div>
                 </div>
             </a>
@@ -786,29 +780,27 @@
 
     <div class="swiper danhmuc-swiper d-none d-lg-flex">
         <div class="swiper-wrapper">
-            <a title="Bán nhà" href="ban-nha" class="swiper-slide">
+            <a title="Bán nhà" href="/categoty?property_type=sale&property_category=house" class="swiper-slide">
                 <div class="danhmuc-item">
                     <div>
                         <img src="images/nha-rieng.svg" alt="" />
                     </div>
                     <div>
                         <h5>Bán nhà</h5>
-                        <span>18,042 </span>
                     </div>
                 </div>
             </a>
-            <a title="Biệt thự, liền kề" href="ban-biet-thu" class="swiper-slide">
+            <a title="Biệt thự, liền kề" href="/categoty?property_type=sale&property_category=villa" class="swiper-slide">
                 <div class="danhmuc-item">
                     <div>
                         <img src="images/biet-thu.svg" alt="" />
                     </div>
                     <div>
                         <h5>Biệt thự</h5>
-                        <span>421</span>
                     </div>
                 </div>
             </a>
-            <a href="ban-shophouse" class="swiper-slide">
+            <a href="/categoty?property_type=sale&property_category=commercial" class="swiper-slide">
                 <div title="Shop house" class="danhmuc-item">
                     <div>
                         <img src="images/shop-house.svg" alt="" />
@@ -816,11 +808,10 @@
 
                     <div>
                         <h5>Shop house</h5>
-                        <span>194</span>
                     </div>
                 </div>
             </a>
-            <a title="Cho thuê nhà riêng" href="cho-thue-nha" class="swiper-slide">
+            <a title="Cho thuê nhà riêng" href="/categoty?property_type=rent&property_category=house" class="swiper-slide">
                 <div class="danhmuc-item">
                     <div>
                         <img src="images/cho-thue.svg" alt="" />
@@ -828,22 +819,20 @@
 
                     <div>
                         <h5>Cho thuê nhà</h5>
-                        <span> 1,010</span>
                     </div>
                 </div>
             </a>
-            <a title="Cho thuê Văn phòng" href="/cho-thue-van-phong" class="swiper-slide">
+            <a title="Cho thuê Văn phòng" href="/categoty?property_type=rent&property_category=office" class="swiper-slide">
                 <div class="danhmuc-item">
                     <div>
                         <img src="images/van-phong.svg" alt="" />
                     </div>
                     <div>
                         <h5>Văn phòng</h5>
-                        <span>462</span>
                     </div>
                 </div>
             </a>
-            <a href="ban-dat-nen-du-an" class="swiper-slide" title="Bán đất nền">
+            <a href="/categoty?property_type=sale&property_category=land" class="swiper-slide" title="Bán đất nền">
                 <div class="danhmuc-item">
                     <div>
                         <img src="images/dat-nen.svg" alt="" />
@@ -851,7 +840,6 @@
 
                     <div>
                         <h5>Bán đất nền</h5>
-                        <span>1,150</span>
                     </div>
                 </div>
             </a>
@@ -863,11 +851,11 @@
     <h3 class="title">Bất động sản theo địa điểm</h3>
     <div class="swiper danhmuc-swiper d-flex d-lg-none">
         <div class="swiper-wrapper">
-            <a href="/ban-nha-ha-noi" class="tinhthanh-item h-152 swiper-slide">
+            <a href="/categoty?gia_tri_tinh_chon=01" class="tinhthanh-item h-152 swiper-slide">
                 <img src="https://media.batdongsan.vn/crop/333x250/provinces/bat-dong-san-ha-noi.jpeg" alt="Bất động sản Hà Nội" class="img-thumbnail-home" />
                 <h5>Hà Nội</h5>
             </a>
-            <a href="ban-nha-hai-phong" class="tinhthanh-item h-152 swiper-slide">
+            <a href="/categoty?gia_tri_tinh_chon=31" class="tinhthanh-item h-152 swiper-slide">
                 <img src="https://media.batdongsan.vn/crop/333x250/provinces/bat-dong-san-hai-phong.jpg" alt="Bất động sản Hải Phòng" class="img-thumbnail-home" />
                 <h5>Hải Phòng</h5>
             </a>
@@ -1010,413 +998,6 @@
                 </div>
                 @endforeach
 
-
-                <div class="swiper-slide">
-                    <div class="d-flex flex-column gap-4" style="gap: 24px;">
-                        <a href="ban-nha-mau-luong-o-to-qua-cua-kinh-doanh-dt-35m-x-5t-64-ty-r117358" class="main-item noi-bat">
-                            <div class="image-item h-150">
-                                <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117358_66c9eb0d18a73.jpg alt="BÁN NHÀ MẬU LƯƠNG Ô TÔ QUA CỬA - KINH DOANH DT 35M x 5T 6.4 tỷ"
-                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
-                                <div class="list-img">
-                                    <img src="assets/img/camera.png" alt="" />
-                                    <span class="qty">5</span>
-                                </div>
-                            </div>
-
-                            <div class="info">
-                                <h3 class="title">
-                                    BÁN NHÀ MẬU LƯƠNG Ô TÔ QUA CỬA - KINH DO...
-                                </h3>
-                                <div class="price-area">
-                                    <span class="price">
-                                        <img src="assets/img/price.png" alt="" />
-                                        <span style="margin-left: 5px;"> 6 tỷ 400 triệu </span>
-                                    </span>
-
-                                    <span class="area">
-                                        <img src="assets/img/area.png" alt="" />
-                                        <span>
-                                            35 m²
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="address">
-                                    Hà Đông, Hà Nội
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="d-flex flex-column gap-4" style="gap: 24px;">
-                        <a href="ban-nha-nguyen-van-cu-long-bien-dt-45m2-6-tang-9-ty-5-thang-may-o-to-cafe-tang-thuong-r117357" class="main-item noi-bat">
-                            <div class="image-item h-150">
-                                <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117357_66c9e8e4a8aa8.jpg alt="Bán nhà, Nguyễn Văn Cừ Long Biên DT 45m2 * 6 tầng 9 tỷ 5 thang máy ô tô cafe
-                                tầng thượng" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
-                                <div class="list-img">
-                                    <img src="assets/img/camera.png" alt="" />
-                                    <span class="qty">2</span>
-                                </div>
-                            </div>
-
-                            <div class="info">
-                                <h3 class="title">
-                                    Bán nhà, Nguyễn Văn Cừ Long Biên DT 45m2...
-                                </h3>
-                                <div class="price-area">
-                                    <span class="price">
-                                        <img src="assets/img/price.png" alt="" />
-                                        <span style="margin-left: 5px;"> 9 tỷ 500 triệu </span>
-                                    </span>
-
-                                    <span class="area">
-                                        <img src="assets/img/area.png" alt="" />
-                                        <span>
-                                            45 m²
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="address">
-                                    Long Biên, Hà Nội
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="d-flex flex-column gap-4" style="gap: 24px;">
-                        <a href="ban-nha-nguyen-van-cu-long-bien-dt-47m26-tang-gia-10-ty-o-to-thong-thang-may-vai-phut-sang-ho-guom-r117356" class="main-item noi-bat">
-                            <div class="image-item h-150">
-                                <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117356_66c9e8ca22ab3.jpg alt="Bán nhà Nguyễn Văn Cừ Long Biên DT 47m2*6 tầng giá 10 tỷ ô tô thông thang máy
-                                vài phút sang Hồ Gươm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
-                                <div class="list-img">
-                                    <img src="assets/img/camera.png" alt="" />
-                                    <span class="qty">1</span>
-                                </div>
-                            </div>
-
-                            <div class="info">
-                                <h3 class="title">
-                                    Bán nhà Nguyễn Văn Cừ Long Biên DT 47m2*...
-                                </h3>
-                                <div class="price-area">
-                                    <span class="price">
-                                        <img src="assets/img/price.png" alt="" />
-                                        <span style="margin-left: 5px;"> 10 tỷ </span>
-                                    </span>
-
-                                    <span class="area">
-                                        <img src="assets/img/area.png" alt="" />
-                                        <span>
-                                            47 m²
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="address">
-                                    Long Biên, Hà Nội
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="d-flex flex-column gap-4" style="gap: 24px;">
-                        <a href="ban-dat-thuy-phuong-ngo-thong-o-to-do-cua-mat-tien-rong-56m2-3ty-r117355" class="main-item noi-bat">
-                            <div class="image-item h-150">
-                                <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117355_66c9e6f6359c8.jpg alt="Bán đất Thụy Phương ngõ thông ô tô đỗ cửa , mặt tiền rộng 56m2 3tỷ"
-                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
-                                <div class="list-img">
-                                    <img src="assets/img/camera.png" alt="" />
-                                    <span class="qty">5</span>
-                                </div>
-                            </div>
-
-                            <div class="info">
-                                <h3 class="title">
-                                    Bán đất Thụy Phương ngõ thông ô tô đỗ cử...
-                                </h3>
-                                <div class="price-area">
-                                    <span class="price">
-                                        <img src="assets/img/price.png" alt="" />
-                                        <span style="margin-left: 5px;"> 3 tỷ </span>
-                                    </span>
-
-                                    <span class="area">
-                                        <img src="assets/img/area.png" alt="" />
-                                        <span>
-                                            56 m²
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="address">
-                                    Bắc Từ Liêm, Hà Nội
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="d-flex flex-column gap-4" style="gap: 24px;">
-                        <a href="nha-dep-thang-may-truong-chinh-414m2-6-tang-gia-768-ty-kinh-doanh-dinh-r117354" class="main-item noi-bat">
-                            <div class="image-item h-150">
-                                <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117354_66c9e6927213d.jpg alt="Nhà Đẹp Thang Máy Trường Chinh, 41.4m², 6 Tầng, Giá 7.68 Tỷ, Kinh Doanh Đỉnh"
-                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
-                                <div class="list-img">
-                                    <img src="assets/img/camera.png" alt="" />
-                                    <span class="qty">1</span>
-                                </div>
-                            </div>
-
-                            <div class="info">
-                                <h3 class="title">
-                                    Nhà Đẹp Thang Máy Trường Chinh, 41.4m²,...
-                                </h3>
-                                <div class="price-area">
-                                    <span class="price">
-                                        <img src="assets/img/price.png" alt="" />
-                                        <span style="margin-left: 5px;"> 7 tỷ 680 triệu </span>
-                                    </span>
-
-                                    <span class="area">
-                                        <img src="assets/img/area.png" alt="" />
-                                        <span>
-                                            42 m²
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="address">
-                                    Đống Đa, Hà Nội
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="d-flex flex-column gap-4" style="gap: 24px;">
-                        <a href="tap-the-bach-khoatang-1-100m2-66-ty-kinh-doanh-dinh-r117353" class="main-item noi-bat">
-                            <div class="image-item h-150">
-                                <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117353_66c9e5f60e13a.jpg alt="Tập Thể Bách Khoa,Tầng 1, 100m² , 6.6 Tỷ, Kinh Doanh đỉnh"
-                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
-                                <div class="list-img">
-                                    <img src="assets/img/camera.png" alt="" />
-                                    <span class="qty">1</span>
-                                </div>
-                            </div>
-
-                            <div class="info">
-                                <h3 class="title">
-                                    Tập Thể Bách Khoa,Tầng 1, 100m² , 6.6 Tỷ...
-                                </h3>
-                                <div class="price-area">
-                                    <span class="price">
-                                        <img src="assets/img/price.png" alt="" />
-                                        <span style="margin-left: 5px;"> 6 tỷ 600 triệu </span>
-                                    </span>
-
-                                    <span class="area">
-                                        <img src="assets/img/area.png" alt="" />
-                                        <span>
-                                            100 m²
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="address">
-                                    Hai Bà Trưng, Hà Nội
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="d-flex flex-column gap-4" style="gap: 24px;">
-                        <a href="con-duy-nhat-1-lo-dat-dep-45x12-full-tho-tai-hxh-8m-nguyen-anh-thu-quan-12-r117352" class="main-item noi-bat">
-                            <div class="image-item h-150">
-                                <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117352_66c9e4965d7dc.jpg alt="Còn duy nhất 1 lô đất đẹp (4.5x12), full thổ. tại HXH 8m Nguyễn Ảnh Thủ, Quận
-                                12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
-                                <div class="list-img">
-                                    <img src="assets/img/camera.png" alt="" />
-                                    <span class="qty">3</span>
-                                </div>
-                            </div>
-
-                            <div class="info">
-                                <h3 class="title">
-                                    Còn duy nhất 1 lô đất đẹp (4.5x12), full...
-                                </h3>
-                                <div class="price-area">
-                                    <span class="price">
-                                        <img src="assets/img/price.png" alt="" />
-                                        <span style="margin-left: 5px;"> 3 tỷ 490 triệu </span>
-                                    </span>
-
-                                    <span class="area">
-                                        <img src="assets/img/area.png" alt="" />
-                                        <span>
-                                            54 m²
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="address">
-                                    Quận 12, Hồ Chí Minh
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="d-flex flex-column gap-4" style="gap: 24px;">
-                        <a href="nen-xin-va-luu-tu-5-10-so-dien-thoai-cua-mot-vai-ban-be-dong-nghiep-hoac-anh-chi-lon-tuoi-de-ket-r117088" class="main-item noi-bat">
-                            <div class="image-item h-150">
-                                <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117088_66c69ae6c9986.jpg alt="Nên xin và lưu từ 5 – 10 số điện thoại của một vài bạn bè đồng nghiệp hoặc anh
-                                chị lớn tuổi để kết" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
-                                <div class="list-img">
-                                    <img src="assets/img/camera.png" alt="" />
-                                    <span class="qty">5</span>
-                                </div>
-                            </div>
-
-                            <div class="info">
-                                <h3 class="title">
-                                    Nên xin và lưu từ 5 – 10 số điện thoại c...
-                                </h3>
-                                <div class="price-area">
-                                    <span class="price">
-                                        <img src="assets/img/price.png" alt="" />
-                                        <span style="margin-left: 5px;"> 5 tỷ 290 triệu/tháng </span>
-                                    </span>
-
-                                    <span class="area">
-                                        <img src="assets/img/area.png" alt="" />
-                                        <span>
-                                            65 m²
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="address">
-                                    Quận 4, Hồ Chí Minh
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="d-flex flex-column gap-4" style="gap: 24px;">
-                        <a href="can-ban-dat-nha-pho-tho-cu-nguyen-mieng-1-ty-1-100m2-r117162" class="main-item noi-bat">
-                            <div class="image-item h-150">
-                                <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117162_66c7c4f81a971.jpg alt="Cần bán đất nhà phố thổ cư nguyên miếng 1 tỷ 1, 100m2"
-                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
-                                <div class="list-img">
-                                    <img src="assets/img/camera.png" alt="" />
-                                    <span class="qty">1</span>
-                                </div>
-                            </div>
-
-                            <div class="info">
-                                <h3 class="title">
-                                    Cần bán đất nhà phố thổ cư nguyên miếng...
-                                </h3>
-                                <div class="price-area">
-                                    <span class="price">
-                                        <img src="assets/img/price.png" alt="" />
-                                        <span style="margin-left: 5px;"> 1 tỷ 100 triệu </span>
-                                    </span>
-
-                                    <span class="area">
-                                        <img src="assets/img/area.png" alt="" />
-                                        <span>
-                                            100 m²
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="address">
-                                    Thủ Đức, Hồ Chí Minh
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="d-flex flex-column gap-4" style="gap: 24px;">
-                        <a href="can-ban-dat-ngop-tho-cu-nguyen-mieng-1-ty-1-100m2-r117163" class="main-item noi-bat">
-                            <div class="image-item h-150">
-                                <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117163_66c7caa332ae3.jpg alt="Cần bán đất ngộp thổ cư nguyên miếng 1 tỷ 1, 100m2"
-                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
-                                <div class="list-img">
-                                    <img src="assets/img/camera.png" alt="" />
-                                    <span class="qty">1</span>
-                                </div>
-                            </div>
-
-                            <div class="info">
-                                <h3 class="title">
-                                    Cần bán đất ngộp thổ cư nguyên miếng 1 t...
-                                </h3>
-                                <div class="price-area">
-                                    <span class="price">
-                                        <img src="assets/img/price.png" alt="" />
-                                        <span style="margin-left: 5px;"> 1 tỷ 100 triệu </span>
-                                    </span>
-
-                                    <span class="area">
-                                        <img src="assets/img/area.png" alt="" />
-                                        <span>
-                                            100 m²
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="address">
-                                    Thủ Đức, Hồ Chí Minh
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="d-flex flex-column gap-4" style="gap: 24px;">
-                        <a href="can-ban-dat-chinh-chu-100-tho-cu-1-ty-1-100m2-r117165" class="main-item noi-bat">
-                            <div class="image-item h-150">
-                                <img class="news_image img-thumbnail-home" lazy-src=https://media.batdongsan.vn/crop/266x150/posts/117165_66c7cd8cc4b7a.jpg alt="Cần bán đất chính chủ 100% thổ cư 1 tỷ 1, 100m2"
-                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjWLKu/z8ABrwC4TW+tGIAAAAASUVORK5CYII=" />
-                                <div class="list-img">
-                                    <img src="assets/img/camera.png" alt="" />
-                                    <span class="qty">1</span>
-                                </div>
-                            </div>
-
-                            <div class="info">
-                                <h3 class="title">
-                                    Cần bán đất chính chủ 100% thổ cư 1 tỷ 1...
-                                </h3>
-                                <div class="price-area">
-                                    <span class="price">
-                                        <img src="assets/img/price.png" alt="" />
-                                        <span style="margin-left: 5px;"> 1 tỷ 100 triệu </span>
-                                    </span>
-
-                                    <span class="area">
-                                        <img src="assets/img/area.png" alt="" />
-                                        <span>
-                                            100 m²
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="address">
-                                    Thủ Đức, Hồ Chí Minh
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
