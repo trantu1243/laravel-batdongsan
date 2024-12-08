@@ -26,22 +26,19 @@
                                     stroke="currentColor"
                                     stroke-width="1.5"
                                     stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                ></path>
+                                    stroke-linejoin="round"></path>
                                 <path
                                     d="M4.5 13C5.32843 13 6 12.3284 6 11.5C6 10.6716 5.32843 10 4.5 10C3.67157 10 3 10.6716 3 11.5C3 12.3284 3.67157 13 4.5 13Z"
                                     stroke="currentColor"
                                     stroke-width="1.5"
                                     stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                ></path>
+                                    stroke-linejoin="round"></path>
                                 <path
                                     d="M4.5 20C5.32843 20 6 19.3284 6 18.5C6 17.6716 5.32843 17 4.5 17C3.67157 17 3 17.6716 3 18.5C3 19.3284 3.67157 20 4.5 20Z"
                                     stroke="currentColor"
                                     stroke-width="1.5"
                                     stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                ></path>
+                                    stroke-linejoin="round"></path>
                                 <path d="M8.5 4.5H20.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                 <path d="M8.5 11.5H20.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                 <path d="M8.5 18.5H20.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -63,14 +60,14 @@
                             <a href="/manage" class="nav-link">
                                 <i class="fa fa-circle nav-icon"></i>
 
-                                <p>Tất cả tin (1)</p>
+                                <p>Tất cả tin </p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="/manage/status/2" class="nav-link">
                                 <i class="fa fa-circle nav-icon"></i>
 
-                                <p>Tin đang đăng (0)</p>
+                                <p>Tin đang đăng </p>
                             </a>
                         </li>
 
@@ -78,14 +75,14 @@
                             <a href="/manage/status/1" class="nav-link">
                                 <i class="fa fa-circle nav-icon"></i>
 
-                                <p>Tin chờ duyệt (1)</p>
+                                <p>Tin chờ duyệt </p>
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a href="/manage/status/3" class="nav-link">
                                 <i class="fa fa-circle nav-icon"></i>
-                                <p>Tin không duyệt (0)</p>
+                                <p>Tin không duyệt </p>
                             </a>
                         </li>
                     </ul>

@@ -8,6 +8,7 @@
     a {
         color: inherit;
     }
+
     .dkEGFR {
         display: flex;
     }
@@ -467,6 +468,7 @@
         margin-right: 8px;
         padding-right: 0px;
     }
+
     .search-form {
         display: flex;
         align-items: center;
@@ -550,21 +552,21 @@
                                                             <div color="gray" class="sc-ebkicu gpcSQh">
                                                                 <div color="gray" class="sc-fodVxV sUpQc sc-jtazYL eTTgQK" type="primary">
                                                                     @php
-                                                                        $status = $item->post_status;
-                                                                        $badge = 'primary';
-                                                                        if ($item->post_status == "pending_approval") {
-                                                                            $status = "Chờ duyệt";
-                                                                            $badge = 'warning';
-                                                                        } else if ($item->post_status == "pending_revision") {
-                                                                            $status = "Sửa chờ duyệt";
-                                                                            $badge = 'warning';
-                                                                        } else if ($item->post_status == "rejected") {
-                                                                            $status = "Không duyệt";
-                                                                            $badge = 'danger';
-                                                                        } else if ($item->post_status == "active") {
-                                                                            $status = "Tin đang đăng";
-                                                                            $badge = 'success';
-                                                                        }
+                                                                    $status = $item->post_status;
+                                                                    $badge = 'primary';
+                                                                    if ($item->post_status == "pending_approval") {
+                                                                    $status = "Chờ duyệt";
+                                                                    $badge = 'warning';
+                                                                    } else if ($item->post_status == "pending_revision") {
+                                                                    $status = "Sửa chờ duyệt";
+                                                                    $badge = 'warning';
+                                                                    } else if ($item->post_status == "rejected") {
+                                                                    $status = "Không duyệt";
+                                                                    $badge = 'danger';
+                                                                    } else if ($item->post_status == "active") {
+                                                                    $status = "Tin đang đăng";
+                                                                    $badge = 'success';
+                                                                    }
                                                                     @endphp
                                                                     <span class="badge badge-{{ $badge }}">{{ $status }}</span>
                                                                 </div>
@@ -612,8 +614,7 @@
                                                             data-tracking-label="prid=34443037,pos=lmp"
                                                             class="sc-kLgntA bwpqkK sc-fUiUso ezLBWn"
                                                             type="border"
-                                                            color="secondary"
-                                                        >
+                                                            color="secondary">
                                                             <div class="sc-iktFzd gaGeRK">
                                                                 <span class="sc-jJEJSO dnonxM">
                                                                     <div class="sc-gWHgXt ikxKmn">
