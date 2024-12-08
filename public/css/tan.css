@@ -1,6 +1,13 @@
+#toast-container {
+  top: 80px !important;
+}
+#toast-container > .toast {
+  margin-top: 10px;
+}
+
 #header {
   position: sticky;
-  z-index: 10;
+  z-index: 999999999999999;
   top: 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   background-color: #e5f3ff;

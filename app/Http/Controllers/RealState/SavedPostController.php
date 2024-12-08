@@ -47,9 +47,11 @@ class SavedPostController extends Controller
                 'type' => "save",
                 'seen' => false
             ]);
-            return redirect()->back()->with('success', 'Tin đã được lưu');
+            toastr()->success("Lưu thành công");
+            return redirect()->back();
         } else {
-            return redirect()->back()->with('info', 'Tin đã được lưu trước đó');
+            toastr()->warning("Tin đã được lưu trước đó !!!");
+            return redirect()->back();
         }
     }
 
@@ -61,9 +63,11 @@ class SavedPostController extends Controller
 
         if ($savedPost) {
             $savedPost->delete();
-            return redirect()->back()->with('success', 'Đã xóa tin đã lưu');
+            toastr()->success("Xóa Thành Công");
+            return redirect()->back();
         }
 
-        return redirect()->back()->with('error', 'Không tìm thấy tin đã lưu');
+        toastr()->error("Không tìm thấy tin đã lưu");
+        return redirect()->back();
     }
 }

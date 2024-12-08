@@ -3,10 +3,17 @@
 // @import "~bootstrap/scss/bootstrap";
 // Viết các quy tắc CSS tùy chỉnh của bạn ở đây
 @import "variable.scss";
+#toast-container {
+    top: 80px !important;
+    > .toast {
+        margin-top: 10px; // Nếu cần thêm khoảng cách giữa các thông báo
+    }
+}
+
 //  header
 #header {
     position: sticky;
-    z-index: 10;
+    z-index: 999999999999999;
     top: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: $background-color-header;
