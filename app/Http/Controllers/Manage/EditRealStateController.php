@@ -8,6 +8,7 @@ use App\Models\District;
 use App\Models\Property;
 use App\Models\PropertyImage;
 use App\Models\Province;
+use App\Models\SavedPost;
 use App\Models\Ward;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,7 +16,9 @@ use Illuminate\Support\Facades\Log;
 
 class EditRealStateController extends Controller
 {
-    public function show($id){
+    public function show($id)
+    {
+        $savedPosts = SavedPost::where('user_id', Auth::id())->get();
         $name = Auth::user()->name;
         $realState = Property::find($id);
         $provinces = Province::all();
@@ -30,11 +33,13 @@ class EditRealStateController extends Controller
             'realState' => $realState,
             'provinces' => $provinces,
             'districts' => $districts,
-            'wards' => $wards
+            'wards' => $wards,
+            'savedPosts' => $savedPosts
         ]);
     }
 
-    public function edit($id, EditRealStateRequest $request){
+    public function edit($id, EditRealStateRequest $request)
+    {
         $realState = Property::find($id);
 
         $realState->property_type = $request->input('property_type');
@@ -66,6 +71,5 @@ class EditRealStateController extends Controller
 
         toastr()->success("Chỉnh sửa thành công");
         return back();
-
     }
 }

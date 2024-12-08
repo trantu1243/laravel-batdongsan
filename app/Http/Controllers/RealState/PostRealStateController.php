@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\RealStateRequest;
 use App\Models\Property;
 use App\Models\PropertyImage;
+use App\Models\SavedPost;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,17 +14,21 @@ use Illuminate\Support\Facades\Log;
 
 class PostRealStateController extends Controller
 {
-    public function show(){
+    public function show()
+    {
+        $savedPosts = SavedPost::where('user_id', Auth::id())->get();
         $user = Auth::user();
         return view('batdongsan.post', [
-            'user' => $user
+            'user' => $user,
+            'savedPosts' => $savedPosts
         ]);
     }
 
-    public function create(RealStateRequest $request): RedirectResponse{
-        try{
+    public function create(RealStateRequest $request): RedirectResponse
+    {
+        try {
             $realState = Property::create([
-                'user_id' => Auth::id(),
+                ~'user_id' => Auth::id(),
                 'property_type' => $request->input('property_type'),
                 'property_category' => $request->input('property_category'),
                 'city' => $request->input('city'),
@@ -63,12 +68,10 @@ class PostRealStateController extends Controller
 
             toastr()->success('Đã tạo bất động sản thành công');
             return redirect('/manage');
-        }
-        catch (\Exception $e) {
+        } catch (\Exception $e) {
             Log::error($e);
             toastr()->error($e);
             return back();
         }
-
     }
 }

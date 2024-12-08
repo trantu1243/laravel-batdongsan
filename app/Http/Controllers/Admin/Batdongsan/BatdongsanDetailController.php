@@ -9,16 +9,18 @@ use Illuminate\Http\Request;
 
 class BatdongsanDetailController extends Controller
 {
-    public function show($id){
+    public function show($id)
+    {
         $realState = Property::with(['user', 'images'])->find($id);
         $images = PropertyImage::where('property_id', $realState->id)->get();
-        return view('admin.batdongsan.detail',[
+        return view('admin.batdongsan.detail', [
             'realState' => $realState,
             'images' => $images
         ]);
     }
 
-    public function accept($id){
+    public function accept($id)
+    {
         $realState = Property::find($id);
         $realState->post_status = 'active';
         $realState->save();

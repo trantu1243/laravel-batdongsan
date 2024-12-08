@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,55 +28,70 @@
   * sidebar-collapse
   * sidebar-mini
 -->
+
 <body class="hold-transition sidebar-mini">
-    <div class="wrapper">
-        <!-- Navbar -->
-        @include('admin.layouts.navbar')
-        <!-- /.navbar -->
+  <div class="wrapper">
+    <!-- Navbar -->
+    @include('admin.layouts.navbar')
+    <!-- /.navbar -->
 
-        <!-- Main Sidebar Container -->
-        @include('admin.layouts.sidebar')
+    <!-- Main Sidebar Container -->
+    @include('admin.layouts.sidebar')
 
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            @yield('content')
-        </div>
-        <!-- /.content-wrapper -->
-
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-        <!-- /.control-sidebar -->
-
-        <!-- Main Footer -->
-
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      @yield('content')
     </div>
-    <!-- ./wrapper -->
+    <!-- /.content-wrapper -->
 
-    <!-- REQUIRED SCRIPTS -->
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
 
-    <!-- jQuery -->
-    <script src="/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Main Footer -->
+    <!-- Xử lý lưu bài đăng -->
+    @php
+    // Kiểm tra nếu bài viết đã được lưu
+    $isSaved = $savedPosts->contains('post_id', $item->id);
+    @endphp
 
-    <script src="/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <form action="{{ route('save.post', ['postId' => $item->id]) }}" method="post" id="form-{{$item->id}}">
+      @csrf
+      <button type="submit" class="heart btn_parent_btn-save" style="display: inline-block; outline: none; border: none; background-color: #fff;">
+        <span style="padding: 5px; display: inline-block;" class="{{ $isSaved ? 'saved' : '' }} btn-save js-btn-save add-like" post_id="{{ $item->id }}" title="{{ $isSaved ? 'Tin đã lưu' : 'Lưu tin này' }}" onclick="document.getElementById('form-{{$item->id}}').submit();">
+          <i class="icon heart margin-right-0"></i>
+        </span>
+      </button>
+    </form>
 
-    <!-- AdminLTE -->
-    <script src="/dist/js/adminlte.js"></script>
+  </div>
+  <!-- ./wrapper -->
 
-    <!-- OPTIONAL SCRIPTS -->
-    <script src="/plugins/chart.js/Chart.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="/dist/js/demo.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="/dist/js/pages/dashboard3.js"></script>
-    <script>
-        $(function () {
-          bsCustomFileInput.init();
-        });
-        </script>
+  <!-- REQUIRED SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="/plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+
+  <!-- AdminLTE -->
+  <script src="/dist/js/adminlte.js"></script>
+
+  <!-- OPTIONAL SCRIPTS -->
+  <script src="/plugins/chart.js/Chart.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="/dist/js/demo.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="/dist/js/pages/dashboard3.js"></script>
+  <script>
+    $(function() {
+      bsCustomFileInput.init();
+    });
+  </script>
 </body>
-</html>
 
+</html>
